@@ -15,7 +15,7 @@
 
 1.  **体験**
 
-    トラックでは ラジコンやロボカーを動かしたら、触ったりすることができます。
+    トラックでは ラジコンやロボカーを動かしたり、触ったりすることができます。
 
     対象: 子供、AI/IoT初心者
 
@@ -60,6 +60,8 @@
 
         ラジコンカーと喋ってみよう
 
+        > 参考 [ChatGPTからJetRacerを制御し、交差点で「右折」or「直進」を選択し、走行するスキルの構築に成功](https://twitter.com/gclue_akira/status/1634167593627164672)
+
       - NeRF
 
         ラジコンカーにiPhoneを乗せて、NeRFしてみよう
@@ -78,25 +80,30 @@
     - タイムトライアル部門
     - デジタルツイン
 
-      　　学習走行＋トーナメント(2回 x 2日 )を実施、１回につき１時間半です。8台でトーナメントを行います。
-  　最大参加者数は 8台 x 4の３２名です。
+      　　学習走行＋トーナメント(2回 x 2日 )を実施、１回につき１時間半です。6台でトーナメントを行います。
+  　最大参加者数は 8台 x 4の24名です。
 
-TODO wording for 2023
+Layout
 
-<img src="./img/2023-05-19-17-52-24.png" width="1080">
+  >佐々木陽
+  AWSコースは、ラジコンスケールが1/16向けなので
+  1/10のラジコンだとカーブが曲がれないかも
 
-コース
+  >Satoshi Endo
+  赤い線では無理というしかないですねー。で、原点に帰って、可能なコースをコンクリートの上にテープを貼ってつくるかですかねー。
 
-- 体験 1
+- AWSコースがレース用 (要調整)
 
-  [JetRacer オーバル 2m x 3m](https://www.welectron.com/Waveshare-99001-Track-Map-for-JetRacer-PiRacer_1)
+    [e:Invent 2018 Track　4.95m x 7.5m](https://www.robocarstore.com/collections/tracks/products/aws-deepracer-standard-track)
 
-- 体験 2
 
-  [AWS コース サイズは、このre:Invent 2018 Track　4.95m x 7.5m](https://www.robocarstore.com/collections/tracks/products/aws-deepracer-standard-track)
+- Jetracerが体験用
 
-- レース
-　[ドンキーは このスタンダード 6.7 x 10.2](https://www.robocarstore.com/collections/tracks/products/diyrobocars-standard-track)
+  [JetRacer oval 2m x 3m](https://www.welectron.com/Waveshare-99001-Track-Map-for-JetRacer-PiRacer_1)
+
+
+  <img src="./img/2023-05-21-19-37-57.png" width="600">
+
 
 - 机・椅子
 
@@ -130,14 +137,14 @@ https://www.facebook.com/groups/2249059025382644/
 ### 参加費
 AIカー走行経験者／「AIでRCカーを走らせよう！ MTF2023」参加：無料
 
-- Maker Farie Tokyo 2019の参加者である必要がありま。参加料は以下のとおりです。
+- Maker Farie Tokyo 2023の参加者である必要があります。参加料は以下のとおりです。
 
   ```
   前売：
   当日：
   ```
 
-  詳しくはMaker Faire Tokyo 2019公式サイトをご覧ください。
+  詳しくはMaker Faire Tokyo 2023公式サイトをご覧ください。
 　
   - https://makezine.jp/event/mft2023/
 
@@ -149,14 +156,15 @@ AIカー走行経験者／「AIでRCカーを走らせよう！ MTF2023」参加
   AIカーの走行経験者
 
 ### 定員
-32人
+
+24人
 
 ### 受講に必要な機材について（受講前に必ずご確認ください）
 - Donkey Car、JetRacer、自作AIカーのいずれか、コントローラ
 
     > ただし、今回使用予定のコースで走行するのに相応しい本体サイズ、重量、走行スピード、動力のものに限らせていただきます。
 
-- 本体サイズ、重量、走行スピード等が、Donkey Car（1/16）と著しく異なる場合は事前に問い合わせください。
+- 本体サイズ、重量、走行スピード等が、JetRacer (1/10) / Donkey Car（1/16）と著しく異なる場合は事前に問い合わせください。
 
   > 合致しない場合は、当日、走行をお断りする場合がありますのでご注意ください。
 
