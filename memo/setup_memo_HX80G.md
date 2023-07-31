@@ -1,3 +1,25 @@
+ -  donkey v5.0.dev3 ...
+    ```
+    python -c 'import tensorflow as tf; print(tf.__version__)'
+    2.9.1
+    python -c "import cv2; print(cv2.__version__)"
+    4.8.0
+    python -c "import numpy; print(numpy.version.version)"
+    1.25.0
+    ```
+
+
+    - 4.5.0
+      ```
+      conda update -n base -c defaults conda
+      conda env remove -n donkey
+
+      git fetch --all --tags -f
+      latestTag=$(git describe --tags `git rev-list --tags --max-count=1`)
+      git checkout $latestTag
+      pip install -e .[pi]
+      ```
+
 Unity Plateau
 
   Window > Rendering > Environment > Fog をオフにする

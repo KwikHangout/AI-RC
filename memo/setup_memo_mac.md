@@ -34,7 +34,7 @@ raspi3[raspi3 Donkey Car<br><br>mycar<br>mysim car]
 raspi3 -.- ps3(ps3 contoller)
 tpu[Coral USB]
 
-mac -.test: train donkey model with tpu.-tpu
+mac -.test: coral samples.-tpu
 raspi3 -. test: sign detect with corla .- tpu
 
 raspi3 -. driving in GYM --js .-> mac
@@ -77,22 +77,197 @@ mac -. rcv:data, out:model.- nano
 
     > can it be a virtual racing demo?
 
-1. Donkey UI
+1. Train
+
+    > Donkey UI works except jetson nano.
 
     - [ ] MacbookPro
-      - [ ] connect car
-        - [ ] raspi3 Donkey Car
-        - [ ] raspi4
-        - [ ] nano
-          - [ ] train on nano ⭐️
-      - [ ] train w/o Coral USB　⭐️
-      - [ ] train with Coral USB
+      - [ ] rsync data from
+        - [x] raspi3 Donkey Car
+        - [x] raspi4 mysim
+        - [ ] nano mysim
+
+    - train mysim/data
+      - [x] mac
+      - [x] HX80G
+      - [x] jetson nano ⭐️ (use console donkey train ...)
 
 
 1. AI Pilot on GYM-Doneky each mysim car
-    - [ ] raspi3 Donkey Car ⭐️
-    - [ ] raspi4 ⭐️
-    - [ ] nano
+    - [x] HX80G mysim
+    - [x] raspi3 Donkey Car' mysim
+    - [x] raspi4 mysim
+    - [ ] nano mysim ⭐️
+
+
+---
+
+|H/W|Win|Mac|Raspi4|Jetson nano|Raspi3 donkey-kwiksher|nano-kwiksher|
+|:------|:------|:------|:------|:------|:------|:------|
+|donkey version|5.0 dev3|4.5.0|4.5.0|4.5.0|4.5.0|4.5.0|
+|tf|2.9.1|2.2.0|2.3.0|2.5.0 |2.2.0|2.4.1|
+|numpy|1.25.0|1.18.5|1.18.5|1.19.0|1.18.5?|1.18.5<br>=>1.19.0|
+|cv|4.8.0|4.8.0|4.7.0|4.1.1|?????|4.6.0<br>=>4.4.0|
+|jetpack||||4.5.1-b17||4.6.1|
+|OS|WSL Ubuntu 20.04|miniconda|Buster|Ubuntu 18.04|Buster|Ubutu 20.04|
+|python||3.9.5||3.6||3.8.10|
+|scikit||||||0.19.3|
+|typing-extensions||||||3.7.4.3<br>=>4.7.1|
+|donkey ui|✔️|✔️|NS|NS|NS|crash|
+|donkey train (console)|✔️|✔️|NS|NS|NS|✔️|
+|web contoller (browoser 8887)|✔️|✔️|||||
+|ps3 contoller<br>(gamepad)|✔️<br>(browser)|✔️<br>(browser)|||✔️<br>(--js)||
+|mysim|✔️|✔️|✔️|✔️|✔️|✔️|
+|mycar|||||✔️||
+
+- jetson nano
+
+  is modified w/o aufumentations, and myconfig.py for BATH_SIZE 4
+  and 4.5.0 requires numpy 1.19.0, so tf 2.3.1 does not work. Use tf 2.5.0
+
+  TODO [Ubuntu 20.04 image](https://github.com/Qengineering/Jetson-Nano-Ubuntu-20-image)
+    - Update OpenCV (4.8.0)
+    - Update PyTorch (1.13.0)
+    - Update TorchVision (0.14.0)
+    - New: TensorRT (8.0.1.6)
+    - JetPack 4.6.1,
+
+      by donkecar setup
+
+        - opencv-python 4.6.0.66 requires numpy>=1.19.3; python_version >= "3.6" and platform_system == "Linux" and platform_machine == "aarch64", but you have numpy 1.19.0 which is incompatible.
+        - tensorflow 2.4.1 requires numpy~=1.19.2, but you have numpy 1.19.0 which is incompatible.
+
+        > ~= means at least 1.19.2. It will favour a greater version but in the 1.19.* series, not 1.20.*.
+
+        > https://stackoverflow.com/questions/70950572/which-version-of-tensorflow-is-compatible-with-numpy-1-19-1
+
+       - donkey ui fails to start
+
+          ```
+          WARNING:kivy:stderr: It seems that scikit-image has not been built correctly.
+          ```
+
+          =>
+            export LD_PRELOAD=/usr/lib/aarch64-linux-gnu/libgomp.so.1
+
+
+          ```
+          ImportError: cannot import name 'Concatenate' from 'typing_extensions' (/usr/local/lib/python3.8/dist-packages/typing_extensions.py)
+          ```
+
+          => pip install Concatenate, Update typing_extensions
+
+          - skimage error
+
+          ```
+          ImportError: /home/jetson/env/lib/python3.8/site-packages/skimage/_shared/../../scikit_image.libs/libgomp-d22c30c5.so.1.0.0: cannot allocate memory in static TLS block
+          It seems that scikit-image has not been built correctly.
+          ```
+
+          find .so and export LD_PRROAD it
+
+          DONE, now it succeeds the trainning!
+
+          ```
+          donkey train --tub ./data --model ./models/mypilot.h5
+          ```
+
+
+          - donkey ui crash
+
+          Level 1:tensorflow:Registering AudioMicrofrontend (None) in gradient.
+        [Level 1           ] Registering AudioMicrofrontend (None) in gradient.
+        2023-07-31 14:53:48.889900: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.10.2
+        Segmentation fault (core dumped)
+
+- mac
+
+  setup.py is modifed for numpy==1.18.5 for tf 2.2.0
+---
+update to 4.5.0
+
+  https://docs.donkeycar.com/guide/host_pc/setup_mac/
+
+  ```
+  git fetch --all --tags -f
+  latestTag=$(git describe --tags `git rev-list --tags --max-count=1`)
+  git checkout $latestTag
+
+  conda update -n base -c defaults conda
+  conda env remove -n donkey
+
+  conda install mamba -n base -c conda-forge
+  mamba env create -f install/envs/mac.yml
+  conda activate donkey
+  pip install -e .[pc]
+  ```
+
+  - tensowflow version
+
+    ```
+    python -c "import tensorflow; print(tensorflow.__version__)"
+    python -c "import numpy; print(numpy.version.version)"
+    python -c "import cv2; print(cv2.__version__)"
+    ```
+    - => 2.2.0
+  ## drive
+
+  python manage.py drive
+
+  - "Stop Car" deletes 100 records when you crash
+  - 10-20 laps of good data (5-20k images)
+  ## rsync data
+
+  rsync -r pi@surrogate-kwiksher.local:~/mysim/data/ ./mysim_raspi/data/
+
+  rsync -rv --progress --partial pi@<your_pi_ip_address>:~/mycar/data/  ~/mycar/data/
+
+  ## donkey ui
+
+    - libSDL2_image-2.0.0.dylib not found Error
+
+      > https://github.com/kivy/kivy/issues/7956
+      ```
+      cd /usr/local/Caskroom/miniconda/base/envs/donkey/lib/
+      cp /usr/local/Caskroom/miniconda/base/pkgs/sdl2_image-2.0.5-h7fada4f_0/lib/libSDL2_image-2.0.0.dylib
+      ```
+
+  ## train
+
+    doneky ui > train > linear
+
+    version >= 4.3.0
+      - AUGMENTATIONS = ['MULTIPLY', 'BLUR']
+      - TRANSFORMATIONS = ['CROP'] or TRANSFORMATIONS = ['TRAPEZE']
+
+    600枚 images 4分くらい？
+
+      epoch 1/100
+      2023-07-27 19:38:34.136 python[53503:1657257] _TIPropertyValueIsValid called with 4 on nil context!
+      2023-07-27 19:38:34.136 python[53503:1657257] imkxpc_getApplicationProperty:reply: called with incorrect property value 4, bailing.
+      2023-07-27 19:38:34.136 py
+
+      curacy: 0.9000 - throttle_out_accuracy: 0.9594
+      Epoch 00054: val_loss did not improve from 0.14126
+      5/5 [==============================] - 4s 721ms/step - loss: 0.1851 - angle_out_loss: 0.2784 - throttle_out_loss: 0.0919 - angle_out_accuracy: 0.9000 - throttle_out_accuracy: 0.9594 - val_loss: 0.1741 - val_angle_out_loss: 0.2978 - val_throttle_out_loss: 0.0503 - val_angle_out_accuracy: 0.8867 - val_throttle_out_accuracy: 0.9727
+      INFO:donkeycar.parts.interpreter:Convert model /Users/ymmtny/Documents/GitHub/AI-RC/src/mysim_raspi/models/pilot_23-07-27_1.h5 to TFLite /Users/ymmtny/Documents/GitHub/AI-RC/src/mysim_raspi/models/pilot_23-07-27_1.tflite
+      2023-07-27 19:42:11.416210: I tensorflow/core/grappler/devices.cc:60] Number of eligible GPUs (core count >= 8, compute capability >= 0.0): 0 (Note: TensorFlow was not compiled with CUDA support)
+      2023-07-27 19:42:11.416388: I tensorflow/core/grappler/clusters/single_machine.cc:356] Starting new session
+      2023-07-27 19:42:11.425553: I tensor
+
+  ## copy back model and run
+
+  rsync -rv --progress --partial ./mysim_raspi/models/ pi@surrogate-kwiksher.local:~/mysim/models/
+
+  rsync -rv --progress --partial ./mysim_raspi/models/ pi@donkey-kwiksher.local:~/Donkey/mysim/models/
+
+  rsync -rv --progress --partial ./mysim_raspi/models/ jetson@jetson-desktop.local:~/projects/mysim/models/
+
+  - raspi
+
+    cd ~/mysim
+    python manage.py drive --model ./models/pilot_23-07-28_0.tflite --type tflite_linear
+
 
 ---
 TPU

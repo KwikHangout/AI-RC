@@ -1,3 +1,30 @@
+donkey-kwiksher - raspi3 - update 2023 Jul 28
+  - 4.5.0
+  - tensorflow 2.3.0
+
+  ```
+  sudo apt-get update --allow-releaseinfo-change
+  sudo apt-get upgrade
+
+  pip install https://github.com/lhelontra/tensorflow-on-arm/releases/download/v2.3.0/tensorflow-2.3.0-cp37-none-linux_armv7l.whl
+
+  python -c "import tensorflow; print(tensorflow.__version__)"
+  python -c "import numpy; print(numpy.version.version)"
+  python -c "import cv2; print(cv2.__version__)"
+  ```
+
+ - opencv
+
+  pip install opencv-python==4.5.1.48
+
+  - mysim
+
+  ```
+    pip install gym
+    git clone https://github.com/tawnkramer/gym-donkeycar
+    cp gym-donkeycar/gym-donkeycar ./mysim/
+  ```
+
 raspi 4
 	vnc viewerでアクセスする
 
@@ -19,6 +46,91 @@ raspi 4
 
     pi/creator1337
 
+
+   - lsb_release -a
+
+      ```
+      No LSB modules are available.
+      Distributor ID: Raspbian
+      Description:    Raspbian GNU/Linux 10 (buster)
+      Release:        10
+      Codename:       buster
+      ```
+
+  For raspi4 buster
+
+  - https://docs.donkeycar.com/guide/robot_sbc/setup_raspberry_pi/#step-1-flash-operating-system
+
+    - Step 6: Update and Upgrade
+
+      ```
+      sudo apt-get update --allow-releaseinfo-change
+      sudo apt-get upgrade
+      ```
+    - Step 11:
+
+      ```
+      git fetch --all --tags -f
+      latestTag=$(git describe --tags `git rev-list --tags --max-count=1`)
+      git checkout $latestTag
+      pip install -e .[pi]
+      ```
+
+      > opencv-python is not finished
+
+      https://raspberrypi-guide.github.io/programming/install-opencv
+
+      ```
+      pip install opencv-python==4.8.0.74
+      sudo apt-get install python-opencv
+      ```
+    - Camera
+
+      ```
+      vcgencmd get_camera
+      raspistill -o test.jpg
+      ```
+
+      [Raspberry Piでカメラが認識しない際の対処法](https://qiita.com/kaiyu0401/items/0d27ec359b5a692c1f89)
+
+      ```
+      sudo rpi-update
+      ```
+
+      - failed to open vchiq instance
+
+        https://gokids.hatenablog.com/entry/2018/10/23/200000
+        http://blawat2015.no-ip.com/~mieki256/diary/201708304.html
+
+        ```
+        sudo chmod 777 /dev/vchiq
+        ```
+   - i2c
+
+      [Errno 2] No such file or directory: '/dev/i2c-1'
+
+   - My Virtual Donkey
+
+      https://docs.donkeycar.com/guide/deep_learning/simulator/
+
+      ```
+      pip install gym==0.21
+      ```
+      > pip install gym will install 0.26
+
+  - tensorflow 2.3.1 to work with jetson nano
+
+  pip install https://github.com/lhelontra/tensorflow-on-arm/releases/download/v2.3.0/tensorflow-2.3.0-cp37-none-linux_armv7l.whl
+
+    this requires numpy > 1.19
+  =>
+     not work
+
+     back to 2.2.0
+
+    ```
+    pip install https://github.com/lhelontra/tensorflow-on-arm/releases/download/v2.2.0/tensorflow-2.2.0-cp37-none-linux_armv7l.whl
+    ```
 
 ------
 mac headless raspi
@@ -165,6 +277,13 @@ donkey-kwiksher
 
     https://docs.surrogate.tv/getting_started.html#sdk-installation
 
+
+- Coral USB tpu
+
+  https://docs.donkeycar.com/parts/stop_sign_detection/
+  https://coral.ai/docs/accelerator/get-started#3-run-a-model-on-the-edge-tpu
+
+
 WiFi
   Wifiつながらない時は
   チピファイつかうって手も
@@ -241,3 +360,7 @@ Ishinomaki
   python manage.py train --tub ./data/tub_15_19-08-02 --model ./models/mypilot.h5
 
   python manage.py drive --model ./models/mypilot.h5
+
+- numpy
+
+  - 1.19.0

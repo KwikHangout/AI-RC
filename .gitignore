@@ -2,3 +2,7 @@
 *.html
 registration_form.md
 application_form.md
+DonkeySimMac
+src/mysim_raspi
+src/opencv-python-headless-4.6.0.66
+opencv-python-headless-4.6.0.66.tar.gz
