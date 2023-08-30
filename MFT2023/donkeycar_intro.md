@@ -63,9 +63,17 @@ li { font-size: 20px }
 </style>
 
 <div align="right">
-<small > 2023.08.25 山本直也 </small></div>
+<small > https://www.facebook.com/groups/2249059025382644 <br> 2023.08.25</small></div>
 
 # AIでRCカーを走らせよう！MFT2023
+
+>AI(人工知能)でラジコンカーを走らせる Facebookのコミュニティ 2018年からやってます。
+
+<div align="right">
+<small>発起人
+<br> 遠藤諭 佐々木陽 山本直也
+</small>
+</div>
 
 <div class="colwrap">
 <div class="left">
@@ -78,7 +86,7 @@ li { font-size: 20px }
 <div class="left">
 New Fabo 1/28 カー
 
-<img src="./img/2023-08-29-19-55-32.png" width="600">
+<img src="./img/2023-08-29-19-55-32.png" width="900">
 </div>
 <div class="right">
 1/16 HSP-94186  (ドンキーカー)
@@ -94,6 +102,7 @@ New Fabo 1/28 カー
 <div class="right">
 </div>
 <br>
+カメラ、コンピューター、モータ制御
 <img src="./img/2023-08-29-20-14-57.png" width="1200">
 
 
@@ -107,6 +116,14 @@ New Fabo 1/28 カー
 ---
 
 <img src="fabo/FaBo_JetRacer_Kit_Red.png" width="1200">
+
+---
+chatGPTと同じTransformerのAIモデルへと進化中
+<img src="./img/2023-08-30-10-43-17.png" width="1200">
+
+---
+
+<img src="./img/2023-08-30-10-42-05.png" width="1200">
 
 ---
 ぬりえ
