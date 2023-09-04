@@ -1,15 +1,37 @@
-- [ ] 出展内容調査フォーム  In Progress
-- [ ] 計画・日程 In Progress
+- [x] 出展内容調査フォーム  In Progress
+- [x] 計画・日程 In Progress
 - [ ] 展示・備品代 支払い 7/12?
 
+----
+
+コース
+
+- [ ] 搬入補法？
+   - [ ] 掛川から軽トラを持ってくることも可能だが、、
+- [ ] ダンボールの入手方法、保管場所は? Fabo@秋葉原？
+  - [ ] 養生テープ
+  - [ ] 電源タップ
+
+
+https://www.researchgate.net/publication/351455198_A_Gamified_Simulator_and_Physical_Platform_for_Self-Driving_Algorithm_Training_and_Validation
+
+<img src="./img/2023-09-04-09-52-13.png" width="600">
+
+<img src="./img/2023-09-04-09-53-02.png" width="600">
+
+<img src="./img/2023-09-04-09-53-22.png" width="600">
+
+<img src="./img/2023-07-21-10-40-25.png" width="600">
+
+<img src="./img/2023-09-04-10-00-33.png" width="600">
 
 
 ---
 計画・日程
-- [ ] スケジュール
-  - [ ] 募集
-  - [ ] 事前走行会
-    > 会津？
+- [x] スケジュール
+  - [x] 募集
+  - [x] 事前走行会
+    > ~~会津？~~
 
 
 https://kitabunka.or.jp/cocokita/
