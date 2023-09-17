@@ -12,6 +12,31 @@
   - [ ] 養生テープ
   - [ ] 電源タップ
 
+    ダンボール 52cm ≒ 520 /24.7 = 21.0 px
+
+    - Area TOP 208x245 ≒ 5137 x 6051　≒ 5m x 6m
+    - Area Bottom 316x120 ≒ 7805x 2964 ≒ 8m x 3m
+
+    4200/170px = 24.7
+
+    => 35枚くらい
+
+    <img src="./img/2023-09-17-20-51-45.png" width="300">
+    <img src="./img/2023-09-17-20-55-02.png" width="300">
+    <img src="./img/2023-09-17-20-58-11.png" width="300">
+
+    https://rmenx13.hatenablog.com/entry/2022/11/01/060000
+
+    <img src="./img/2023-09-17-21-14-59.png" width="300">
+    <img src="./img/2023-09-17-21-15-25.png" width="300">
+    <img src="./img/2023-09-17-21-19-17.png" width="200">
+
+    http://mago.pepper.jp/danbo-img/60/mago_Partition.pdf
+
+    {{<img src="./img/2023-09-17-21-07-02.png" width="600">}}
+
+<img src="./toolkit/img/layout_W01.png" width="300">
+
 
 https://www.researchgate.net/publication/351455198_A_Gamified_Simulator_and_Physical_Platform_for_Self-Driving_Algorithm_Training_and_Validation
 
