@@ -128,4 +128,4 @@ chatGPTと同じTransformerのAIモデルへと進化中
 ---
 ぬりえ
 
-<img src="fabo/FaBo_JetRacer_Kit_WB.png" width="1200">
+<img src="img/Firefly 20231003155203.png" width="1200">

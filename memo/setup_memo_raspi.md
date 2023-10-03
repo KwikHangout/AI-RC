@@ -1,3 +1,9 @@
+stop sign
+
+  https://dl.google.com/coral/canned_models/coco_labels.txt
+
+
+
 donkey-kwiksher - raspi3 - update 2023 Jul 28
   - 4.5.0
   - tensorflow 2.3.0

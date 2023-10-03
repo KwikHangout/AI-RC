@@ -113,7 +113,7 @@ mac -. rcv:data, out:model.- nano
 |python||3.9.5||3.6||3.8.10|
 |scikit||||||0.19.3|
 |typing-extensions||||||3.7.4.3<br>=>4.7.1|
-|donkey ui|✔️|✔️|NS|NS|NS|crash|
+|donkey ui|✔️|✔️|NS|NS|NS|(todo)|
 |donkey train (console)|✔️|✔️|NS|NS|NS|✔️|
 |web contoller (browoser 8887)|✔️|✔️|||||
 |ps3 contoller<br>(gamepad)|✔️<br>(browser)|✔️<br>(browser)|||✔️<br>(--js)||
@@ -173,7 +173,9 @@ mac -. rcv:data, out:model.- nano
           ```
 
 
-          - donkey ui crash
+          - donkey ui crash from console
+
+            (TODO) it needs DISPLAY
 
           Level 1:tensorflow:Registering AudioMicrofrontend (None) in gradient.
         [Level 1           ] Registering AudioMicrofrontend (None) in gradient.

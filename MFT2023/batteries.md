@@ -52,3 +52,41 @@ https://super-rc.co.jp/rc/category/?pcm_cd=01-17-02
   ヨコモ
   京商
   その他メーカー
+
+```
+Tsuyoshi Kumazawa	YB-L400	1
+Mitsuhiro Matsuura	Zeee 7.6V 100C 2S 6000mAh	2
+Hiromi KONDO	Novoo PowerCube 5000 mAh	1
+Atsushi Urakawa 	LF1100-6.6V レーシングパック（M）	2
+Atsushi Urakawa 	Turnigy nano-tech 2100mAh 2S	1
+Mitsuhiro Matsuura	T7PXR(LiFe/6.6V/1100mAh)	1
+Masato Kawamura	INIU モバイルバッテリー (5v 10000mAh)	1
+Masato Kawamura	Poweradd EnergyCell 5000 	1
+Masato Kawamura	RAVPower 6700mAh モバイルバッテリー (5V/2.4A)	1
+Nagayama Takeo	FT2F1700BV2	1
+Nagayama Takeo	SUNPADOW 7.4V / 3800mAh / 130C	2
+Nagayama Takeo	MON 10000mAh PD18W QC3.0	１
+Nagayama Takeo	Anker Power Bank (10000mAh, 30W)	1
+Tasuku Hori	10000mAh Raspberry PI バッテリ(UPS接続)	1
+Jiro Hattori	LF1100-6.6Vレーシングパック	2
+Akira Sasaki, Li-Feﾊﾞｯﾃﾘｰ EA550R 550mAh 3.3V 10
+```
+
+---
+## conpass 写真依頼のメッセージ
+
+皆様
+
+MFT事務局（消防署）より 作品とリチウムイオン電池の紐付けの依頼がありました。お手数ですが 9/24(日曜日)までに
+以前お願いした google spreadsheetoに ご準備中のラジコンカーの**写真**貼っていただけないでしょうか？
+
+- スプレッドシートURL
+
+  https://docs.google.com/spreadsheets/d/163RyX407vJxyzI4dEilmphnCulDfDH61qmqXMP91svM/edit?fbclid=IwAR3hbPQAbsZrmw7Llg2hEfJsVy9bCoph7WfowrTMVv1kqDcQu_AX76qA5a8#gid=0
+
+急なご依頼となり、恐縮ですがよろしくお願いします。
+山本
+
+P.S.
+当日のお知らせですが、また別途近日中にお知らせします。
+(集合時間は、10/14(土曜) 9:00です)
