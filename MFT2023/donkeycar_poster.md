@@ -92,18 +92,6 @@ li { font-size: 20px }
 </div>
 
 ---
-<div class="colwrap">
-<div class="left">
-New Fabo 1/28 カー
-
-<img src="./img/2023-08-29-19-55-32.png" width="900">
-</div>
-<div class="right">
-1/16 HSP-94186  (ドンキーカー)
-
-<img src="./img/2023-08-29-20-01-00.png" width="600"></div>
-
----
 <!--_header: 'https://www.mdpi.com/2079-9292/10/17/2102'-->
 
 <div class="colwrap">
@@ -121,17 +109,6 @@ New Fabo 1/28 カー
 <img src="./img/2023-08-29-20-14-57.png" width="1200">
 
 
-
----
-<!--_header: 'https://github.com/NVIDIA-AI-IOT/jetracer'-->
-
-
-<img src="./img/2023-08-29-21-02-49.png" width="1000">
-
----
-
-<img src="fabo/FaBo_JetRacer_Kit_Red.png" width="1200">
-
 ---
 chatGPTと同じTransformerのAIモデルへと進化中
 <img src="./img/2023-08-30-10-43-17.png" width="1200">
@@ -139,11 +116,3 @@ chatGPTと同じTransformerのAIモデルへと進化中
 ---
 
 <img src="./img/2023-08-30-10-42-05.png" width="1200">
-
----
-
-<br>ぬりえ タミヤ 1/10 トヨタ GR 86 (TT-02シャーシ) レッド
-
-![](./img/Firefly_20231003155203.png)
-
-- https://fabo.store/collections/jetracer/products/fabo-jetracer-kit-carbon-edition
