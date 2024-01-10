@@ -102,35 +102,37 @@ mac -. rcv:data, out:model.- nano
 
 ---
 
-|H/W|Win|Mac|Raspi4|Jetson nano|Raspi3 donkey-kwiksher|nano-kwiksher|
-|:------|:------|:------|:------|:------|:------|:------|
-|donkey version|5.0 dev3|4.5.0|4.5.0|4.5.0|4.5.0|4.5.0|
-|tf|2.9.1|2.2.0|2.3.0|2.5.0 |2.2.0|2.4.1|
-|numpy|1.25.0|1.18.5|1.18.5|1.19.0|1.18.5?|1.18.5<br>=>1.19.0|
-|cv|4.8.0|4.8.0|4.7.0|4.1.1|?????|4.6.0<br>=>4.4.0|
-|jetpack||||4.5.1-b17||4.6.1|
-|OS|WSL Ubuntu 20.04|miniconda|Buster|Ubuntu 18.04|Buster|Ubutu 20.04|
-|python||3.9.5||3.6||3.8.10|
-|scikit||||||0.19.3|
-|typing-extensions||||||3.7.4.3<br>=>4.7.1|
-|donkey ui|✔️|✔️|NS|NS|NS|(todo)|
-|donkey train (console)|✔️|✔️|NS|NS|NS|✔️|
-|web contoller (browoser 8887)|✔️|✔️|||||
-|ps3 contoller<br>(gamepad)|✔️<br>(browser)|✔️<br>(browser)|||✔️<br>(--js)||
-|mysim|✔️|✔️|✔️|✔️|✔️|✔️|
-|mycar|||||✔️||
+| H/W                           | Win              | Mac            | Raspi4 | Jetson nano  | Raspi3 donkey-kwiksher | nano-kwiksher      | skipcity donkey nano   |
+|:------------------------------|:-----------------|:---------------|:-------|:-------------|:-----------------------|:-------------------|------------------------|
+| donkey version                | 5.0 dev3         | 4.5.0          | 4.5.0  | 4.5.0        | 4.5.0                  | 4.5.0              |4.5.0|
+| tf                            | 2.9.1            | 2.2.0          | 2.3.0  | 2.5.0        | 2.2.0                  | 2.4.1              |2.3.1|
+| numpy                         | 1.25.0           | 1.18.5         | 1.18.5 | 1.19.0       | 1.18.5?                | 1.18.5<br>=>1.19.0 |1.19.0|
+| cv                            | 4.8.0            | 4.8.0          | 4.7.0  | 4.1.1        | ?????                  | 4.6.0<br>=>4.4.0   |4.1.0|
+| jetpack                       |                  |                |        | 4.5.1-b17    |                        | 4.6.1              |4.6.1|
+| OS                            | WSL Ubuntu 20.04 | miniconda      | Buster | Ubuntu 18.04 | Buster                 | Ubutu 20.04        ||
+| python                        | 3.9.18           | 3.9.5          |        | 3.6          |                        | 3.8.10             |3.6|
+| scikit                        |                  |                |        |              |                        | 0.19.3             ||
+| typing-extensions             |                  |                |        |              |                        | 3.7.4.3<br>=>4.7.1 ||
+| donkey ui                     | ✔️                | ✔️              | NS     | NS           | NS                     | (todo)             ||
+| donkey train (console)        | ✔️                | ✔️              | NS     | NS           | NS                     | ✔️                  ||
+| web contoller (browoser 8887) | ✔️                | ✔️              |        |              |                        |                    ||
+| ps3 contoller<br>(gamepad)    | ✔️<br>(browser)   | ✔️<br>(browser) |        |              | ✔️<br>(--js)            |                    ||
+| mysim                         | ✔️                | ✔️              | ✔️      | ✔️            | ✔️                      | ✔️                  ||
+| mycar                         |                  |                |        |              | ✔️                      |                    ||
 
-- jetson nano
+- jetson nano|
 
-  is modified w/o aufumentations, and myconfig.py for BATH_SIZE 4
+  is modified **w/o aufumentations**, and myconfig.py for BATH_SIZE 4
   and 4.5.0 requires numpy 1.19.0, so tf 2.3.1 does not work. Use tf 2.5.0
 
-  TODO [Ubuntu 20.04 image](https://github.com/Qengineering/Jetson-Nano-Ubuntu-20-image)
+  [Ubuntu 20.04 image](https://github.com/Qengineering/Jetson-Nano-Ubuntu-20-image)
     - Update OpenCV (4.8.0)
     - Update PyTorch (1.13.0)
     - Update TorchVision (0.14.0)
     - New: TensorRT (8.0.1.6)
     - JetPack 4.6.1,
+
+    - opencv-python-headless is built
 
       by donkecar setup
 
@@ -191,6 +193,7 @@ update to 4.5.0
   https://docs.donkeycar.com/guide/host_pc/setup_mac/
 
   ```
+  cd /Users/ymmtny/Documents/GitHub/AI-RC/src
   git fetch --all --tags -f
   latestTag=$(git describe --tags `git rev-list --tags --max-count=1`)
   git checkout $latestTag

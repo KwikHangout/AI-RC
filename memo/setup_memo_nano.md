@@ -1,8 +1,11 @@
 - ubuntu 20.04 image
 
-  - software keyboard
-  - ssh enabeld
-  - expand it for 64GB sd card
+  - https://github.com/Qengineering/Jetson-Nano-Ubuntu-20-image
+  - https://my-cluttered-blog.com/it_techronolgy/74/
+
+    - software keyboard
+    - ssh enabeld
+    - expand it for 64GB sd card
 
   ```
   sudo apt-get install ssh
@@ -60,7 +63,7 @@
   16:48
   17:26 error
 
-  17:33
+  17:33 ⭐️ let's install opencv-python-headless-4.6.0.66
 
   ```
   cd projects
@@ -122,6 +125,7 @@
     batch size 4
 
 ----
+
 - rsync
 
   rsync -rv --progress --partial ./mysim_raspi/data/ jetson@nano-kwiksher.local:~/projects/mysim/data/
@@ -158,7 +162,9 @@
     module 'setuptools.build_meta' has no attribute '__legacy__'
     ```
 
-- aufumentations
+- aufumentations ⭐️
+
+  > comment out the following line or build it with opencv-python-headless-4.4.0.46
 
   https://github.com/autorope/donkeycar/issues/1136
   ```
@@ -177,14 +183,10 @@
  pip3 install --pre --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v45 tensorflow==2.5.0
 
 
-ubuntu 20.04
 
-- https://github.com/Qengineering/Jetson-Nano-Ubuntu-20-image
-- https://my-cluttered-blog.com/it_techronolgy/74/
+----
 
-Setup
-
-https://docs.donkeycar.com/guide/robot_sbc/setup_jetson_nano/
+https://opencv-python-headless-4.6.0.66/guide/robot_sbc/setup_jetson_nano/
 
 ```
 cat /etc/issue
@@ -263,7 +265,9 @@ python -c "import cv2; print(cv2.__version__)"
       pip install opencv-python
       ```
 
-- opencv
+      not work. build the headless from the source
+
+- opencv-python-headless 4.4.0.46
 
   pip install opencv-python-headless==4.4.0.46
 
@@ -273,8 +277,8 @@ python -c "import cv2; print(cv2.__version__)"
     python3 -m pip install ./opencv-python-headless-4.4.0.46.tar.gz
     ```
 
-  pip install opencv-python==4.5.1.48
-  pip install opencv-python-headless==4.5.1.48
+  ~~pip install opencv-python==4.5.1.48~~
+  ~~pip install opencv-python-headless==4.5.1.48~~
 
   https://qengineering.eu/install-opencv-on-jetson-nano.html
 
@@ -345,6 +349,6 @@ pip install Cython
   pip3 install matplotlib
   ```
 
-- albumentations opencv-headless
+- albumentations opencv-headless ⭐️
 
   https://forums.developer.nvidia.com/t/urgent-help-needed-need-to-install-on-headless-opencv-on-jetson-nano/141589/2

@@ -4,9 +4,16 @@ stop sign
 
 
 
+donkey-kwiksher - raspi3 - update 2023 Oct 15
+  - 4.5.0
+  - tensorflow 2.2.0
+  - numpy 1.18.5
+
+
 donkey-kwiksher - raspi3 - update 2023 Jul 28
   - 4.5.0
   - tensorflow 2.3.0
+  - numpy 19.0?
 
   ```
   sudo apt-get update --allow-releaseinfo-change
@@ -124,13 +131,13 @@ raspi 4
       ```
       > pip install gym will install 0.26
 
-  - tensorflow 2.3.1 to work with jetson nano
+  - tensorflow 2.3.1 to work with jetson nano(tf 2.5.0 ubuntu 18.04) or nano-kwiksher(tf 2.4.1 ubuntu 20.04)
 
   pip install https://github.com/lhelontra/tensorflow-on-arm/releases/download/v2.3.0/tensorflow-2.3.0-cp37-none-linux_armv7l.whl
 
     this requires numpy > 1.19
   =>
-     not work
+     not work for raspi3 buster(doneky-kwiksher numpy 1.18.5)
 
      back to 2.2.0
 

@@ -1,0 +1,2 @@
+- hisada
+  no sd card
