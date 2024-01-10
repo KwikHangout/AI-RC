@@ -7,6 +7,10 @@ weight: 1
 
 ### Jetson Nano ドンキカー
 
+{{<img src="./img/2024-01-09-15-49-16.png" width="400">}}
+
+{{<img src="./img/2024-01-09-15-59-23.png" width="800">}}
+
 ## 概念図
 
   ```mermaid
@@ -53,10 +57,166 @@ weight: 1
   WifiSpot -.- pc
 
   ```
+----
 
-{{<img src="./img/2024-01-09-15-49-16.png" width="800">}}
+## ワークフロー
 
-{{<img src="./img/2024-01-09-15-59-23.png" width="800">}}
+1. 学習のための走行データの取得
+
+    ```mermaid
+    graph LR
+
+    subgraph ラジコン
+      hw[電源ON ラジコン、ゲームパッド]
+    end
+
+    subgraph PC
+      del[前回のデータを消す del_data]
+      run[走行 run_car]
+      stop[狩猟 run_carをキャンセル]
+    end
+
+      hw -.-> del
+      del -.-> run
+
+    subgraph ゲームパッド
+      drive[走行 15周 Bボタンで記録 On/Off]
+    end
+
+    run -.->drive
+    drive -.-> stop
+    ```
+
+1. 学習
+
+    ```mermaid
+    graph LR
+
+    subgraph ラジコン
+      state[停止状態 電源はそのままでOK]
+    end
+
+    subgraph PC
+      train[学習 run_train 10-20分]
+    end
+    ```
+
+1. AI 走行
+
+    ```mermaid
+    graph LR
+
+    subgraph ラジコン
+      stateOK[自動走行状態]
+      stateNG[衝突して止まった]
+    end
+
+    subgraph PC
+      auto[AI走行 run_ai]
+      stop[終了 run_aiをキャンセル]
+    end
+
+    subgraph ゲームパッド
+      drive[startボタンで走行切り替え]
+      userangle[ジョイスティックで後進させて位置を戻す]
+    end
+
+    auto -.->drive
+    drive-.->stateOK
+    stateOK -.->stateNG
+    stateNG -. startボタン.->userangle
+    userangle -.startボタン.-> drive
+    stateOK -.-> stop
+    ```
+1. 状態チェック
+
+  ```mermaid
+  graph RL
+
+    subgraph ラジコン
+      battery[ラジコン バッテリー]
+      wheels[車輪]
+      subgraph jetson
+        WiFi
+        camera[カメラ]
+        mobilebattery[モバイルバッテリ]
+        donkey[donkey web server]
+        jupyter[jupyter server]
+      end
+    end
+
+    subgraph ゲームパッド
+      batterycell[乾電池]
+      mode[モード]
+      inut[XInputとDirectInpu]
+    end
+
+    subgraph 予備バッテリー
+      battriesUsed[バッテリー 使用済]
+      battriesNext[交換用バッテリー]
+      adapterCharge[充電器]
+      adapterDischarge[放電機]
+
+      adapterCharge -.- battriesNext
+      adapterDischarge -.- battriesUsed
+    end
+
+    subgraph PC
+      chrome[ブラウザ]
+    end
+
+    WiFiSpot[無線LANスポット Dokey001]
+
+    chrome -. http:<IP>:8888 .- jupyter
+    chrome -. http:<IP>:8887 .- donkey
+  ```
+
+  - [ ] ラジコンカーとJetsonが走行可能な状態か？
+
+     run_car または run_aiを実行後に、http://<ip>:8887 をブラウザで開いてみてください。
+
+     jupyternoteのブラウザ画面のrun_car/run_aiのログにエラーが出力されていないかを確認してください。
+
+  - [ ] 走行データの記録ができたか？
+
+    画像ファイルの数を確認する
+
+    ```
+     ls -l ~/mycar/data/images | wc-l
+    ```
+
+ - [ ] 学習ができたか？
+
+    run_trainのログで状態を確認してください。
+
+    - epocの出力が正常に終了したことを確認してください。
+
+      画像ファイルがないなどのエラーの場合は、すぐに終了します。
+
+    - mypilot.h5が保存された旨のログが出力されます。
+
+
+- [ ] 自動走行が期待された結果にならない。
+
+    学習データに正常な走行には不必要な衝突などのデータが混じっている可能性があります。
+
+    - raspi用PCに構築された donkeycarの環境で、donkey uiを実行してデータを確認できます。
+
+      > raspiの手順を参考 raspi.md
+
+      1. raspi用ホストPCで conda activate donkey
+      1. rsyncでホストPCに mycar/dataフォルダをコピーする。
+      1. donkey uiをたちあげて、tab managerで確認
+
+          ```
+          conda activate donkey
+          cd ~/projects/mycar
+
+          rsync -rv --progress --partial jetson@<IP>:~/mycar/data/  ./data/
+
+          donkey ui
+          ```
+
 
 ------
 
