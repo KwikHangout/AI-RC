@@ -16,3 +16,4 @@ home = [ "HTML", "RSS", "SEARCH"]
 [markup]
 [markup.goldmark.renderer]
 unsafe = true
+

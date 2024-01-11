@@ -1,0 +1,11 @@
+enableGitInfo = True
+
+[frontmatter]
+lastmod = [":git", "lastmod", "date", "publishDate", ":fileModTime"]
+
+[params]
+  custom_css = ["css/mycustom.css"]
+
+uglyURLs = true
+canonifyURLs = true
+relativeURLs = true

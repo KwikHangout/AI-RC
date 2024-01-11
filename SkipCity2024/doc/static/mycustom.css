@@ -1,0 +1,6 @@
+#sidebar ul.topics li.parent ul, #sidebar ul.topics > li.active ul {
+  display: none;
+}
+#sidebar ul.topics li.parent > ul {
+  display: block;
+}
