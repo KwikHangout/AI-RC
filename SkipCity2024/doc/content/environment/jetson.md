@@ -47,7 +47,8 @@ weight: 1
 
   subgraph joystick[ゲームパッド]
     buttonB([Bボタン 記録 On/Off])
-    buttonA([Aボタン 削除5秒])
+    buttonA([Aボタン 緊急停止])
+    buttonY([Yボタン 削除5秒])
     start([startボタン 切り替え 手動・Auto])
     stickL([左ジョイスティック ハンドル])
     stickR([右ジョイスティック アクセル])
@@ -66,7 +67,7 @@ weight: 1
   LiFeAdapter([充電器/放電器])
   yokomo -.-LiFeAdapter
 
-  WifiSpot[無線LAN DONKEY0001]
+  WifiSpot[無線LAN DONKEY001]
   WifiSpot -.- Donkeycar
   WifiSpot -.- pc
 
@@ -82,8 +83,12 @@ JOYSTICk 拡大写真
 
 1. 学習のための走行データの取得
 
+   - 15-20周 5-10分の走行を実施
+
+     > 5分で6000データセットが集まります。
+
     ```mermaid
-    graph LR
+    graph TB
 
     subgraph ラジコン
       hw[電源ON ラジコン、ゲームパッド]
@@ -92,7 +97,7 @@ JOYSTICk 拡大写真
     subgraph PC
       del[前回のデータを消す del_data]
       run[走行 run_car]
-      stop[狩猟 run_carをキャンセル]
+      stop[終了 run_carをキャンセル]
     end
 
       hw -.-> del
@@ -106,6 +111,8 @@ JOYSTICk 拡大写真
     drive -.-> stop
     ```
 
+    <div style="page-break-before:always"></div>
+
 1. 学習
 
     ```mermaid
@@ -116,6 +123,7 @@ JOYSTICk 拡大写真
     end
 
     subgraph PC
+      check["データ数の確認 ls -l ./data/images | wc-l"]
       train[学習 run_train 10-20分]
     end
     ```
@@ -123,7 +131,7 @@ JOYSTICk 拡大写真
 1. AI 走行
 
     ```mermaid
-    graph LR
+    graph TB
 
     subgraph ラジコン
       stateOK[自動走行状態]
@@ -143,52 +151,58 @@ JOYSTICk 拡大写真
     auto -.->drive
     drive-.->stateOK
     stateOK -.->stateNG
-    stateNG -. startボタン.->userangle
+    stateNG -. startボタン or Aボタン.->userangle
     userangle -.startボタン.-> drive
     stateOK -.-> stop
     ```
+
+    <div style="page-break-before:always"></div>
+
 1. 状態チェック
 
-  ```mermaid
-  graph RL
+    ```mermaid
+    graph RL
 
-    subgraph ラジコン
-      battery[ラジコン バッテリー]
-      wheels[車輪]
-      subgraph jetson
-        WiFi
-        camera[カメラ]
-        mobilebattery[モバイルバッテリ]
-        donkey[donkey web server]
-        jupyter[jupyter server]
+      subgraph ラジコン
+        battery[ラジコン バッテリー]
+        wheels[車輪]
+        subgraph jetson
+          WiFi
+          camera[カメラ]
+          mobilebattery[モバイルバッテリ]
+          donkey[donkey web server]
+          jupyter[jupyter server]
+        end
       end
-    end
 
-    subgraph ゲームパッド
-      batterycell[乾電池]
-      mode[モード]
-      inut[XInputとDirectInpu]
-    end
+      subgraph ゲームパッド
+        batterycell[乾電池]
+        mode[モード]
+        inut[XInputとDirectInpu]
+      end
 
-    subgraph 予備バッテリー
-      battriesUsed[バッテリー 使用済]
-      battriesNext[交換用バッテリー]
-      adapterCharge[充電器]
-      adapterDischarge[放電機]
+      subgraph 予備バッテリー
+        battriesUsed[バッテリー 使用済]
+        battriesNext[交換用バッテリー]
+        adapterCharge[充電器]
+        adapterDischarge[放電機]
 
-      adapterCharge -.- battriesNext
-      adapterDischarge -.- battriesUsed
-    end
+        adapterCharge -.- battriesNext
+        adapterDischarge -.- battriesUsed
+      end
 
-    subgraph PC
-      chrome[ブラウザ]
-    end
+      subgraph PC
+        chrome[ブラウザ]
+      end
 
-    WiFiSpot[無線LANスポット Dokey001]
+      WiFiSpot[無線LANスポット Dokey001]
 
-    chrome -. http:<IP>:8888 .- jupyter
-    chrome -. http:<IP>:8887 .- donkey
-  ```
+      chrome -. "http 8888" .- jupyter
+      chrome -. "http 8887" .- donkey
+
+    ```
+
+    <div style="page-break-before:always"></div>
 
 1. デモ・説明
 
@@ -299,14 +313,17 @@ JOYSTICk 拡大写真
 
       > インターネットに接続していない無線LANスポットです
 
-      >　パスワード: 1が８個
+      >　パスワード: DONKEY1111111
 
     - 固定IP デモ１号機と２号機に割り振られています
 
       - 192.168.100.101
       - 192.168.100.102
 
+<div style="page-break-before:always"></div>
+
 ----
+
 ## 操作
 
 PCブラウザでJupyter notebookからドンキカーに走行データ記録、学習、自走走行のコマンドを実行します。
@@ -326,22 +343,26 @@ http://192.168.100.101:8888
 
     ゲームパッド
     - Bボタン(記録 on/off)
-    - Aボタン
+    - Yボタン (削除5秒)
 
-      衝突などのエラー操作があった時に、直前の10秒のデータを消去します
-
+      衝突などのエラー操作があった時に、直前の5秒のデータを消去します
 
 1. run_train.sh
 1. run_ai.sh
 
     ロードするまで１０秒弱。 8887ポートで下記のDonkey Monitorが開きます。
 
-
     - Joystick
 
-      Select button switches modes - "User, Local Angle, **Local(angle and throttle)**"
+      - startボタン 切り替え 手動・Auto
 
-      - F710 では startボタンで走行が手動・自動が切り替わります。
+        Select button switches modes - "User, Local Angle, **Local(angle and throttle)**"
+
+        startボタンで走行が手動・自動が切り替わります。
+
+      - Aボタン(緊急停止)
+
+        衝突した場合は Aボタンを押す。 startボタンでユーザ操作またはLocal Angleにして、後退させて再度自動走行を実施
 
     - http://192.168.100.101:8887
 

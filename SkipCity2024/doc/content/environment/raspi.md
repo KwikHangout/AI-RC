@@ -7,7 +7,7 @@ weight: 2
 
 ## Raspi Donkey カー
 
-{{<img src="./img/2024-01-09-18-42-45.png" width="600">}}
+{{<img src="./img/2024-01-09-18-42-45.png" width="300">}}
 
 ## 概念図
 
@@ -33,7 +33,8 @@ weight: 2
 
   subgraph joystick[ゲームパッド]
     buttonB([Bボタン 記録 On/Off])
-    buttonA([Aボタン 削除5秒])
+    buttonY([Yボタン 削除5秒])
+    buttonA([Aボタン 緊急停止])
     start([startボタン 切り替え 手動・Auto])
     stickL([左ジョイスティック ハンドル])
     stickR([右ジョイスティック アクセル])
@@ -91,7 +92,9 @@ vscode -.ssh.- raspi
 
 Raspiドンキーカーと同じ無線WiFiに接続してください。
 
-> jetson nano ドンキーカーの無線WiFi DONKEY0001以外の無線WiFiである必要はありません。例 スマホテザリングなどで、任意のインターネットが利用可能なWiFiスポットで問題ありません。
+> jetson nano ドンキーカーの無線WiFi DONKEY001である必要はありません。例 スマホテザリングなどで、任意のインターネットが利用可能なWiFiスポットに ドンキーカーとHX80GのミニゲーミングPCが接続していれば動作します。
+
+ <div style="page-break-before:always"></div>
 
 ### アクセス
 
@@ -110,13 +113,16 @@ Ubuntuは、Z: ドライブにもマウントしてあります。
 {{<img src="./img/2024-01-09-17-22-28.png" width="200">}}
 
 ---
+
+ <div style="page-break-before:always"></div>
+
 ### raspi img
 
 raspiのイメージのバックアップが AI RC Car/raspi3_buster_donkey フォルダに格納されています。
 
 - pi-image.img
 
-{{<img src="./img/2024-01-09-18-26-26.png" width="600">}}
+{{<img src="./img/2024-01-09-18-26-26.png" width="400">}}
 
 EtcherもWin32DiskManagerもインストール済みです。
 
@@ -137,6 +143,8 @@ hugo.exe server
 raspiドンキーカーを任意のWiFiに接続する場合は、**wpa_supplicant**のファイルを用意して、SDカードに書き込んでください。
 
 ---
+
+ <div style="page-break-before:always"></div>
 
 ### vscode - mycar
 
@@ -167,6 +175,8 @@ donkey ui
 
 - vscodeの EmacsキーのエクステンションでEmacsキーになってます。
 
+---
+
 ### donkey web
 
 ```
@@ -180,7 +190,8 @@ python manage.py drive --js
     - [ ] ジョイスティック アクセル
     - [ ] ジョイスティック ハンドル
     - [ ] Bボタン データ記録 On/Off
-    - [ ] Aボタン 直前のデータを消去
+    - [ ] Yボタン 直前のデータを消去
+    - [ ] Aボタン 緊急停止
 
   > ターミナルにログが出てきます。
 
@@ -226,6 +237,9 @@ python manage.py drive --js
     donkey train --tub ./data --model ./models/mypilot.h5
     ```
 
+   <div style="page-break-before:always"></div>
+
+
     FYI..
     - 8000枚　10分
     - 14985 30秒/epoc  20分
@@ -257,7 +271,19 @@ python manage.py drive --js
     python manage.py drive --js --model ./models/pilot_24-01-08_1.tflite --type tflite_linear
     ```
 
+    - startボタン 切り替え 手動・Auto
+
+      Select button switches modes - "User, Local Angle, **Local(angle and throttle)**"
+
+      startボタンで走行が手動・自動が切り替わります。
+
+    - Aボタン(緊急停止)
+
+      衝突した場合は Aボタンを押す。 startボタンでユーザ操作またはLocal Angleにして、後退させて再度自動走行を実施
+
 ---
+
+ <div style="page-break-before:always"></div>
 
 ### donkey ui
 
@@ -270,6 +296,6 @@ Trainerも動作します。
 donkey ui
 ```
 
-{{<img src="./img/2024-01-09-18-06-52.png" width="600">}}
+{{<img src="./img/2024-01-09-18-06-52.png" width="500">}}
 
-{{<img src="./img/2024-01-09-18-10-17.png" width="600">}}
+{{<img src="./img/2024-01-09-18-10-17.png" width="500">}}
