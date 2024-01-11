@@ -7,9 +7,23 @@ weight: 1
 
 ### Jetson Nano ドンキカー
 
-{{<img src="./img/2024-01-09-15-49-16.png" width="400">}}
+- １号機、２号機
 
-{{<img src="./img/2024-01-09-15-59-23.png" width="800">}}
+  {{<img src="./img/IMG_0775.jpeg" width="400">}}
+
+  {{<img src="./img/IMG_0776.jpeg" width="400">}}
+
+- バッテリー、充電器、放電器
+
+  {{<img src="./img/IMG_0778.jpeg" width="400">}}
+
+- モバイルバッテリー、USB AC アダプター
+
+  {{<img src="./img/IMG_0779.jpeg" width="400">}}
+
+- 無線スポット DONKEY001
+
+  {{<img src="./img/IMG_0787.jpeg" width="400">}}
 
 ## 概念図
 
@@ -57,6 +71,11 @@ weight: 1
   WifiSpot -.- pc
 
   ```
+
+JOYSTICk 拡大写真
+
+  {{<img src="./img/2024-01-09-15-59-23.png" width="800">}}
+
 ----
 
 ## ワークフロー
@@ -90,7 +109,7 @@ weight: 1
 1. 学習
 
     ```mermaid
-    graph LR
+    graph TB
 
     subgraph ラジコン
       state[停止状態 電源はそのままでOK]
@@ -170,6 +189,51 @@ weight: 1
     chrome -. http:<IP>:8888 .- jupyter
     chrome -. http:<IP>:8887 .- donkey
   ```
+
+1. デモ・説明
+
+  ```mermaid
+  graph LR
+
+
+　subgraph 操作
+    subgraph phase1[事前準備]
+      drive([走行データ取得 run_car])
+      train([学習 run_train])
+      test1[問題なく走ることを確認 run_ai]
+      test2[パイロンを外して 変化のあることを確認]
+      test3[パイロンを戻して 元に戻ることを確認]
+    end
+    subgraph phase2[デモ/説明]
+      demo0([パイロンを外して走行])
+      demo1([パイロン設置])
+      demo2([通常走行])
+    end
+
+    demo0-.->demo1
+    demo1-.->demo2
+  end
+
+   drive -.-> train
+   train -.->test1
+   test1 -.->test2
+   test2 -.->test3
+
+  subgraph cars[ドンキーカー]
+    car1[１号機 - パイロンなしで学習]
+    car2[２号機 - パイロンありで学習]
+  end
+
+  subgraph PC
+    tab1[ブラウザ http:<１号機IP>:8888]
+    tab2[ブラウザ http:<2号機IP>:8888]
+  end
+
+  cars -.- phase1
+  PC -.- phase1
+
+  ```
+
 
   - [ ] ラジコンカーとJetsonが走行可能な状態か？
 

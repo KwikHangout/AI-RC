@@ -207,6 +207,14 @@ python manage.py drive --js
     python manage.py drive --js
     ```
 
+    https://docs.donkeycar.com/guide/get_driving/
+
+   - 100 records (5 seconds at 20 hz drive loop).
+   - 10-20 laps of good data (5-20k images)
+
+   => 5分-10分で 6000-12000 records
+
+
 1. train in PC
 
     https://docs.donkeycar.com/guide/deep_learning/train_autopilot/
@@ -222,8 +230,11 @@ python manage.py drive --js
     - 8000枚　10分
     - 14985 30秒/epoc  20分
     - 19915 40秒/epoc  22分
+    - 19915 + 9016 50秒/epc 27分
 
-     > intel macbookpro 2020 だと 19915 60秒/epoc 46分
+      > donkey train --tub ./data_0108,./data_0110 --model ./models/mypilot.h5
+
+      > intel macbookpro 2020 だと 19915 60秒/epoc 46分
 
 1. copy back in PC
 
