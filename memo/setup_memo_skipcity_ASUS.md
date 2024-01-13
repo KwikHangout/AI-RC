@@ -96,11 +96,11 @@ TODO
     cat /etc/os-release
 
     python -c 'import tensorflow as tf; print(tf.__version__)'
-    2.9.1
+
     python -c "import cv2; print(cv2.__version__)"
-    4.8.0
+
     python -c "import numpy; print(numpy.version.version)"
-    1.25.0
+
     ```
 
 ----
