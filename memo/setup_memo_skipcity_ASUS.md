@@ -81,11 +81,17 @@ TODO
     https://docs.donkeycar.com/guide/host_pc/setup_ubuntu/
 
     ```
-    git checkout tags/4.5.0 -b 4.5.0
+    # ブランチの確認
+    git branch 
 
     pip install -e .[pc]
     conda update -n base -c defaults conda
+
+    #conda donkey環境の再作成
     conda env remove -n donkey
+
+　　 create -n donkey python=3.6
+    conda activate donkey
   　
     donkey createcar --path ./mycar
     ```
