@@ -371,3 +371,17 @@ http://192.168.100.101:8888
 
       {{<img src="./img/2024-01-06-14-06-06.png" width="1080">}}
 
+---
+
+memo
+
+```
+  rsync -rv --progress --partial jetson@skipcity-donkey-01:~/mycar/data/  ./data/
+
+  donkey train --tub ./data --model ./models/mypilot.h5
+```
+
+```
+rsync -rv --progress --partial ./models/ jetson@skipcity-donkey-01:~/mycar/models/
+
+```
