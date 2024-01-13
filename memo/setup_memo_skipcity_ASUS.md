@@ -82,17 +82,16 @@ TODO
 
     ```
     # ブランチの確認
-    git branch 
+    git branch
 
     pip install -e .[pc]
     conda update -n base -c defaults conda
 
     #conda donkey環境の再作成
     conda env remove -n donkey
-
-　　 create -n donkey python=3.6
+    create -n donkey python=3.6
     conda activate donkey
-  　
+    　
     donkey createcar --path ./mycar
     ```
 
