@@ -151,6 +151,9 @@ cd /home/ymmtny/projects/mycar
 # raspi dataの取得
 rsync -r pi@donkey-endo:~/mycar/data/ ./data/
 
+# train
+donkey train --tub ./data --model ./models/mypilot.h5
+
 # modelをraspinに格納
 rsync -rv --progress --partial ./models/ pi@donkey-endo:~/mycar/models/
 ```

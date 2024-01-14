@@ -22,7 +22,6 @@ MFT2023/event_sep25_リチウムイオン電池リスト.ods
 MFT2023/event_リチウムイオン電池リスト - Sheet1.csv
 2023-09-12-14-34-41.png
 donkeycar_poster.psd
-src
 パネル１.txt
 wsl_ubuntu_donkey_ui.mov
 SkipCity2024/track_design
@@ -35,3 +34,9 @@ AI_members.jpg
 messages_memo.txt
 SkipCity2024/docs_html/assets/javascripts
 SkipCity2024/video
+src/mycar-sc-01
+src/mycar/data
+src/mycar/data_0109
+src/mycar/models
+src/mycar_102
+*.zip

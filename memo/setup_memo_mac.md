@@ -1,3 +1,8 @@
+albumentations
+  ```
+  pip install -U albumentations --no-binary qudida,albumentations
+  ```
+
 MFT2023
 - [ ] 8/1 申し込み開始
 - [ ] 子供むけ 車体お絵描き
