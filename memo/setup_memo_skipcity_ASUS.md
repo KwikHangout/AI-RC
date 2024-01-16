@@ -1,3 +1,40 @@
+- [ ] SDカードのバックアップ
+
+    佐々木さんがSkipCityに行けそうな日時で、バックアップ作業を行うことは可能でしょうか？SkipCity側の展示は その間１台のみの運用。２−３時間？
+
+- [ ] jetson donkeyカーを 2-3台増やせないか？
+
+    １日の初めに５台を準備して、バッテリーの交換の代わりに車体を丸ごと交換で１日が終わるようなオペレーションにしたそうです。
+
+    =>
+    代替案としては、 バッテリー係と車体係を分けて、バッテリーの数を増やし、バッテリー係は放電と充電のみを担当。車体係はバッテリーがなくなったら、バッテリー係からバッテリーを受け取る
+
+    ラズパイDonkeyもrun_ai.serviceを登録したので、走らせるだけならば運用はJetson Donkeyカーと変わりませんが、現在はバッテリーが違うのが難点とのことです。。raspi donkeyにYokokoバッテリーでいけますかね？
+
+    代替案でも良さそうさですが、それでも車体の数が一台でも増えた方が、あらかじめスタンバイさせておくということができるので良いそうです。交換という作業の数を減らしたいという意向です。
+
+
+- [ ] ２月、３月
+
+    上記の追加のdonkeyカーの要望ですが、学習走行とdonkey trainは、私たちが実施する必要があるので、２月に追加車体が間に合えば、２月に作業日程を調整する。
+
+　　３月くらいに コミュニティイベントで走行会をSkipCityでやるのもありかと、
+    wltoys のブラシレスマシンは私が預かりました、組みて立ててみます。
+
+    T2マシンも走行できそうなコースですし、Donkey T2はどうでしょう？
+
+    やっぱ 浦川さんの カエル号なのかなと思います。カエル２号を作る内向けのイベント・ハッカソン的にしても良いかもしれません。
+
+
+
+
+
+今日はcuda 入れて動作確認中、libcudart.so.10.6 not found がtensorflowのimport checkで出たとこまでで、終了しました
+
+  https://stackoverflow.com/questions/64193633/could-not-load-dynamic-library-libcublas-so-10-dlerror-libcublas-so-10-cann
+
+  https://stackoverflow.com/questions/64880546/tensorflow-could-not-load-dynamic-library-libcudart-so-10-0-on-ubuntu-18-04
+
 > 企画展の運営から借りたAsusノートブックのDonkey環境。英語キーボードです。
 
 > jetson nanoドンキー1号機、２号機とも donkeycar 4.5.0 tensorflow 2.3.1です。これに合わせます。

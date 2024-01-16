@@ -1,0 +1,11 @@
+[Unit]
+Description=Run AI Script
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/bin/bash -c 'source /home/pi/env/bin/activate donkey;/home/pi/mycar/run_ai.sh'
+
+[Install]
+WantedBy=multi-user.target

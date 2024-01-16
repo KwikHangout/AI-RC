@@ -187,4 +187,43 @@ python manage.py drive --js --model ./models/pilot_24-01-09_4.h5
  https://www.makeuseof.com/how-to-back-up-your-raspberry-pi-sd-card-on-windows/
 
 
+----
 
+## service
+
+- https://github.com/raspberrypi/documentation/blob/83aeab3278fc7b648022fb56b30e4d62c5ccba24/linux/usage/systemd.md
+
+```
+sudo systemctl enable run_ai.service
+sudo systemctl start run_ai.service
+sudo systemctl stop run_ai.service
+
+```
+
+/etc/systemd/system/run_ai.service
+
+```
+[Unit]
+Description=Run AI Script
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/bin/bash -c 'source /home/pi/env/bin/activate donkey;/home/pi/mycar/run_ai.sh'
+
+[Install]
+WantedBy=multi-user.target
+```
+
+### log
+
+```
+tail -f /var/log/syslog
+```
+
+```
+systemctl list-unit-files | grep enabled
+
+sudo service --status-all
+```
