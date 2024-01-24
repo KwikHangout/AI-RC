@@ -172,7 +172,7 @@ TODO
   cd /home/donkey/projects/mycar
 
   # 学習 dataの取得
-  rsync -r jetson@skipcity-donkey-01o:~/mycar/data/ ./data/
+  rsync -r jetson@skipcity-donkey-01:~/mycar/data/ ./data/
 
   # 確認や学習の実施
   donkey ui
@@ -182,6 +182,71 @@ TODO
 
   ```
 
-  - [ ] donkey uiからの学習の実施はできているが、cuda 10.6の対応ができていないので、モデルを donkey-endoで動かすとエラーになってしまう
-
   > donkey uiの**car connector** の機能は動作しません rsyncを使ってください。
+
+  - [ ] donkey uiからの学習の実施はできているが、cuda 10.6の対応ができていないので、できた モデルで動かすとエラーになってしまう
+
+### donkey-endo.local
+
+  WSL(vs code)のターミナル
+
+  ```
+  cd /home/donkey/projects/mycar
+  ssh pi@donkey-endo
+  ```
+
+  1. donkey-endo.local にSSH後のraspiのコンソールに入る
+  1. サービスの停止
+
+      ```
+      sudo systemctl stop run_ai.service
+      ```
+
+  1. 走行データの取得のための走行
+
+      ```
+      python manage.py drive --js
+      ```
+
+  ホストPCのsshを抜けるが、別のターミナルを立ち上げて、ラズパイのデータを取得する
+
+  1. 学習 dataの取得
+
+      ```
+      rsync -r pi@donkey-endo.local:~/mycar/data/ ./data/
+      ```
+
+  1. 確認や学習の実施
+
+      ```
+      donkey ui
+      ```
+
+  1. modelをドンキーカーに格納
+
+      ```
+      rsync -rv --progress --partial ./models/ pi@donkey-endo.local:~/mycar/models/
+      ```
+
+  donkey-endo.locaにSSHして、ラズパイのターミナルでの操作
+
+  1. run_ai.shのモデルのファイル名を確認してください 最新のファイル名に変更する
+
+      例えば ./models/pilot_24-01-09_4.h5
+
+      ```
+      cd  ~/mycar
+
+      nano run_ai.sh
+      ```
+
+  1. サービスの起動
+
+      ```
+      sudo systemctl start run_ai.service
+      ```
+
+  ホストPCのブラウザからの確認
+
+  - http://donkey-endo.local:8887
+
