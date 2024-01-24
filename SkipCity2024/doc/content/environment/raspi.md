@@ -1,4 +1,3 @@
-
 ---
 title: "raspberry pi"
 chapter: true

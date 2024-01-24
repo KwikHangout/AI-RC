@@ -1,8 +1,8 @@
-- [ ] SDカードのバックアップ
+- [x] SDカードのバックアップ
 
     佐々木さんがSkipCityに行けそうな日時で、バックアップ作業を行うことは可能でしょうか？SkipCity側の展示は その間１台のみの運用。２−３時間？
 
-- [ ] jetson donkeyカーを 2-3台増やせないか？
+- [x] jetson donkeyカーを 2-3台増やせないか？
 
     １日の初めに５台を準備して、バッテリーの交換の代わりに車体を丸ごと交換で１日が終わるようなオペレーションにしたそうです。
 
@@ -29,7 +29,7 @@
 
 
 
-今日はcuda 入れて動作確認中、libcudart.so.10.6 not found がtensorflowのimport checkで出たとこまでで、終了しました
+- [ ] 今日はcuda 入れて動作確認中、libcudart.so.10.6 not found がtensorflowのimport checkで出たとこまでで、終了しました
 
   https://stackoverflow.com/questions/64193633/could-not-load-dynamic-library-libcublas-so-10-dlerror-libcublas-so-10-cann
 
@@ -59,17 +59,15 @@
 
 TODO
 
-> 以下をお願いします。
-
-- [ ] conda install python=3.6
+- [x] conda install python=3.6
 
 
-    - [ ] https://docs.donkeycar.com/guide/host_pc/setup_ubuntu/
+    - [x] https://docs.donkeycar.com/guide/host_pc/setup_ubuntu/
 
       > 現在のdonekycarのdocは 5.0.0用なので 3.9になってしまいます。
 
 
-- [ ] opencv python headless
+- [x] opencv python headless
 
   ```
   sudo apt install python3-opencv
@@ -83,7 +81,7 @@ TODO
   mkdir projects
   ```
 
-- [ ] 4.5.0に変更
+- [x] 4.5.0に変更
 
     https://docs.donkeycar.com/guide/host_pc/setup_ubuntu/
 
@@ -95,7 +93,7 @@ TODO
       pip install -e .[pc]
       ```
 
-  -  [ ] Cythonのバージョンエラーの対処
+  -  [x] Cythonのバージョンエラーの対処
 
       setup.pyの修正
 
@@ -113,7 +111,7 @@ TODO
       pip install -e .[tf]
       ```
 
-- [ ] 4.5.0に変更
+- [x] 4.5.0に変更
 
     https://docs.donkeycar.com/guide/host_pc/setup_ubuntu/
 
@@ -134,6 +132,8 @@ TODO
 
  - [ ] 確認
 
+  > TODO このtensorflowでcuda  10.6 not foundが出ている。対応が必要
+
     ```
     cat /etc/os-release
 
@@ -148,7 +148,7 @@ TODO
 ----
 ## 学習をホストPCで実施
 
-- [ ] ssh configの設定
+- [x] ssh configの設定
 
   ```
   Host skipcity-donkey-01
@@ -159,6 +159,8 @@ TODO
     HostName 192.168.100.102
     User jetson
   ```
+
+  - [ ] donkey-endo.local のラズパイドンキーも設定したか不明
 
 ホストPCとrsync
 
@@ -180,4 +182,6 @@ TODO
 
   ```
 
-  > donkey uiのcar connector の機能は動作しません rsyncを使ってください。
+  - [ ] donkey uiからの学習の実施はできているが、cuda 10.6の対応ができていないので、モデルを donkey-endoで動かすとエラーになってしまう
+
+  > donkey uiの**car connector** の機能は動作しません rsyncを使ってください。
