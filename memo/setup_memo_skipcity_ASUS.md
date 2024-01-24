@@ -192,8 +192,10 @@ TODO
 
   ```
   cd /home/donkey/projects/mycar
-  ssh pi@donkey-endo
+  ssh pi@donkey-endo.local
   ```
+
+  > donkey-endo.local でアクセスできると思います　見つからなかっら HDMIモニターを接続してみてください
 
   1. donkey-endo.local にSSH後のraspiのコンソールに入る
   1. サービスの停止
