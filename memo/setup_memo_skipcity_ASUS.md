@@ -55,7 +55,7 @@
 
     remote explorerで入れます。
 
-    <img src="./img/2024-01-13-10-51-31.png" width="600">
+    <img src="./img/2024-01-25-10-42-28.png" width="600">
 
 TODO
 
@@ -195,7 +195,7 @@ TODO
   ssh pi@donkey-endo.local
   ```
 
-  > donkey-endo.local でアクセスできると思います　見つからなかっら HDMIモニターを接続してみてください
+  > donkey-endo.local でアクセスできると思います　見つからなかっら HDMIモニターを接続して 起動時に表示される IP アドレスを確認して、それを使用してください。
 
   1. donkey-endo.local にSSH後のraspiのコンソールに入る
   1. サービスの停止
@@ -260,3 +260,9 @@ TODO
 
   - http://donkey-endo.local:8887
 
+
+　補足
+
+  Windows のエクスプローラの左側のナビゲーションウィンドウの下の方に Linux のあのペンギンの絵のアイコンで Linux という名前のドライブがあるので、そこから ubuntu のファイルシステムにアクセス可能です。
+
+  /home/donkey/projects/mycar
