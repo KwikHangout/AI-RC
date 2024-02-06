@@ -8,6 +8,32 @@ weight: 2
 
 ## Raspi Donkey カー
 
+同じ .imgを使用 (HX80G > AI RC Car/raspi3_buster_donkey の.imgを利用)
+- donkey-blue.local
+  - 192.168.100.111
+  - throttle, steeringのPWM_STEERING_PINとPWM_THROTTLE_PINの番号を入れ替え
+  - THROTTLE_FORWARD_PWM, THROTTLE_REVERSE_PWMも抑えた値に変更
+  - JOYSTICK_MAX_THROTTLEを1.0に変更
+  - [ ] run_ai.service 設定
+  - [ ] train behavior
+  - [ ] stop sign
+
+  myconfig.py
+  ```
+  TRAIN_BEHAVIORS = True
+  BEHAVIOR_LIST = ['Left_Lane', "Right_Lane", "Center_Lane"]
+  BEHAVIOR_LED_COLORS = [(0, 10, 0), (10, 0, 0)]  #RGB tuples 0-100 per chanel
+
+  ```
+
+  ```
+  python manage.py drive --js --model models/my_beh.h5 --type behavior
+  ```
+
+- donkey-endo.local
+  - 192.168.100.108
+  - [x] run_ai.service 設定済み
+
 {{<img src="./img/2024-01-09-18-42-45.png" width="300">}}
 
 ## 概念図
@@ -254,8 +280,10 @@ python manage.py drive --js
 1. copy back in PC
 
     ```
-    rsync -rv --progress --partial ~/projects/mycar/models/ pi@donkey-endo:~/mycar/models/
+    rsync -rvt --progress --partial ~/projects/mycar/models/ pi@donkey-endo:~/mycar/models/
     ```
+
+     > タイムスタンプオプション t
 
 1. auto pilot in raspi
 

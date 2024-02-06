@@ -41,18 +41,20 @@ donkey-kwiksher - raspi3 - update 2023 Jul 28
 raspi 4
 	vnc viewerでアクセスする
 
-	scan disk     raspoberrypi.local
+	scan disk (64GB)    raspoberrypi.local
 		solar2D
 
-	scan disk pro surrogete-rpi.local for Mobile Mover
+	scan disk pro (32GB)
+   surrogete-rpi.local for Mobile Mover
 		mavproxy
 		joystick
-		suroogete
+		surrogate
 
     pi/create1337
 
 
-	scan disk pro surrogate-kwiksher.local
+	scan disk pro(32GB)
+    surrogate-kwiksher.local
 		donkey
 		OBS
 		surrogate
