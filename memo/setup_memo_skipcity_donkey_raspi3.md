@@ -62,12 +62,18 @@
 
       　sshの設定では、鍵の作成も可能です。その場合は 例えば **donkey_id_rsa**として 名前を変更する
 
+      > この id_rsa はパスフレーズ無し
+
+      ```
+      ssh-keygen -y -f ~/.ssh/donkey_id_rsa
+      ```
+
     - sshを有効
 
       ホストPCから ssh idを登録する
 
       ```
-      ssh-copyi-id -i donkey_id_rsa pi@donkey-endo.local
+      ssh-copy-id -i donkey_id_rsa pi@donkey-endo.local
       ```
 
 1. ホストPCから ssh アクセス

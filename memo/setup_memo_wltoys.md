@@ -1,3 +1,7 @@
+- [ ] https://docs.donkeycar.com/parts/rc/
+
+    - https://www.youtube.com/watch?v=NuVQz7FCAZk
+
 https://rccrawlers.net/2021/02/14/rc-battery-connector/
   タミヤコネクタ
   T型 ディーズンコネクタ
@@ -105,6 +109,16 @@ The Wltoys 144010 Battery's size is 61x33x20mm, Its size is the same as the Wlto
 
       ⭐️専用コネクター#3698-W1
         https://www.super-rc.co.jp/rc/product/view?id=29930
+
+        JST-XH 2 ピン
+        Mini-T用変換ｺﾈｸﾀｰ(7.2Vｺﾈ→Mini-Tｺﾈ)
+        https://eagleonlineshop.com/eagleshop_enduser/shop/ShopProductDetail.aspx?id=2165
+
+        ﾊﾞｯﾃﾘｰ2P変換ｺﾈｸﾀｰ(ｼｮｰﾄ）
+        https://eagleonlineshop.com/eagleshop_enduser/shop/ShopProductDetail.aspx?id=3095S2
+
+        Tコネクターの直列接続用ハーネス
+        https://www.amazon.co.jp/%E3%83%9B%E3%83%93%E3%83%BC%E3%82%AD%E3%83%B3%E3%82%B0-T%E3%82%B3%E3%83%8D%E3%82%AF%E3%82%BF%E3%83%BC%E3%81%AE%E7%9B%B4%E5%88%97%E6%8E%A5%E7%B6%9A%E7%94%A8%E3%83%8F%E3%83%BC%E3%83%8D%E3%82%B9/dp/B0192SBHBG
 
     ⭐️[EMY] T型 2P コネクタ ハンダ部分にチューブ保護不要 (オス メス 10ペア) 24k 金メッキ
     https://amzn.asia/d/0s5oNlO

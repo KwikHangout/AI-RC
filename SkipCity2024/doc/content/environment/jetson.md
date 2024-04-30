@@ -116,7 +116,7 @@ JOYSTICk 拡大写真
 
 1. 学習
 
-    ```mermaid
+    ```mermaidls
     graph TB
 
     subgraph ラジコン

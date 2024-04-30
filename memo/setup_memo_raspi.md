@@ -41,8 +41,14 @@ donkey-kwiksher - raspi3 - update 2023 Jul 28
 raspi 4
 	vnc viewerでアクセスする
 
-	scan disk (64GB)    raspoberrypi.local
+	scan disk (64GB)    kwiksher-solar2d.local
 		solar2D
+    pi/raspberry
+
+  scan disk extreme PRO (32GB)
+    donkey-yolo
+    pi/raspberry
+    64-bit
 
 	scan disk pro (32GB)
    surrogete-rpi.local for Mobile Mover
@@ -148,7 +154,11 @@ raspi 4
     ```
 
 ------
-mac headless raspi
+mac headless raspi - Direct USB Connection (Pi Zero / Zero W Only)
+
+  - https://www.tomshardware.com/reviews/raspberry-pi-headless-setup-how-to,6028.html
+    -  Windows PC: Download and install Bonjour Print Services from apple.com
+
     cmdline.txt
 
         console=serial0,115200 console=tty1 root=PARTUUID=3916cabe-02 rootfstype=ext4 elevator=deadline fsck.repair=yes rootwait modules-load=dwc2,g_ether quiet splash plymouth.ignore-serial-consoles

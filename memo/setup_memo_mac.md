@@ -107,6 +107,8 @@ mac -. rcv:data, out:model.- nano
 
 ---
 
+> Win WSL is now 4.5.0 Ubuntu 22.04 (TODO) update the column below see setup_memo_HX80G.md
+
 | H/W                           | Win              | Mac            | Raspi4 | Jetson nano  | Raspi3 donkey-kwiksher | nano-kwiksher      | skipcity donkey nano   |
 |:------------------------------|:-----------------|:---------------|:-------|:-------------|:-----------------------|:-------------------|------------------------|
 | donkey version                | 5.0 dev3         | 4.5.0          | 4.5.0  | 4.5.0        | 4.5.0                  | 4.5.0              |4.5.0|

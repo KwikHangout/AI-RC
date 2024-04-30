@@ -20,6 +20,12 @@ HX80G ユーザ名
     =>
       powser shellで入力できない、元のscancodeに戻す
 
+  - https://bitto.jp/rdp-keyboard/
+
+    HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layouts\00000411
+
+      KBDJPN.DLL から kbd106.dll に書き換え、再起動
+
 - How to Install OpenGL in Ubuntu in WSL2
 
     https://gist.github.com/Mluckydwyer/8df7782b1a6a040e5d01305222149f3c

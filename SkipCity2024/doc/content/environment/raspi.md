@@ -9,7 +9,7 @@ weight: 2
 ## Raspi Donkey カー
 
 同じ .imgを使用 (HX80G > AI RC Car/raspi3_buster_donkey の.imgを利用)
-- donkey-blue.local
+- **donkey-blue.local**
   - 192.168.100.111
   - throttle, steeringのPWM_STEERING_PINとPWM_THROTTLE_PINの番号を入れ替え
   - THROTTLE_FORWARD_PWM, THROTTLE_REVERSE_PWMも抑えた値に変更
@@ -18,17 +18,27 @@ weight: 2
   - [ ] train behavior
   - [ ] stop sign
 
-  myconfig.py
-  ```
-  TRAIN_BEHAVIORS = True
-  BEHAVIOR_LIST = ['Left_Lane', "Right_Lane", "Center_Lane"]
-  BEHAVIOR_LED_COLORS = [(0, 10, 0), (10, 0, 0)]  #RGB tuples 0-100 per chanel
+    myconfig.py
+    ```
+    TRAIN_BEHAVIORS = True
+    BEHAVIOR_LIST = ['Left_Lane', "Right_Lane"]
+    BEHAVIOR_LED_COLORS = [(0, 10, 0), (10, 0, 0)]  #RGB tuples 0-100 per chanel
 
-  ```
+    ```
 
-  ```
-  python manage.py drive --js --model models/my_beh.h5 --type behavior
-  ```
+    ```
+    python manage.py drive --js --model models/my_beh.h5 --type behavior
+
+    donkey train --tub ./data --model ./models/mypilot_behvior.h5 --type behavior
+    ```
+
+    ```
+    user/throttle > 0.01  and user/throttle < 0.9
+    ```
+
+    ```
+     def run(self, mode, recording, recording_alert, behavior_state, model_file_changed, track_loc):
+     ```rm
 
 - donkey-endo.local
   - 192.168.100.108
