@@ -5,12 +5,20 @@
  Robocar donkey console and donkey app on iOS/Android are created by robocar store
 
  - https://github.com/robocarstore
+  - https://docs.donkeycar.com/guide/deep_learning/mobile_app/
+
+    {{<img src="./img/2024-05-01-11-25-18.png" width="300">}}
 
 
 DonkeyCopilot" is WEB controller application for DonkeyCar made by @covao
 
 
 - https://github.com/covao/DonkeyCopilot
+
+  - https://covao.github.io/DonkeyCopilot/copilot.html?demo
+
+  {{<img src="./img/2024-05-01-11-25-49.png" width="400">}}
+
 
 
 ```mermaid
@@ -26,9 +34,9 @@ sequenceDiagram
     App ->> Raspi Console: drive
     Raspi Console ->> Raspi Car: manage.py drive
 
-   Joystick ->> Raspi Car: drive
+   Joystick ->> Raspi Car: driving manually
 
-    Raspi Car ->> Raspi Car: record data
+    Raspi Car ->> Raspi Car: recording data
 
     App ->> Raspi Console: stop
 
@@ -54,7 +62,9 @@ sequenceDiagram
 
     Raspi Console ->>Raspi Car: manage.py drive --model pillot.h5
 
-    Joystick ->> Raspi Car: auto steering, full auto pilot or  manual driving
+    Joystick ->> Raspi Car: drive mode: auto steering, full auto pilot
+
+    Raspi Car ->>Raspi Car: self driving
 
 ```
 - PC
