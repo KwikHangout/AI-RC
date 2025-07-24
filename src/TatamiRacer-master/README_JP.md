@@ -105,9 +105,11 @@ UI操作画面を見るにはクリックしてください
 [Donkey Copilot ブラウザデモ](https://covao.github.io/DonkeyCopilot/copilot.html?demo)
 
 ----
-## JLPCB
+## PCBWay
 
-$18=¥2600
+$35=¥5000 (送料 $25)
+
+<img src="./img/2025-07-24-10-00-32.png" width="600" class="popup-image">
 
 ## 本体価格
 
@@ -117,30 +119,41 @@ $18=¥2600
 | Raspberry Pi 3 Model A+ | ￥4,620 | [商品ページ](https://akizukidenshi.com/catalog/g/g114878/) |
 | Raspberry Pi Zero 2 W | ￥3,190 | [商品ページ](https://akizukidenshi.com/catalog/g/g117398/) |
 
+
+<img src="./img/2025-07-24-10-28-33.png" width="300" class="popup-image">
+¥800
+
 ---
 
 ## 部品価格一覧
 
 | 部品名 | 価格 | 備考・リンク |
 |:---|:---|:---|
-| カメラ V2 | ￥3,000 | [商品ページ](https://akizukidenshi.com/catalog/g/g110518/) |
-| バッテリー (明誠 C0303 モバイルバッテリー) | ￥1,450 | [Amazon](https://www.amazon.co.jp/dp/B07Q5M3CLQ/?th=1) |
+| ミニ四駆 キット (ぞうさん5:1ギア) | ￥1,500 | [Amazon](https://www.amazon.co.jp/dp/B08VX3W3Q6/) <br> <img src="./img/2025-07-24-10-05-45.png" width="400" class="popup-image">|
+| F710 | ￥5,200 | [Amazon](https://www.amazon.co.jp/dp/B00CDG7994/?th=1) <br> <img src="./img/2025-07-23-14-14-07.png" width="600" class="popup-image"> |
+| バッテリー (明誠 C0303 モバイルバッテリー) | ￥1,450 | [Amazon](https://www.amazon.co.jp/dp/B07Q5M3CLQ/?th=1) <br> <img src="./img/2025-07-24-09-56-27.png" width="200" class="popup-image">|
+| TypC- USB L型 | ￥1,000 | ショートケーブル15-20cm <br> <img src="./img/2025-07-23-14-12-21.png" width="600" class="popup-image"> |
+| カメラ V2 | ￥3,000 | [商品ページ](https://akizukidenshi.com/catalog/g/g110518/) <br> <img src="./img/2025-07-24-09-57-07.png" width="400" class="popup-image">|
+| サーボ (TowerPro SG90) | ￥1,200 | TowerPro SG90(0.1sec/60度) <br> <img src="./img/2025-07-23-13-59-53.png" width="600" class="popup-image"> |
 | DCモーター用/Hブリッジ L298N | ￥700 | [Amazon](https://www.amazon.co.jp/dp/B083DT2DMV/) <br> <img src="./img/2025-07-23-13-57-35.png" width="600" class="popup-image"> |
 | ピンヘッダー | ￥700 | オス 90度 / モータードライバー用 <br> 単行 40ポジション 2.54 mmピッチ 2個 <br> [Amazon](https://www.amazon.co.jp/dp/B00V4V703O/) <br> <img src="./img/2025-07-23-13-57-07.png" width="600" class="popup-image"> |
-| 130 DC モーター | ￥1,400 | タミヤ エレクラフトシリーズ No.28 低回転型130モーター 模型工作用モーター 75028 <br> [Amazon](https://www.amazon.co.jp/dp/B005AFBLIA/) <br> <img src="./img/2025-07-23-13-59-24.png" width="600" class="popup-image"> |
-| サーボ (TowerPro SG90) | ￥1,200 | TowerPro SG90(0.1sec/60度) <br> <img src="./img/2025-07-23-13-59-53.png" width="600" class="popup-image"> |
-| ミニ四駆 キット (ぞうさん5:1ギア) | ￥1,500 | [Amazon](https://www.amazon.co.jp/dp/B08VX3W3Q6/) |
-| ローラーパーツ | ￥600 | スペーサーとM2x10ネジが必要 <br> <img src="./img/2025-07-23-14-05-24.png" width="600" class="popup-image"> |
-| タミヤ ミニ四駆 グレードアップパーツシリーズ (ステンレスビスセット) | ￥300 | M2x15またはM2x16 mm ボルト <br> No.508 GP.508 ステンレスビスセット 15・20・25・30mm 15508 <br> <img src="./img/2025-07-23-14-07-22.png" width="600" class="popup-image"> |
-| タミヤ ミニ四駆 72mm シャフト | ￥150 | Tamiya Grade-Up Parts Series Black Reinforced Shaft (4 Pieces), 2.8 inches / 72 mm, GP.417, 15417 <br> [Amazon](https://www.amazon.co.jp/dp/B003GALRS0/) <br> <img src="./img/2025-07-23-14-09-49.png" width="600" class="popup-image"> |
 | ジャンパーケーブル | ￥700 | メスコネクタからメスコネクタ 10cm <br> <img src="./img/2025-07-23-14-11-32.png" width="600" class="popup-image"> |
-| TypC- USB L型 | ￥1,000 | ショートケーブル15-20cm <br> <img src="./img/2025-07-23-14-12-21.png" width="600" class="popup-image"> |
-| F710 | ￥5,200 | [Amazon](https://www.amazon.co.jp/dp/B00CDG7994/?th=1) <br> <img src="./img/2025-07-23-14-14-07.png" width="600" class="popup-image"> |
+| タミヤ 130 DC モーター 75028 | ￥1,400 | タミヤ エレクラフトシリーズ No.28 低回転型130モーター 模型工作用モーター 75028 <br> [Amazon](https://www.amazon.co.jp/dp/B005AFBLIA/) <br> <img src="./img/2025-07-23-13-59-24.png" width="600" class="popup-image"> |
+| タミヤ ミニ四駆 グレードアップパーツシリーズ 15435 <br>ファーストトライパーツ<br>ローラーパーツ | ￥600 | スペーサーとM2x10ネジが必要 <br> <img src="./img/2025-07-23-14-05-24.png" width="600" class="popup-image"> |
+| タミヤ ミニ四駆 グレードアップパーツシリーズ <br> ステンレスビスセット | ￥300 | M2x15またはM2x16 mm ボルト <br> No.508 GP.508 ステンレスビスセット 15・20・25・30mm 15508 <br> <img src="./img/2025-07-23-14-07-22.png" width="600" class="popup-image"> |
+| タミヤ ミニ四駆 グレードアップパーツシリーズ <br>72mm シャフト | ￥150 | Tamiya Grade-Up Parts Series Black Reinforced Shaft (4 Pieces), 2.8 inches / 72 mm, GP.417, 15417 <br> [Amazon](https://www.amazon.co.jp/dp/B003GALRS0/) <br> <img src="./img/2025-07-23-14-09-49.png" width="600" class="popup-image"> |
+
 
 ---
 
 **合計部品費（Raspberry Piとmicro SDカードを除く）**
 **約 18,000円**
+
+合計
+
+- rapsi (3200~9200円) + SDカード (1000円) + PCBWay 5000円
+
+=> 27400円 ~ 32400円
 
 ----
 
@@ -171,7 +184,7 @@ DCモーター用/Hブリッジ ⭐️
   ¥700
   https://www.amazon.co.jp/dp/B083DT2DMV/
 
-  <img src="./img/2025-07-23-13-57-35.png" width="600" class="popup-image">
+
 
 ---
 ピンヘッダー ⭐️
@@ -181,7 +194,7 @@ DCモーター用/Hブリッジ ⭐️
   https://www.amazon.co.jp/dp/B00V4V703O/
 
 
-  <img src="./img/2025-07-23-13-57-07.png" width="600" class="popup-image">
+
 
 ---
 130 DC モーター
@@ -189,14 +202,14 @@ DCモーター用/Hブリッジ ⭐️
   タミヤ エレクラフトシリーズ No.28 低回転型130モーター 模型工作用モーター 75028
   https://www.amazon.co.jp/dp/B005AFBLIA/
 
-  <img src="./img/2025-07-23-13-59-24.png" width="600" class="popup-image">
+
 
 ---
 サーボ
   ¥1200
   TowerPro SG90(0.1sec/60度)
 
-  <img src="./img/2025-07-23-13-59-53.png" width="600" class="popup-image">
+
 
 ---
 ミニ四駆 キット
@@ -208,14 +221,14 @@ DCモーター用/Hブリッジ ⭐️
 ローラーパーツ
   スペーサーとM2x10ネジが必要
   ¥600
-  <img src="./img/2025-07-23-14-05-24.png" width="600" class="popup-image">
+
 
 ---
 タミヤ ミニ四駆 グレードアップパーツシリーズ
   ¥300
   M2x15またはM2x16 mm ボルト
   No.508 GP.508 ステンレスビスセット 15・20・25・30mm 15508
-  <img src="./img/2025-07-23-14-07-22.png" width="600" class="popup-image">
+
 
 ---
 タミヤ ミニ四駆 72mm シャフト
@@ -223,23 +236,23 @@ DCモーター用/Hブリッジ ⭐️
   Tamiya Grade-Up Parts Series Black Reinforced Shaft (4 Pieces), 2.8 inches / 72 mm, GP.417, 15417
   https://www.amazon.co.jp/dp/B003GALRS0/
 
-  <img src="./img/2025-07-23-14-09-49.png" width="600" class="popup-image">
+
 
 ---
 ジャンパーケーブル
   ¥700
   メスコネクタからメスコネクタ 10cm
-  <img src="./img/2025-07-23-14-11-32.png" width="600" class="popup-image">
+
 
 ---
 TypC- USB L型
   ¥1000
   ショートケーブル15-20cm
-  <img src="./img/2025-07-23-14-12-21.png" width="600" class="popup-image">
+
 
 ---
 F710
   ¥5200
   https://www.amazon.co.jp/dp/B00CDG7994/?th=1
-  <img src="./img/2025-07-23-14-14-07.png" width="600" class="popup-image">
+
 
