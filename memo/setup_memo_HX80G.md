@@ -1,7 +1,7 @@
 HX80G ユーザ名
 
 - user:ymmtny w/o @gmail.com
-- password:s****1
+- password:s****1 or PC
 
   >!DonkeySkipCity2024 に変更した
 

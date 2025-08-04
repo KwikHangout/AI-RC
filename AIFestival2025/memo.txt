@@ -1,0 +1,83 @@
+https://github.com/covao/TatamiRacer
+https://speakerdeck.com/covao/minisi-qu-besunoaika-tatamiracernozhi-zuo?slide=6
+
+tatamiracer_kit.stl
+  PLA 0.12mmで 14時間
+  半田づけはピンヘッダのみ
+
+slide7　カストマイズ
+  タイヤとギア比のカスタマイズ
+  カスタマイズ例
+  平坦な路面 (フローリング、畳など)
+  ・中径ホイール (20mm) + 標準ゴムタイヤ (またはスポンジタイヤ)
+  ・ギア比 5:1
+  粗い路面 (ビニールシートなど)
+  ・大径ホイール (23mm) + コミカルミニ四駆シリーズPAJEROのタイヤ
+  ・ギア比 6.7:1 (光造形による自作の6Tピニオンギア)
+  ・かみ合わせをよくするためスペーサーを入れてます
+
+  https://www.amazon.co.jp/dp/B07VQK3XVV/
+  https://make.dmm.com/item/1465687/
+
+  =>
+    https://make.dmm.com/market/shop/265720/
+    9,980円　クリアレジン/SLA
+
+
+  https://speakerdeck.com/covao/simulink
+  差動２輪オプション
+
+--------
+
+9/13(土) 20(土) KAIT AI技術を自動運転ラジコンカーで学ぶ　高大連携講座
+
+ python 3.7
+ ubuntu 22
+
+raspi 3A
+battery
+  keeper 18350 16000nAg
+  だいたい１時間走行できる
+  KeepPower 18350リチウムイオンバッテリー (2本セット) ¥1900
+
+充電器が必要
+F710
+
+
+
+WiFi Router
+  SSID KAIT-RACER 10.20.171.221
+
+donkey 4.4.0
+ tensor flow 2.2.0
+baster
+
+あらかじめデータセットを入れておいて ２、３周だけのデータをマージする
+
+ミニ授業です x 6-8席 午前１回、 午後１回
+  KAIT QTを触りながら、AI RCカーの仕組み解説
+    SDカードが刺さっているほうがパソコンのスイッチ
+  - 走行データ取得
+  - 学習 python mangage.py train を実行
+  - AI 走行を確認
+
+  KAIT QT か Donkey 1/16 どちらかを決定する
+  ２台
+
+  パソコン２台
+    HX80G
+    Notebook from Fabo?
+
+
+--------
+
+皆様 署中お見合い申し上げます。
+
+すこし先になりますが、11月8日(土)に 秋葉原で THIRDWAVE主催のAIフェステイバル2025のイベントが開催されます。
+
+AIでRCカーを走らせよう！のコミュニティのみなさま 参加無料ですので AIフェスで AI RCカーを走らせてみませんか？ 下記のconnpassのイベントページで募集を開始いたしましたので、ご検討のほど 宜しくお願いします。
+
+  AI Fes でRCカーを走らせよう! 11/8(土) ベルサール秋葉原
+  https://ai-rc-mft2023.connpass.com/event/362203/
+
+ご質問などあれば、お気軽にコメント頂ければ幸いです。

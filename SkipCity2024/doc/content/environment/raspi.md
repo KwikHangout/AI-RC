@@ -27,7 +27,7 @@ weight: 2
     ```
 
     ```
-    python manage.py drive --js --model models/my_beh.h5 --type behavior
+    python manage.py drive --js --model models/mypilot_behavior.h5 --type behavior
 
     donkey train --tub ./data --model ./models/mypilot_behvior.h5 --type behavior
     ```

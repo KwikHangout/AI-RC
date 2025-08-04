@@ -62,13 +62,41 @@ li { font-size: 20px }
 
 </style>
 
-<div align="right">
-<small > FacebookグループのコミュニティURL <br>
-<img src="./img/2023-10-03-19-53-51.png" width="100">
-</small></div>
 
+<div class="colwrap">
+<div class="left">
 
-# AIでRCカーを走らせよう！ コミュニティ MFT 2023
+<center>
+<img src="./img/AI_RC_CAR_half.png">
+<br>since 2018
+
+<br> AIやIoT・ロボットに取り組む方ならば、誰でも入れる Facebookのオンライングループやってます <br>
+<img src="./img/2023-10-03-19-53-51.png" width="100"></center>
+
+</div>
+
+<div class="right">
+
+自己紹介
+
+- 山本直也
+- 静岡県掛川市在住
+- 得意技
+
+  - Solar2D
+  - App development extension for Adobe Photoshop
+  https://kwiksher.com/
+  - Storyboard Editor Plugin For AdobeXD
+    https://storyboard.ink/
+
+    <img src="./img/2024-07-28-10-33-13.png" width="300">
+    <img src="./img/2024-07-28-10-33-42.png" width="300">
+
+</div>
+
+---
+<div class="colwrap">
+<div class="left">
 
 - **AIカーの魅力と可能性**：AI（人工知能）で自動走行する模型の自動車「AIカー」
 - **AIカーの今後の展望**：AIカーをレースのような形で突き詰めることで、自動運転の技術革新につながる可能性を示唆。
@@ -77,138 +105,7 @@ li { font-size: 20px }
 <br>
 <div align="center">The next big thing will start out looking like a toy <br> <small>Innovators's Dilemma by Clay Christensen</small></div>
 
-
-<div align="right">
-<small>
-<br> AIやIoT・ロボットに取り組む方ならば、<br>誰でも入れるオンライングループです
-<br>2023
-</small>
-</div>
-
-<div class="colwrap">
-<div class="left">
 </div>
 <div class="right">
-</div>
-
----
-<div class="colwrap">
-<div class="left">
-New Fabo 1/28 カー
-
-<img src="./img/2023-08-29-19-55-32.png" width="900">
-</div>
-<div class="right">
-1/16 HSP-94186  (ドンキーカー)
-
-<img src="./img/2023-08-29-20-01-00.png" width="600"></div>
-
----
-<!--_header: 'https://www.mdpi.com/2079-9292/10/17/2102'-->
-
-<div class="colwrap">
-<div class="left">
-</div>
-<div class="right">
-</div>
-<br>
-
-カメラ、コンピューター、モータ制御
-1. 人間が操作して10～15周くらいコース上を走らせます
-2. 人間の操作からAIが運転方法を取得(AIの学習モデル構築)
-3. カメラの画像からAIが「こんな風景のときは“ステアリング”と“スロットル”こうだったよねと自動走行します。
-
-<img src="./img/2023-08-29-20-14-57.png" width="1200">
-
-
-
----
-<!--_header: 'https://github.com/NVIDIA-AI-IOT/jetracer'-->
-
-
-<img src="./img/2023-08-29-21-02-49.png" width="1000">
-
----
-
-<img src="fabo/FaBo_JetRacer_Kit_Red.png" width="1200">
-
----
-chatGPTと同じTransformerのAIモデルへと進化中
-<img src="./img/2023-08-30-10-43-17.png" width="1200">
-
----
-
-<img src="./img/2023-08-30-10-42-05.png" width="1200">
-
----
-
-<br>ぬりえ タミヤ 1/10 トヨタ GR 86 (TT-02シャーシ) レッド
-
-![](./img/Firefly_20231003155203.png)
-
-- https://fabo.store/collections/jetracer/products/fabo-jetracer-kit-carbon-edition
-
----
-
-What does AI mean to you?
-
-<img src="./img/2023-12-16-11-53-14.png" width="1080">
-
----
-
-<div class="colwrap">
-<div class="left">
-
-![right h:300](./img/2023-10-03-14-55-19.png)
-![right w:440](./img/2023-10-03-15-43-55.png)
-
-</div><div class="right">
-
-- 展示で用意した絵は Adobeのgenerative fillとrecolor
-
-- 以下の紹介資料の文言は Bing AIで以前の遠藤さんの記事を要約
-　
-  - AIカーの魅力と可能性：AI（人工知能）で自動走行する模型の自動車「AIカー」
-
-  - AIカーの今後の展望：AIカーをレースのような形で突き詰めることで、自動運転の技術革新につながる可能性を示唆。
-
-  - AI/ロボットの楽しさや教育性: Generative AIやIoT, メカトロニクスを伝える。
-
-
-- デュアルマッチ（リーグ戦）の対戦順は chatGPTが得意な大学生にお願いして、一瞬で連チャンで試合にならないように、組み合わせが出来上がりました。
-
----
-<div align="center">
-<img src="./img/2023-12-17-10-39-51.png" width="1080">
-
----
-
-BBQ in Tokyo
-
-<img src="./img/2023-12-16-11-49-28.png" width="1080">
-
----
-
-<img src="./img/2023-12-16-11-50-39.png" width="1080">
-
----
-
-海外では 16 Macau & Hong Kong school team in the race.
-
-<img src="./img/2023-12-16-11-56-58.png" width="1080">
-
----
-
-[Fabo 佐々木さんが優勝](https://www.facebook.com/1528500579/videos/740868718078250/)
-
-<div align="center">
-<img src="./img/2023-12-16-12-09-27.png" width="600">
-</div>
-
----
-
-2024 首都圏某所で準備中
-
-<div align="center">
-
-<img src="./img/2023-12-16-12-18-25.png" width="600">
+<img src="./img/2024-07-28-10-13-35.png" height="500">
+<br>1/16 HSP-94186, Raspberry Pi 3A+

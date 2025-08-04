@@ -353,6 +353,10 @@
 # TFMINI_SERIAL_PORT = "/dev/serial0" # tfmini serial port, can be wired up or use usb/serial adapter
 #
 # #TRAINING
+def filter_record(record):
+    return record.underlying['user/throttle'] > 0
+
+TRAIN_FILTER = filter_record
 # # The default AI framework to use. Choose from (tensorflow|pytorch)
 # DEFAULT_AI_FRAMEWORK = 'tensorflow'
 #
@@ -362,7 +366,7 @@
 # # python manage.py train and drive commands.
 # # tensorflow models: (linear|categorical|tflite_linear|tensorrt_linear)
 # # pytorch models: (resnet18)
-DEFAULT_MODEL_TYPE = "linear"
+# DEFAULT_MODEL_TYPE = 'linear'
 # BATCH_SIZE = 128                #how many records to use when doing one pass of gradient decent. Use a smaller number if your gpu is running out of memory.
 # TRAIN_TEST_SPLIT = 0.8          #what percent of records to use for training. the remaining used for validation.
 # MAX_EPOCHS = 100                #how many times to visit all records of your data
@@ -481,6 +485,9 @@ DEFAULT_MODEL_TYPE = "linear"
 #                            # such that augmentations are applied to the transformed image,
 # POST_TRANSFORMATIONS = []  # transformations applied _after_ training augmentations,
 #                            # such that changes are applied to the augmented image
+
+AUGMENTATIONS = ['MULTIPLY', 'BLUR']
+TRANSFORMATIONS = ['TRAPEZE']
 #
 # # Settings for brightness and blur, use 'MULTIPLY' and/or 'BLUR' in
 # # AUGMENTATIONS
@@ -638,7 +645,7 @@ DEFAULT_MODEL_TYPE = "linear"
 # AUTO_CREATE_NEW_TUB = False     #create a new tub (tub_YY_MM_DD) directory when recording or append records to data directory directly
 #
 # #LED
-HAVE_RGB_LED = True         #do you have an RGB LED like https://www.amazon.com/dp/B07BNRZWNF
+# HAVE_RGB_LED = False            #do you have an RGB LED like https://www.amazon.com/dp/B07BNRZWNF
 # LED_INVERT = False              #COMMON ANODE? Some RGB LED use common anode. like https://www.amazon.com/Xia-Fly-Tri-Color-Emitting-Diffused/dp/B07MYJQP8B
 #
 # #LED board pin number for pwm outputs
@@ -676,9 +683,9 @@ HAVE_RGB_LED = True         #do you have an RGB LED like https://www.amazon.com/
 # #BEHAVIORS
 # #When training the Behavioral Neural Network model, make a list of the behaviors,
 # #Set the TRAIN_BEHAVIORS = True, and use the BEHAVIOR_LED_COLORS to give each behavior a color
-TRAIN_BEHAVIORS = True
-BEHAVIOR_LIST = ['Left_Lane', "Right_Lane"]
-BEHAVIOR_LED_COLORS = [(0, 10, 0), (10, 0, 0)]  #RGB tuples 0-100 per chanel
+# TRAIN_BEHAVIORS = True
+# BEHAVIOR_LIST = ['Left_Lane', "Right_Lane"]
+# BEHAVIOR_LED_COLORS = [(0, 10, 0), (10, 0, 0)]  #RGB tuples 0-100 per chanel
 #
 # #Localizer
 # #The localizer is a neural network that can learn to predict its location on the track.
