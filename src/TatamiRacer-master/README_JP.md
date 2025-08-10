@@ -131,7 +131,7 @@ $35=¥5000 (送料 $25)
 |:---|:------------------------------------------------------------------------------------------------|:--------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | A | ミニ四駆 キット (ぞうさん5:1ギア)                                                               | ￥1,500 | [Amazon](https://www.amazon.co.jp/dp/B08VX3W3Q6/) <br> <img src="./img/2025-07-24-10-05-45.png" width="400" class="popup-image">                                                                                                                   |
 |   | F710                                                                                            | ￥5,200 | [Amazon](https://www.amazon.co.jp/dp/B00CDG7994/?th=1) <br> <img src="./img/2025-07-23-14-14-07.png" width="600" class="popup-image">                                                                                                              |
-| A | バッテリー (明誠 C0303 モバイルバッテリー)                                                      | ￥1,450 | [Amazon](https://www.amazon.co.jp/dp/B07Q5M3CLQ/?th=1) <br> <img src="./img/2025-07-24-09-56-27.png" width="200" class="popup-image">                                                                                                              |
+| A | バッテリー (明誠 C0303 モバイルバッテリー)  <br> <br> ※Type A to Type CのUSBで充電                                                  | ￥1,450 | [Amazon](https://www.amazon.co.jp/dp/B07Q5M3CLQ/?th=1) <br> <img src="./img/2025-07-24-09-56-27.png" width="200" class="popup-image">                                                                                                              |
 | A<br>(残2) | TypC- USB L型                                                                                   | ￥1,000 | ショートケーブル15-20cm <br> [e.g. aceyoon](https://www.amazon.co.jp/dp/B0B4JQ41SW/) <img src="./img/2025-07-23-14-12-21.png" width="600" class="popup-image">                                                                                     |
 | A | カメラ V2                                                                                       | ￥3,000 | [秋月 商品ページ](https://akizukidenshi.com/catalog/g/g110518/) <br> <a href="https://www.amazon.co.jp/exec/obidos/ASIN/B086MK17K5/beatnix06-22/">Amazon 1500円</a><br> <img src=ω"./img/2025-07-24-09-57-07.png" width="400" class="popup-image"> |
 | A<br>(残1)| サーボ (TowerPro SG90)                                                                          | ￥1,200 | TowerPro SG90(0.1sec/60度) <br>  [リンク](https://www.ωamazon.co.jp/dp/B016FKJJ8M/) <br><img src="./img/2025-07-23-13-59-53.png" width="600" class="popup-image">                                                                                  |
@@ -661,8 +661,7 @@ This setup should allow you to control your DC motors with the MX1508 driver fro
 
 tatamiracerzero.local
 
-BIRDS CoworkingxFUKURO
-
+BIRDS Coworking×FUKUROI
 ----
 
 短いUSBケーブル（A-microBタイプ）10cm
@@ -690,4 +689,150 @@ https://www.amazon.co.jp/-/en/RasTech-Raspberry-Camera-Megapixels-ZERO1-3/dp/B08
 <img src="./img/2025-08-04-10-12-53.png" width="600" class="popup-image">
 
 
+---
 
+Raspi imager
+
+{{<img src="./img/2025-08-10-14-51-34.png" width="600" class="popup-image">}}
+
+- General
+
+  {{<img src="./img/2025-08-10-14-53-42.png" width="600" class="popup-image">}}
+
+  - hostname: tatamiracer-zero.local
+  - username: pi
+  - wifi SSID: Your WiFi (2.4GHz)
+
+- Enable SSH
+  - use password auth: true
+
+  > if not work, put `ssh` empty file in boot/ directory of the sd card
+
+  {{<img src="./img/2025-08-10-14-52-53.png" width="600" class="popup-image">}}
+
+config.txt
+
+  Before
+  ```
+  #hdmi_safe=1
+  #framebuffer_width=1280
+  #framebuffer_height=720
+  dtoverlay=vc4-kms-v3d
+  ```
+
+  After
+  ```
+  hdmi_safe=1
+  framebuffer_width=1280
+  framebuffer_height=720
+  #dtoverlay=vc4-kms-v3d
+  ```
+
+ wpa_supplicant.conf
+
+ ```
+ country=JP
+  ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+  update_config=1
+  network={
+      ssid="BIRDS Coworking×FUKUROI"
+      psk="xxxxx"
+  }
+  ```
+
+https://docs.donkeycar.com/guide/robot_sbc/setup_raspberry_pi/
+
+Installation for Donkeycar <= 4.5 using Raspberry Pi OS Buster
+
+- [step6](https://docs.donkeycar.com/guide/robot_sbc/setup_raspberry_pi/#step-6-update-and-upgrade)
+
+```
+sudo apt-get update --allow-releaseinfo-change
+sudo apt-get upgrade
+```
+
+```
+sudo raspi-config
+```
+- i2c
+- camera
+- expand filesystem
+
+Step 8
+
+```
+sudo apt-get install build-essential python3 python3-dev python3-pip python3-virtualenv python3-numpy python3-picamera python3-pandas python3-rpi.gpio i2c-tools avahi-utils joystick libopenjp2-7-dev libtiff5-dev gfortran libatlas-base-dev libopenblas-dev libhdf5-serial-dev libgeos-dev git ntp
+```
+
+Step 10
+
+```
+python3 -m virtualenv -p python3 env --system-site-packages
+echo "source ~/env/bin/activate" >> ~/.bashrc
+source ~/.bashrc
+```
+
+Step 11
+
+```
+mkdir projects
+cd projects
+
+git clone https://github.com/autorope/donkeycar
+cd donkeycar
+git fetch --all --tags -f
+git checkout 4.5.1
+```
+
+⭐️Install opencv-python**
+
+```
+pip install opencv-python==4.5.1.48
+
+```
+
+```
+pip install -e .[pi]
+pip install https://github.com/lhelontra/tensorflow-on-arm/releases/download/v2.2.0/tensorflow-2.2.0-cp37-none-linux_armv7l.whl
+```
+
+- Check tensorflow version
+
+  ```
+  python -c "import tensorflow; print(tensorflow.__version__)"
+  ```
+
+  - Fix
+
+    ```
+    pip install protobuf==3.20.1
+    ```
+
+### VNC
+
+  - https://www.freva.com/how-to-fix-cannot-currently-show-the-desktop-on-raspberry-pi/
+
+  ```
+  echo 'hdmi_force_hotplug=1'>> /boot/config.txt
+  echo 'hdmi_group=2'>> /boot/config.txt
+  echo 'hdmi_mode=51'>> /boot/config.txt
+  ```
+
+
+  ```
+  sudo apt install xserver-xorg lightdm lxde-core lxterminal
+  ```
+
+
+## Create mycar
+
+```
+donkey createcar --path ~/mycar
+```
+
+[Setup TatamiRacer by Shell Script](https://github.com/covao/TatamiRacer/blob/master/doc/HowToSetupSoftware.md#setup-tatamiracer-by-shell-script)
+
+```
+wget "https://raw.githubusercontent.com/covao/TatamiRacer/master/raspi/install/setup_tatamiracer.sh" -O "setup_tatamiracer.sh"
+sh -x setup_tatamiracer.sh
+```
