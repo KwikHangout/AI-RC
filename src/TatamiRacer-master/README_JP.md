@@ -172,7 +172,10 @@ F710: ¥5,200
   ￥3,000
   https://akizukidenshi.com/catalog/g/g110518/
 
-  ¥1400
+  ¥1400 RasTech Raspberry Pi Camera Module, Raspberry Pi Camera 5 Megapixels
+
+  >ov5647
+
   https://www.amazon.co.jp/exec/obidos/ASIN/B086MK17K5/beatnix06-22/
 
 ---
@@ -703,12 +706,16 @@ Raspi imager
   - username: pi
   - wifi SSID: Your WiFi (2.4GHz)
 
-- Enable SSH
-  - use password auth: true
+- Enable SSH : don't make it true
 
-  > if not work, put `ssh` empty file in boot/ directory of the sd card
+  put `ssh` empty file in boot/ directory of the sd card
 
   {{<img src="./img/2025-08-10-14-52-53.png" width="600" class="popup-image">}}
+
+
+  ```
+  ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no pi@192.168.68.50
+  ```
 
 config.txt
 
@@ -808,7 +815,16 @@ pip install https://github.com/lhelontra/tensorflow-on-arm/releases/download/v2.
     pip install protobuf==3.20.1
     ```
 
+---
+
+https://github.com/covao/TatamiRacer/blob/master/doc/HowToSetupSoftware.md#install-donkey-car-application-for-raspberry-pi
+
 ### VNC
+
+```
+sudo apt install realvnc-vnc-server realvnc-vnc-viewer
+sudo raspi-config nonint do_vnc 0
+```
 
   - https://www.freva.com/how-to-fix-cannot-currently-show-the-desktop-on-raspberry-pi/
 
@@ -823,7 +839,6 @@ pip install https://github.com/lhelontra/tensorflow-on-arm/releases/download/v2.
   sudo apt install xserver-xorg lightdm lxde-core lxterminal
   ```
 
-
 ## Create mycar
 
 ```
@@ -836,3 +851,52 @@ donkey createcar --path ~/mycar
 wget "https://raw.githubusercontent.com/covao/TatamiRacer/master/raspi/install/setup_tatamiracer.sh" -O "setup_tatamiracer.sh"
 sh -x setup_tatamiracer.sh
 ```
+
+```
+arp -a | gre@ 2c:cf
+```
+
+camera
+
+
+- raspistill
+
+  ```
+  vcgencmd get_camera
+
+  sudo raspistill -o image.jpg
+  ```
+
+- raspivid
+
+- libcamera-hello
+
+```
+sudo apt install libcamera-apps
+```
+
+https://zenn.dev/kobayutapon/articles/490d93ab683337
+
+- V1 camera (OV5647)	dtoverlay=ov5647
+- V2 camera (IMX219)	dtoverlay=imx219
+
+```
+sudo raspi-config nonint do_legacy 0
+```
+
+```
+hdmi_force_hotplug=1
+hdmi_group=2
+hdmi_mode=51
+
+[all]
+dtoverlay=vc4-fkms-v3d
+#dtoverlay=vc4-kms-v3d,nocomposite
+#dtoverlay=ov5647
+dtoverlay=imx219
+
+## Setup TatamiRacer by Shell Script
+
+wget "https://raw.githubusercontent.com/covao/TatamiRacer/master/raspi/install/setup_tatamiracer.sh" -O "setup_tatamiracer.sh"
+sh -x setup_tatamiracer.sh
+
