@@ -894,6 +894,7 @@ dtoverlay=vc4-fkms-v3d
 #dtoverlay=vc4-kms-v3d,nocomposite
 #dtoverlay=ov5647
 dtoverlay=imx219
+```
 
 ## Setup TatamiRacer by Shell Script
 
