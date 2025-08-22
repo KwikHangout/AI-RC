@@ -853,7 +853,7 @@ sh -x setup_tatamiracer.sh
 ```
 
 ```
-arp -a | gre@ 2c:cf
+arp -a | grep 2c:cf
 ```
 
 camera
@@ -900,3 +900,17 @@ dtoverlay=imx219
 wget "https://raw.githubusercontent.com/covao/TatamiRacer/master/raspi/install/setup_tatamiracer.sh" -O "setup_tatamiracer.sh"
 sh -x setup_tatamiracer.sh
 
+
+bullseys
+https://zenn.dev/kobayutapon/articles/490d93ab683337
+
+
+----
+
+前輪とサーボ
+
+{{<img src="./img/2025-08-21-11-15-00.png" width="600" class="popup-image">}}
+
+{{<img src="./img/2025-08-21-11-16-34.png" width="600" class="popup-image">}}
+
+sudo systemctl restart pigpiod

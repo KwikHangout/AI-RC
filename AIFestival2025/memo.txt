@@ -1,3 +1,6 @@
+
+
+
 https://github.com/covao/TatamiRacer
 https://speakerdeck.com/covao/minisi-qu-besunoaika-tatamiracernozhi-zuo?slide=6
 
@@ -29,7 +32,8 @@ slide7　カストマイズ
 
 --------
 
-9/13(土) 20(土) KAIT AI技術を自動運転ラジコンカーで学ぶ　高大連携講座
+2025/9/20(土)
+  AIで走る自動運転カーレース「KAIT Racer GP 8」2025/9/20(土)神奈川県 厚木市で開催します．
 
  python 3.7
  ubuntu 22
@@ -46,7 +50,8 @@ F710
 
 
 WiFi Router
-  SSID KAIT-RACER 10.20.171.221
+  SSID: KAIT-RACER 10.20.171.221
+  Pass: kanagawa12
 
 donkey 4.4.0
  tensor flow 2.2.0
