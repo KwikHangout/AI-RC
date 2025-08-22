@@ -45,7 +45,7 @@ TatamiRacerは、[「タミヤ ミニ四駆」キット](https://www.tamiya.com/
 | M2x15またはM2x16 mm ボルト | フロントホイールシャフト用 |+|+| [15508](https://www.amazon.co.jp/dp/B01MXVKDOM/),  [15233](https://www.amazon.co.jp/dp/B001VZE9MS/)| [リンク](https://www.amazon.com/dp/B07YS5ZSZH/) |
 | タミヤ ミニ四駆 72mm シャフト | 延長リアシャフト用|+|+| [リンク](https://www.amazon.co.jp/dp/B003GALRS0/) | [リンク](https://www.amazon.com/dp/B002CAO2IC/) |
 | ジャンパーケーブル | メスコネクタからメスコネクタ 10cm|+|+| [リンク](https://www.amazon.co.jp/dp/B07MR1SVVR/) | [リンク](https://www.amazon.com/dp/B0742RS6YL) |
-| Type-C USB ケーブル（L型ヘッダー） | ショートケーブル15-20cm ||+| [e.g. aceyoon](https://www.amazon.co.jp/dp/B0B4JQ41SW/)| [e.g. aceyoon](https://www.amazon.com/dp/B096VYVR17/) |
+| Type-C USB ケーブル（L型ヘッダー） <br><br> 注意 raspi zero は micro USBを用意してください   | ショートケーブル15-20cm ||+| [e.g. aceyoon](https://www.amazon.co.jp/dp/B0B4JQ41SW/)| [e.g. aceyoon](https://www.amazon.com/dp/B096VYVR17/) |
 | ゲームパッド | USBまたはBluetooth | |+| [F710](https://www.amazon.co.jp/dp/B00CDG7994/), [PS4互換ゲームパッド](https://www.amazon.co.jp/dp/B0C4NW3G8J/)  | [F710](https://www.amazon.com/dp/B0041RR0TW/), [PS4互換ゲームパッド](https://www.amazon.com/dp/B0C4NW3G8J/) |
 ||  || |  |  |
 | 概算コスト（Raspberry Piとmicro SDカードを除く） |  |6,000円 |10,000円 |  |  |
@@ -132,8 +132,8 @@ $35=¥5000 (送料 $25)
 | A | ミニ四駆 キット (ぞうさん5:1ギア)                                                               | ￥1,500 | [Amazon](https://www.amazon.co.jp/dp/B08VX3W3Q6/) <br> <img src="./img/2025-07-24-10-05-45.png" width="400" class="popup-image">                                                                                                                   |
 |   | F710                                                                                            | ￥5,200 | [Amazon](https://www.amazon.co.jp/dp/B00CDG7994/?th=1) <br> <img src="./img/2025-07-23-14-14-07.png" width="600" class="popup-image">                                                                                                              |
 | A | バッテリー (明誠 C0303 モバイルバッテリー)  <br> <br> ※Type A to Type CのUSBで充電                                                  | ￥1,450 | [Amazon](https://www.amazon.co.jp/dp/B07Q5M3CLQ/?th=1) <br> <img src="./img/2025-07-24-09-56-27.png" width="200" class="popup-image">                                                                                                              |
-| A<br>(残2) | TypC- USB L型                                                                                   | ￥1,000 | ショートケーブル15-20cm <br> [e.g. aceyoon](https://www.amazon.co.jp/dp/B0B4JQ41SW/) <img src="./img/2025-07-23-14-12-21.png" width="600" class="popup-image">                                                                                     |
-| A | カメラ V2                                                                                       | ￥3,000 | [秋月 商品ページ](https://akizukidenshi.com/catalog/g/g110518/) <br> <a href="https://www.amazon.co.jp/exec/obidos/ASIN/B086MK17K5/beatnix06-22/">Amazon 1500円</a><br> <img src=ω"./img/2025-07-24-09-57-07.png" width="400" class="popup-image"> |
+| A | TypeC- USB L型 <br><br> 注意 raspi zero は micro USBを準備                            | ￥1,000 | ショートケーブル15-20cm <br> [e.g. aceyoon](https://www.amazon.co.jp/dp/B0B4JQ41SW/) <img src="./img/2025-07-23-14-12-21.png" width="600" class="popup-image">                                                                                     |
+| A | カメラ V2 または V1                                                                                     | ￥3,000 | [秋月 商品ページ](https://akizukidenshi.com/catalog/g/g110518/) <br> <a href="https://www.amazon.co.jp/exec/obidos/ASIN/B086MK17K5/beatnix06-22/">Amazon 1500円</a><br> <img src="./img/2025-07-24-09-57-07.png" width="400" class="popup-image"> |
 | A<br>(残1)| サーボ (TowerPro SG90)                                                                          | ￥1,200 | TowerPro SG90(0.1sec/60度) <br>  [リンク](https://www.ωamazon.co.jp/dp/B016FKJJ8M/) <br><img src="./img/2025-07-23-13-59-53.png" width="600" class="popup-image">                                                                                  |
 | A<br>(残2)| DCモーター用/Hブリッジ L298N                                                                    | ￥700   | [Amazon](https://www.amazon.co.jp/dp/B083DT2DMV/) <br> <img src="./img/2025-07-23-13-57-35.png" width="600" class="popup-image">                                                                                                                   |
 |   | ピンヘッダー                                                                                    | ￥700   | オス 90度 / モータードライバー用 <br> 単行 40ポジション 2.54 mmピッチ 2個 <br> [Amazon](https://www.amazon.co.jp/dp/B00V4V703O/) <br> <img src="./img/2025-07-23-13-57-07.png" width="600" class="popup-image">                                    |
@@ -264,7 +264,7 @@ F710
 
 <img src="./img/2025-07-24-13-22-32.png" width="600" class="popup-image">
 
-- Shipped with 日本郵便 Tracking ID 421049153162
+- Shipped
 
 - [x]raspi
 - [x]sdcard
@@ -393,210 +393,6 @@ The MX1508 typically **does not have separate enable (ENA/ENB) pins** like the L
 
     *(If you had a second motor, you would use IN3/IN4 and MOTOR-B outputs similarly.)*
 
-**Control Logic (Python using RPi.GPIO for one DC Motor):**
-
-To control the DC motor's direction and speed using the MX1508, you'll manipulate the IN1 and IN2 pins. For speed control, you'll apply PWM to one of the input pins.
-
-```python
-import RPi.GPIO as GPIO
-from time import sleep
-
-# --- MX1508 (DC Motor) setup ---
-# GPIO pin assignments (BCM mode, adjust as needed)
-MOTOR_IN1 = 17 # Connect to IN1 on MX1508
-MOTOR_IN2 = 18 # Connect to IN2 on MX1508
-
-GPIO.setmode(GPIO.BCM)
-GPIO.setup([MOTOR_IN1, MOTOR_IN2], GPIO.OUT)
-
-# For speed control, we'll apply PWM to one of the pins
-# For example, to go forward, set IN1 HIGH and apply PWM to IN2 (or vice-versa, depending on desired direction)
-# Let's assume applying PWM to IN2 for forward, and IN1 for backward.
-PWM_PIN_FOR_SPEED = MOTOR_IN2 # For forward direction
-# You might want a dedicated PWM instance if controlling both directions with speed
-# Or handle PWM logic within the functions
-
-# Setting up a single PWM instance for one of the IN pins for simplicity in speed control example
-# Note: You can also implement software PWM by rapidly toggling the pins, or use hardware PWM if available on your chosen pins.
-# For simplicity, we'll use a single PWM for one direction here.
-# For the MX1508, typically you hold one INx low and apply PWM to the other INx to control speed.
-# Let's set up a PWM on MOTOR_IN2 for forward movement speed.
-# You could set up another PWM on MOTOR_IN1 for backward movement speed, or handle it differently.
-pwm_motor_speed = GPIO.PWM(PWM_PIN_FOR_SPEED, 100) # 100 Hz frequency
-pwm_motor_speed.start(0) # Start with 0% duty cycle (motor off)
-
-def motor_forward(speed):
-    """
-    Drives the motor forward at a given speed (0-100).
-    Here, IN1 is HIGH, IN2 receives PWM.
-    """
-    GPIO.output(MOTOR_IN1, GPIO.HIGH)
-    # The speed is controlled by the duty cycle of IN2
-    pwm_motor_speed.ChangeDutyCycle(speed)
-    print(f"Motor Forward at {speed}% speed")
-
-def motor_backward(speed):
-    """
-    Drives the motor backward at a given speed (0-100).
-    Here, IN2 is HIGH, IN1 receives PWM.
-    NOTE: You would need to reconfigure pwm_motor_speed to MOTOR_IN1 for this to work directly as coded.
-    A more robust solution involves toggling the PWM pin or managing two PWM instances.
-    For simplicity here, let's just reverse the HIGH/LOW and skip direct PWM on backward for this example.
-    To control speed backward, you'd apply PWM to MOTOR_IN1 and keep MOTOR_IN2 HIGH.
-    A simpler approach for MX1508 is often just direct digital control for direction, and applying PWM
-    to the "active" input.
-    Let's refine this to be more common for MX1508:
-    """
-    GPIO.output(MOTOR_IN2, GPIO.HIGH)
-    # To control backward speed, you'd apply PWM to MOTOR_IN1.
-    # For this example, let's just set MOTOR_IN1 to a fixed state for direction, no speed control on backward.
-    # To properly control speed in both directions with a single PWM instance, you'd need more complex logic
-    # or control the PWM duty cycle after setting the direction.
-    GPIO.output(MOTOR_IN1, GPIO.LOW) # For fixed backward
-    # To control speed backward, you'd actually want something like:
-    # pwm_motor_speed.ChangeFrequency(100) # Ensure frequency is set
-    # pwm_motor_speed.ChangeDutyCycle(0) # Stop current PWM
-    # GPIO.output(MOTOR_IN1, GPIO.LOW) # Set direction
-    # GPIO.output(MOTOR_IN2, GPIO.HIGH)
-    # pwm_motor_speed.ChangeDutyCycle(speed) # Apply PWM to the correct pin
-
-    # Let's redefine for common MX1508 PWM usage:
-    # One pin is HIGH/LOW, the other is PWM.
-    # If IN1=HIGH, IN2=PWM_DUTY_CYCLE -> Motor A in one direction, speed controlled by PWM
-    # If IN1=PWM_DUTY_CYCLE, IN2=HIGH -> Motor A in other direction, speed controlled by PWM
-
-    # For now, let's simplify to direct control with full speed for backward.
-    GPIO.output(MOTOR_IN1, GPIO.LOW)
-    GPIO.output(MOTOR_IN2, GPIO.HIGH)
-    pwm_motor_speed.ChangeDutyCycle(speed) # If PWM_PIN_FOR_SPEED is IN2, this will still be forward.
-                                         # A single PWM is tricky for both directions this way.
-                                         # Let's adjust the simple example to only show forward speed.
-
-    print(f"Motor Backward at {speed}% speed (Note: Speed control might be simplified here)")
-    # For robust speed control in both directions with MX1508, you usually:
-    # 1. Set one IN pin LOW, the other IN pin to PWM.
-    # 2. To reverse, set the first IN pin to PWM, the other IN pin LOW.
-    # The RPi.GPIO PWM instance is tied to a specific pin.
-    # So, you would likely need to stop/start PWM on different pins, or use a library that abstracts this.
-
-    # Simpler approach: set direction, then apply PWM
-    # For forward: IN1=HIGH, IN2=PWM(speed)
-    # For backward: IN1=PWM(speed), IN2=HIGH
-    # This requires dynamically managing which pin the PWM instance is on, or having two PWM instances.
-
-    # Let's revise the functions to handle speed control more realistically for MX1508:
-    # We will use one PWM instance and switch which pin is high/low.
-
-def set_motor_speed_and_direction(direction, speed):
-    """
-    Controls the motor direction and speed (0-100).
-    direction: 'forward', 'backward', 'stop'
-    """
-    if direction == 'forward':
-        GPIO.output(MOTOR_IN1, GPIO.HIGH)
-        # Apply PWM to IN2 for forward speed
-        # Ensure pwm_motor_speed is managing IN2. This is the tricky part with a single PWM object.
-        # A more direct way is to set duty cycle and then set the other pin.
-        GPIO.output(MOTOR_IN2, GPIO.LOW) # Set IN2 low initially
-        # Then, apply PWM to IN2 by toggling it or dynamically changing PWM source
-        # For simplicity, we'll use a direct digital approach if no hardware PWM is on *both* pins needed.
-
-        # Let's use software PWM or just simple on/off for basic example given the MX1508.
-        # If speed control is needed, you set one pin high and apply PWM to the other.
-        # This typically means pwm_motor_speed needs to be associated with MOTOR_IN2 for forward.
-        # And if going backward, it needs to be associated with MOTOR_IN1.
-        # This implies changing the PWM pin, or having two PWM instances, or managing a single one carefully.
-
-        # For this example, let's just do simple direction control first, then add basic speed later.
-        GPIO.output(MOTOR_IN1, GPIO.HIGH)
-        GPIO.output(MOTOR_IN2, GPIO.LOW)
-        if speed > 0:
-            # Simple speed control: cycle between ON/OFF based on speed
-            # This is not RPi.GPIO.PWM, but a conceptual software PWM
-            # For actual PWM, you'd use pwm_motor_speed.ChangeDutyCycle(speed)
-            # but you'd need to ensure pwm_motor_speed is applied to the correct pin.
-            # Let's assume you've set pwm_motor_speed on MOTOR_IN2, for forward.
-            # And for backward, you'd set it on MOTOR_IN1. This needs re-initialization.
-
-            # Easiest way for MX1508 with speed:
-            # Define two PWM objects if you want fine control in both directions
-            # OR, use a single PWM object on a specific pin and set the other pin HIGH/LOW
-            # and only control speed when that PWM pin is the active one.
-
-            # Revert to the basic on/off and then explain PWM nuance.
-            # Basic digital control for MX1508:
-            # IN1 | IN2 | Motor Action
-            # --- | --- | ------------
-            # LOW | LOW | Stop
-            # HIGH| LOW | Forward
-            # LOW | HIGH| Reverse
-            # PWM | LOW | Forward (Speed controlled by PWM)
-            # LOW | PWM | Reverse (Speed controlled by PWM)
-
-            # Given this, let's redefine the motor control functions without a global pwm_motor_speed.
-            # We will use RPi.GPIO.PWM directly within the functions, or assume a fixed PWM pin.
-            # The most flexible way: Use a function that takes 'pin_to_pwm' and 'pin_to_set_low'.
-            # But that requires passing the PWM object.
-
-            # Let's use a clear, basic approach for controlling direction, and then integrate a single PWM for one direction.
-            # For real bidirectional speed, use pigpio or a more advanced library.
-
-            # Simple forward with speed (PWM on IN2)
-            pwm_motor_forward = GPIO.PWM(MOTOR_IN2, 100) # PWM on IN2
-            pwm_motor_forward.start(0)
-            GPIO.output(MOTOR_IN1, GPIO.HIGH) # Set IN1 high
-            pwm_motor_forward.ChangeDutyCycle(speed)
-            print(f"Motor Forward at {speed}% speed (PWM on IN2)")
-            return pwm_motor_forward # Return PWM object to stop later
-
-    elif direction == 'backward':
-        # Simple backward with speed (PWM on IN1)
-        pwm_motor_backward = GPIO.PWM(MOTOR_IN1, 100) # PWM on IN1
-        pwm_motor_backward.start(0)
-        GPIO.output(MOTOR_IN2, GPIO.HIGH) # Set IN2 high
-        pwm_motor_backward.ChangeDutyCycle(speed)
-        print(f"Motor Backward at {speed}% speed (PWM on IN1)")
-        return pwm_motor_backward # Return PWM object to stop later
-
-    elif direction == 'stop':
-        GPIO.output(MOTOR_IN1, GPIO.LOW)
-        GPIO.output(MOTOR_IN2, GPIO.LOW)
-        print("Motor Stopped")
-        return None # No PWM object to return
-
-try:
-    print("Motor Forward at 70% speed...")
-    current_pwm = set_motor_speed_and_direction('forward', 70)
-    sleep(2)
-    if current_pwm: current_pwm.stop() # Stop previous PWM
-
-    print("Motor Backward at 50% speed...")
-    current_pwm = set_motor_speed_and_direction('backward', 50)
-    sleep(2)
-    if current_pwm: current_pwm.stop() # Stop previous PWM
-
-    set_motor_speed_and_direction('stop', 0)
-    sleep(1)
-
-except KeyboardInterrupt:
-    pass
-finally:
-    # Ensure all GPIO pins are set to LOW and cleaned up
-    GPIO.output(MOTOR_IN1, GPIO.LOW)
-    GPIO.output(MOTOR_IN2, GPIO.LOW)
-    GPIO.cleanup()
-    print("GPIO cleanup complete.")
-```
-
-**Important Notes for MX1508:**
-
-  * **PWM for Speed:** For the MX1508, to control speed, you typically keep one INx pin HIGH and apply a PWM signal to the other INx pin for that motor. Reversing direction then involves switching which pin receives the PWM and which is held HIGH. The `RPi.GPIO.PWM` object is tied to a specific pin. For bidirectional speed control, you might need to create and stop/start `PWM` objects on different pins, or use a library like `pigpio` which offers more flexible software PWM across all GPIOs. The example above illustrates how to start a new PWM for each direction for clarity.
-  * **Voltage:** Ensure your external power supply's voltage matches your DC motor's rated voltage and is within the MX1508's operating range (typically 2V-10V).
-  * **Current:** The MX1508 is suitable for small motors. If your DC motor draws significant current (over 1.5A continuous), this module might not be sufficient, and you would need a more powerful driver.
-  * **Common Ground:** Always connect the GND of your external motor power supply to a GND pin on your Raspberry Pi.
-
-This setup should allow you to control your DC motors with the MX1508 driver from your Raspberry Pi. Remember to adjust the GPIO pin numbers in the code to match your actual wiring.
-
 ----
 
 <img src="./img/2025-07-30-11-09-04.png" width="1600" class="popup-image">
@@ -677,16 +473,21 @@ This setup should allow you to control your DC motors with the MX1508 driver fro
 
 tatamiracerzero.local
 
-BIRDS Coworking×FUKUROI
+SSID: BIRDS Coworking×FUKUROI
+
 ----
 
-短いUSBケーブル（A-microBタイプ）10cm
+## Raspi Zero用
+
+短いUSBケーブル（A-microBタイプ）10cm で モバイルバッテリーからraspi zeroに給電します
+
 https://www.switch-science.com/products/2844
 
 <img src="./img/2025-08-04-10-03-44.png" width="600" class="popup-image">
 
 
-USBをMicro-Bへ変換するアダプタ
+USBをMicro-Bへ変換するアダプタ これは F710のゲームパッドのUSBドングルを micro-Bに接続するために必要です。
+<br>
 https://www.switch-science.com/products/3702
 
 <img src="./img/2025-08-04-09-59-32.png" width="600" class="popup-image">
@@ -945,3 +746,212 @@ auto pilot
 ```
 python manage.py drive --js --model ./models/mypilot.tflite --type tflite_linear
 ```
+
+
+-----
+
+参考
+
+**Control Logic (Python using RPi.GPIO for one DC Motor):**
+
+To control the DC motor's direction and speed using the MX1508, you'll manipulate the IN1 and IN2 pins. For speed control, you'll apply PWM to one of the input pins.
+
+```python
+import RPi.GPIO as GPIO
+from time import sleep
+
+# --- MX1508 (DC Motor) setup ---
+# GPIO pin assignments (BCM mode, adjust as needed)
+MOTOR_IN1 = 17 # Connect to IN1 on MX1508
+MOTOR_IN2 = 18 # Connect to IN2 on MX1508
+
+GPIO.setmode(GPIO.BCM)
+GPIO.setup([MOTOR_IN1, MOTOR_IN2], GPIO.OUT)
+
+# For speed control, we'll apply PWM to one of the pins
+# For example, to go forward, set IN1 HIGH and apply PWM to IN2 (or vice-versa, depending on desired direction)
+# Let's assume applying PWM to IN2 for forward, and IN1 for backward.
+PWM_PIN_FOR_SPEED = MOTOR_IN2 # For forward direction
+# You might want a dedicated PWM instance if controlling both directions with speed
+# Or handle PWM logic within the functions
+
+# Setting up a single PWM instance for one of the IN pins for simplicity in speed control example
+# Note: You can also implement software PWM by rapidly toggling the pins, or use hardware PWM if available on your chosen pins.
+# For simplicity, we'll use a single PWM for one direction here.
+# For the MX1508, typically you hold one INx low and apply PWM to the other INx to control speed.
+# Let's set up a PWM on MOTOR_IN2 for forward movement speed.
+# You could set up another PWM on MOTOR_IN1 for backward movement speed, or handle it differently.
+pwm_motor_speed = GPIO.PWM(PWM_PIN_FOR_SPEED, 100) # 100 Hz frequency
+pwm_motor_speed.start(0) # Start with 0% duty cycle (motor off)
+
+def motor_forward(speed):
+    """
+    Drives the motor forward at a given speed (0-100).
+    Here, IN1 is HIGH, IN2 receives PWM.
+    """
+    GPIO.output(MOTOR_IN1, GPIO.HIGH)
+    # The speed is controlled by the duty cycle of IN2
+    pwm_motor_speed.ChangeDutyCycle(speed)
+    print(f"Motor Forward at {speed}% speed")
+
+def motor_backward(speed):
+    """
+    Drives the motor backward at a given speed (0-100).
+    Here, IN2 is HIGH, IN1 receives PWM.
+    NOTE: You would need to reconfigure pwm_motor_speed to MOTOR_IN1 for this to work directly as coded.
+    A more robust solution involves toggling the PWM pin or managing two PWM instances.
+    For simplicity here, let's just reverse the HIGH/LOW and skip direct PWM on backward for this example.
+    To control speed backward, you'd apply PWM to MOTOR_IN1 and keep MOTOR_IN2 HIGH.
+    A simpler approach for MX1508 is often just direct digital control for direction, and applying PWM
+    to the "active" input.
+    Let's refine this to be more common for MX1508:
+    """
+    GPIO.output(MOTOR_IN2, GPIO.HIGH)
+    # To control backward speed, you'd apply PWM to MOTOR_IN1.
+    # For this example, let's just set MOTOR_IN1 to a fixed state for direction, no speed control on backward.
+    # To properly control speed in both directions with a single PWM instance, you'd need more complex logic
+    # or control the PWM duty cycle after setting the direction.
+    GPIO.output(MOTOR_IN1, GPIO.LOW) # For fixed backward
+    # To control speed backward, you'd actually want something like:
+    # pwm_motor_speed.ChangeFrequency(100) # Ensure frequency is set
+    # pwm_motor_speed.ChangeDutyCycle(0) # Stop current PWM
+    # GPIO.output(MOTOR_IN1, GPIO.LOW) # Set direction
+    # GPIO.output(MOTOR_IN2, GPIO.HIGH)
+    # pwm_motor_speed.ChangeDutyCycle(speed) # Apply PWM to the correct pin
+
+    # Let's redefine for common MX1508 PWM usage:
+    # One pin is HIGH/LOW, the other is PWM.
+    # If IN1=HIGH, IN2=PWM_DUTY_CYCLE -> Motor A in one direction, speed controlled by PWM
+    # If IN1=PWM_DUTY_CYCLE, IN2=HIGH -> Motor A in other direction, speed controlled by PWM
+
+    # For now, let's simplify to direct control with full speed for backward.
+    GPIO.output(MOTOR_IN1, GPIO.LOW)
+    GPIO.output(MOTOR_IN2, GPIO.HIGH)
+    pwm_motor_speed.ChangeDutyCycle(speed) # If PWM_PIN_FOR_SPEED is IN2, this will still be forward.
+                                         # A single PWM is tricky for both directions this way.
+                                         # Let's adjust the simple example to only show forward speed.
+
+    print(f"Motor Backward at {speed}% speed (Note: Speed control might be simplified here)")
+    # For robust speed control in both directions with MX1508, you usually:
+    # 1. Set one IN pin LOW, the other IN pin to PWM.
+    # 2. To reverse, set the first IN pin to PWM, the other IN pin LOW.
+    # The RPi.GPIO PWM instance is tied to a specific pin.
+    # So, you would likely need to stop/start PWM on different pins, or use a library that abstracts this.
+
+    # Simpler approach: set direction, then apply PWM
+    # For forward: IN1=HIGH, IN2=PWM(speed)
+    # For backward: IN1=PWM(speed), IN2=HIGH
+    # This requires dynamically managing which pin the PWM instance is on, or having two PWM instances.
+
+    # Let's revise the functions to handle speed control more realistically for MX1508:
+    # We will use one PWM instance and switch which pin is high/low.
+
+def set_motor_speed_and_direction(direction, speed):
+    """
+    Controls the motor direction and speed (0-100).
+    direction: 'forward', 'backward', 'stop'
+    """
+    if direction == 'forward':
+        GPIO.output(MOTOR_IN1, GPIO.HIGH)
+        # Apply PWM to IN2 for forward speed
+        # Ensure pwm_motor_speed is managing IN2. This is the tricky part with a single PWM object.
+        # A more direct way is to set duty cycle and then set the other pin.
+        GPIO.output(MOTOR_IN2, GPIO.LOW) # Set IN2 low initially
+        # Then, apply PWM to IN2 by toggling it or dynamically changing PWM source
+        # For simplicity, we'll use a direct digital approach if no hardware PWM is on *both* pins needed.
+
+        # Let's use software PWM or just simple on/off for basic example given the MX1508.
+        # If speed control is needed, you set one pin high and apply PWM to the other.
+        # This typically means pwm_motor_speed needs to be associated with MOTOR_IN2 for forward.
+        # And if going backward, it needs to be associated with MOTOR_IN1.
+        # This implies changing the PWM pin, or having two PWM instances, or managing a single one carefully.
+
+        # For this example, let's just do simple direction control first, then add basic speed later.
+        GPIO.output(MOTOR_IN1, GPIO.HIGH)
+        GPIO.output(MOTOR_IN2, GPIO.LOW)
+        if speed > 0:
+            # Simple speed control: cycle between ON/OFF based on speed
+            # This is not RPi.GPIO.PWM, but a conceptual software PWM
+            # For actual PWM, you'd use pwm_motor_speed.ChangeDutyCycle(speed)
+            # but you'd need to ensure pwm_motor_speed is applied to the correct pin.
+            # Let's assume you've set pwm_motor_speed on MOTOR_IN2, for forward.
+            # And for backward, you'd set it on MOTOR_IN1. This needs re-initialization.
+
+            # Easiest way for MX1508 with speed:
+            # Define two PWM objects if you want fine control in both directions
+            # OR, use a single PWM object on a specific pin and set the other pin HIGH/LOW
+            # and only control speed when that PWM pin is the active one.
+
+            # Revert to the basic on/off and then explain PWM nuance.
+            # Basic digital control for MX1508:
+            # IN1 | IN2 | Motor Action
+            # --- | --- | ------------
+            # LOW | LOW | Stop
+            # HIGH| LOW | Forward
+            # LOW | HIGH| Reverse
+            # PWM | LOW | Forward (Speed controlled by PWM)
+            # LOW | PWM | Reverse (Speed controlled by PWM)
+
+            # Given this, let's redefine the motor control functions without a global pwm_motor_speed.
+            # We will use RPi.GPIO.PWM directly within the functions, or assume a fixed PWM pin.
+            # The most flexible way: Use a function that takes 'pin_to_pwm' and 'pin_to_set_low'.
+            # But that requires passing the PWM object.
+
+            # Let's use a clear, basic approach for controlling direction, and then integrate a single PWM for one direction.
+            # For real bidirectional speed, use pigpio or a more advanced library.
+
+            # Simple forward with speed (PWM on IN2)
+            pwm_motor_forward = GPIO.PWM(MOTOR_IN2, 100) # PWM on IN2
+            pwm_motor_forward.start(0)
+            GPIO.output(MOTOR_IN1, GPIO.HIGH) # Set IN1 high
+            pwm_motor_forward.ChangeDutyCycle(speed)
+            print(f"Motor Forward at {speed}% speed (PWM on IN2)")
+            return pwm_motor_forward # Return PWM object to stop later
+
+    elif direction == 'backward':
+        # Simple backward with speed (PWM on IN1)
+        pwm_motor_backward = GPIO.PWM(MOTOR_IN1, 100) # PWM on IN1
+        pwm_motor_backward.start(0)
+        GPIO.output(MOTOR_IN2, GPIO.HIGH) # Set IN2 high
+        pwm_motor_backward.ChangeDutyCycle(speed)
+        print(f"Motor Backward at {speed}% speed (PWM on IN1)")
+        return pwm_motor_backward # Return PWM object to stop later
+
+    elif direction == 'stop':
+        GPIO.output(MOTOR_IN1, GPIO.LOW)
+        GPIO.output(MOTOR_IN2, GPIO.LOW)
+        print("Motor Stopped")
+        return None # No PWM object to return
+
+try:
+    print("Motor Forward at 70% speed...")
+    current_pwm = set_motor_speed_and_direction('forward', 70)
+    sleep(2)
+    if current_pwm: current_pwm.stop() # Stop previous PWM
+
+    print("Motor Backward at 50% speed...")
+    current_pwm = set_motor_speed_and_direction('backward', 50)
+    sleep(2)
+    if current_pwm: current_pwm.stop() # Stop previous PWM
+
+    set_motor_speed_and_direction('stop', 0)
+    sleep(1)
+
+except KeyboardInterrupt:
+    pass
+finally:
+    # Ensure all GPIO pins are set to LOW and cleaned up
+    GPIO.output(MOTOR_IN1, GPIO.LOW)
+    GPIO.output(MOTOR_IN2, GPIO.LOW)
+    GPIO.cleanup()
+    print("GPIO cleanup complete.")
+```
+
+**Important Notes for MX1508:**
+
+  * **PWM for Speed:** For the MX1508, to control speed, you typically keep one INx pin HIGH and apply a PWM signal to the other INx pin for that motor. Reversing direction then involves switching which pin receives the PWM and which is held HIGH. The `RPi.GPIO.PWM` object is tied to a specific pin. For bidirectional speed control, you might need to create and stop/start `PWM` objects on different pins, or use a library like `pigpio` which offers more flexible software PWM across all GPIOs. The example above illustrates how to start a new PWM for each direction for clarity.
+  * **Voltage:** Ensure your external power supply's voltage matches your DC motor's rated voltage and is within the MX1508's operating range (typically 2V-10V).
+  * **Current:** The MX1508 is suitable for small motors. If your DC motor draws significant current (over 1.5A continuous), this module might not be sufficient, and you would need a more powerful driver.
+  * **Common Ground:** Always connect the GND of your external motor power supply to a GND pin on your Raspberry Pi.
+
+This setup should allow you to control your DC motors with the MX1508 driver from your Raspberry Pi. Remember to adjust the GPIO pin numbers in the code to match your actual wiring.
