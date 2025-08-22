@@ -607,18 +607,31 @@ This setup should allow you to control your DC motors with the MX1508 driver fro
 
 ---
 
+車輪
+
 <img src="./img/2025-07-30-12-18-33.png" width="600" class="popup-image">
 
 <img src="./img/2025-07-30-17-11-37.png" width="600" class="popup-image">
 
 ----
 
+サーボ
+
 <img src="./img/2025-07-30-17-12-29.png" width="600" class="popup-image">
-<img src="./img/2025-07-30-17-12-44.png" width="600" class="popup-image">
+
+<img src="./img/2025-08-22-20-44-59.png" width="600" class="popup-image">
 
 <img src="./img/2025-08-02-12-27-51.png" width="600" class="popup-image">
 
 <img src="./img/2025-07-30-12-42-32.png" width="600" class="popup-image">
+
+
+前輪とサーボ
+
+<img src="./img/2025-08-21-11-15-00.png" width="600" class="popup-image">
+
+<img src="./img/2025-08-21-11-16-34.png" width="600" class="popup-image">
+
 
 ----
 
@@ -907,12 +920,6 @@ https://zenn.dev/kobayutapon/articles/490d93ab683337
 
 
 ----
-
-前輪とサーボ
-
-{{<img src="./img/2025-08-21-11-15-00.png" width="600" class="popup-image">}}
-
-{{<img src="./img/2025-08-21-11-16-34.png" width="600" class="popup-image">}}
 
 sudo systemctl restart pigpiod
 
