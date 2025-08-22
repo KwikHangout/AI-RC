@@ -914,3 +914,26 @@ https://zenn.dev/kobayutapon/articles/490d93ab683337
 {{<img src="./img/2025-08-21-11-16-34.png" width="600" class="popup-image">}}
 
 sudo systemctl restart pigpiod
+
+
+get data
+
+```
+rsync -rv --progress --partial pi@tatamiracer-zero:~/mycar/data/  ./data/
+```
+
+train
+```
+~\mycar$ donkey train --tub ./data --model ./models/mypilot.h5
+```
+
+copy back
+```
+rsync -rv --progress --partial ./models/ pi@tatamiracer-zero:~/mycar/models/
+```
+
+auto pilot
+
+```
+python manage.py drive --js --model ./models/mypilot.tflite --type tflite_linear
+```
