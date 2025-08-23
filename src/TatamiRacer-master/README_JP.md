@@ -1,117 +1,24 @@
-[Japanese](https://github.com/covao/TatamiRacer/blob/master/README_JP.md) / [English](https://github.com/covao/TatamiRacer/blob/master/README.md)
 
-![TatamiRacerLogo](img/TatamiRacer_LogoM.png)
+オリジナルのReadmeを参考に Raspi Zero 2 Wで組み立ててみました。作業メモです。
 
-### ver 2.0
+  [github.com/covao/TatamiRacer - Japanese](https://github.com/covao/TatamiRacer/blob/master/README_JP.md)
 
-TatamiRacerは、[「タミヤ ミニ四駆」キット](https://www.tamiya.com/english/mini4wd/m4item/m4item.htm)に基づいた小型自動運転車です。約1.8m x 0.9mの1畳のスペースで動作可能です。車はディープラーニングと自動運転制御のために["Donkey Car"](http://docs.donkeycar.com/)ソフトウェアを使用しています。興味深いことに、日本語の「畳」という言葉は、ニューラルネットワークの畳み込み演算も連想させます。
-
-### YouTube
-
-- TatamiRacer
-
-[![](https://img.youtube.com/vi/b-pkVy8e3DA/0.jpg)](https://www.youtube.com/watch?v=b-pkVy8e3DA)
-
-- Maker Faire Tokyo 2022でのTatamiRacer
-
-[![](https://img.youtube.com/vi/s3ll8Y1OPn8/0.jpg)](https://www.youtube.com/watch?v=s3ll8Y1OPn8)
-
-# リリース履歴
-
-### [ver 1.0](https://github.com/covao/TatamiRacer/tree/1.0) 2023-05-28
-
-### [ver 2.0](https://github.com/covao/TatamiRacer)
-
-- 3Dパーツの更新
-- モバイルバッテリーのサイズと重量を削減
-- Raspberry Pi Zero 2のインストールをサポート
-
-# 部品表（BOM）
+  > オリジナルの手順を参考に進めてください
 
 | 部品名 | 備考 | 最低構成 | 推奨構成 | Amazon-JP | Amazon-US |
 |:---|:---|:---:|:---:|:---:|:---:|
-| Raspberry Pi Zero2 W ||+|| [リンク](https://www.amazon.co.jp/dp/B09LH5SBPS/) | [リンク](https://www.amazon.com/dp/B09LH5SBPS) |
-| Raspberry Pi 4 |2GB、4GB、または8GB RAMを選択||+| [リンク](https://www.amazon.co.jp/dp/B09GRVDPCX/) | [リンク](https://www.amazon.com/dp/B07TC2BK1X) |
-| Raspberry Pi カメラモジュール | v1.3:OV5647(Omnivision)またはv2.1:IMX219Pq3(SONY)|+|+| [v1.3](https://www.amazon.co.jp/dp/B073RCXGQS/), [v2.1](https://www.amazon.co.jp/dp/B01F1SWTZE)| [v1.3](https://www.amazon.com/dp/B07QNSJ32M/),  [v2.1](https://www.amazon.com/dp/B01ER2SKFS)|
-| Micro SD カード | 16GB以上|+|+| [e.g. SanDisk](https://www.amazon.co.jp/dp/B0CH2WM7QY/) | [e.g. SanDisk](https://www.amazon.com/dp//B08J4HJ98L) |
-| モバイルバッテリー | サイズ:53x85x9.0mm 電圧:5V 電流:最大2.1A |+|+|[Meisei C0303](https://www.amazon.co.jp/dp/B07Q5M3CLQ/) | [Atom Tech Super Slim Power Bank](https://www.amazon.com/dp/B07JZCZSH9/) |
-| モータードライバーモジュール| DCモーター用/Hブリッジ|+|+| [L298N ](https://www.amazon.co.jp/dp/B083DT2DMV/) |[L298N ](https://www.amazon.com/dp/B07Y1QJZK3/) |
-| ピンヘッダー | オス 90度 / モータードライバー用|+|+| [リンク](https://www.amazon.co.jp/dp/B00V4V703O/) |[リンク](https://www.amazon.com/dp/B0979568B3/) |
-| 130 DC モーター | 低速 (<8000 RPM) 低電流(<500mA)|+|+|[TAMIYA](https://www.amazon.co.jp/dp/B005AFBLIA/),[uxcell](https://www.amazon.co.jp/dp/B07CWLWRYJ/) | [uxcell](https://www.amazon.com/dp/B01ERLPVJW) |
-| マイクロサーボ |TowerPro SG90(0.1sec/60度)|+|+| [リンク](https://www.amazon.co.jp/dp/B016FKJJ8M/) | [リンク](https://www.amazon.com/dp/B07MLR1498/) |
-| タミヤ ミニ四駆 キット |VZシャーシとお好きなボディ。ギア比3.5:1または5:1を選択（推奨5:1ギア）|+|+| [ぞうさん5:1ギア](https://www.amazon.co.jp/dp/B08VX3W3Q6/), [トヨタ ヤリス 3.5:1 ギア](https://www.amazon.co.jp/dp/B08C5FM9HM/), [ホンダ e 3.5:1 ギア](https://www.amazon.co.jp/dp/B08HK7HWCM/), [デュアル リッジ Jr](https://www.amazon.co.jp/dp/B088FK3NC2/) | [ぞうさん5:1ギア](https://www.amazon.com/dp/B08VX3W3Q6/), [トヨタ ヤリス 3.5:1 ギア](https://www.amazon.com/dp/B08C5FM9HM/), [ホンダ e 3.5:1 ギア](https://www.amazon.com/dp/B08HK7HWCM/), [デュアル リッジ Jr](https://www.amazon.com/dp/B088FK3NC2/) |
-|タミヤ ギアセット |ギア比を変更する場合（例: 5:1）|||[15516](https://www.amazon.co.jp/dp/B0043RN7W4/)|[15516](https://www.amazon.com/dp/B0043RN7W4/)|
-| タミヤ ミニ四駆 ローラーパーツ | スペーサーとM2x10ネジが必要|+|+| [15381](https://www.amazon.co.jp/dp/B001E40PXI/), [95391](https://www.amazon.co.jp/dp/B07F8RLJBQ/),[15435](https://www.amazon.co.jp/dp/B005GJCC9C/)|[15435](https://www.amazon.com/dp/B005GJCC9C/) |
-| M2x15またはM2x16 mm ボルト | フロントホイールシャフト用 |+|+| [15508](https://www.amazon.co.jp/dp/B01MXVKDOM/),  [15233](https://www.amazon.co.jp/dp/B001VZE9MS/)| [リンク](https://www.amazon.com/dp/B07YS5ZSZH/) |
-| タミヤ ミニ四駆 72mm シャフト | 延長リアシャフト用|+|+| [リンク](https://www.amazon.co.jp/dp/B003GALRS0/) | [リンク](https://www.amazon.com/dp/B002CAO2IC/) |
-| ジャンパーケーブル | メスコネクタからメスコネクタ 10cm|+|+| [リンク](https://www.amazon.co.jp/dp/B07MR1SVVR/) | [リンク](https://www.amazon.com/dp/B0742RS6YL) |
+dp/B0742RS6YL) |
 | Type-C USB ケーブル（L型ヘッダー） <br><br> 注意 raspi zero は micro USBを用意してください   | ショートケーブル15-20cm ||+| [e.g. aceyoon](https://www.amazon.co.jp/dp/B0B4JQ41SW/)| [e.g. aceyoon](https://www.amazon.com/dp/B096VYVR17/) |
-| ゲームパッド | USBまたはBluetooth | |+| [F710](https://www.amazon.co.jp/dp/B00CDG7994/), [PS4互換ゲームパッド](https://www.amazon.co.jp/dp/B0C4NW3G8J/)  | [F710](https://www.amazon.com/dp/B0041RR0TW/), [PS4互換ゲームパッド](https://www.amazon.com/dp/B0C4NW3G8J/) |
-||  || |  |  |
-| 概算コスト（Raspberry Piとmicro SDカードを除く） |  |6,000円 |10,000円 |  |  |
 
-# 3Dプリントパーツ
-
-## 組み立て
-
-[3Dビューアー](3d/tatamiracer_assembly.stl)を参照
-<img src="img/TatamiRacer_3D_Assembly.png" alt="" title="" width="640" height="">
-
-## 3Dプリント用キット
-
-[3Dビューアー](3d/tatamiracer_kit.stl)を参照
-<img src="img/TatamiRacer_3D_Kit.png" alt="" title="" width="640" height="">
-
-# 回路図
-
-<img src="img/TatamiRacer_Circuit.png" alt="" title="" width="640" height="">
-
-# ボディ
-
-様々な種類のミニ四駆のボディを取り付け可能です。例: [Amazon JP](https://www.amazon.co.jp/s?k=%E3%83%9F%E3%83%8B%E5%9B%9B%E9%A7%86+and+%E3%83%97%E3%83%A9%E3%83%A2%E3%83%87%E3%83%AB+and+%E3%82%B7%E3%83%A3%E3%83%BC%E3%82%B7&__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&ref=nb_sb_noss), [Amazon US](https://www.amazon.com/s?k=tamiya+1%2F32+mini4wd&ref=nb_sb_noss)
-<img src="img/Body_Selection.jpg" alt="" title="" width="640" height="">
-
-# 畳サーキットコース
-
-<img src="img/tatami_circuit_150cmx100cm_preview.jpg" alt="" title="" width="640" height="">
-
-## プリントファブリック用画像データ
-
-ファブリック印刷サービスが利用可能
-- [畳サーキット 150cmx100cm 200dpi](img/tatami_circuit_150cmx100cm_200dpi.jpg)
-- [畳サーキット 110cmx100cm 200dpi](img/tatami_circuit_110cmx100cm_200dpi.jpg)
-
-# [TatamiRacer組み立て手順](doc/Assembly_Instructions.md)
-
-[TatamiRacer組み立て手順](doc/Assembly_Instructions.md)を参照
-<img src="img/TatamiRacerBuild.jpg" alt="" title="" width="640" height="">
-
-# [ソフトウェアのセットアップ方法](doc/HowToSetupSoftware.md)
-
-[ソフトウェアのセットアップ方法](doc/HowToSetupSoftware.md)を参照
-<img src="img/TatamiRacer_Shortcut.jpg" alt="" title="" width="640" height="">
-
-# [TatamiRacerのキャリブレーション方法](doc/HowToCalibrateTatamiRacer.md)
-
-[TatamiRacerのキャリブレーション方法](doc/HowToCalibrateTatamiRacer.md)を参照
-<img src="img/tatamiracer_test.jpg" alt="" title="" width="640" height="">
-
-# [操作方法](doc/HowToGetDriving.md)
-
-[操作方法](doc/HowToGetDriving.md)を参照
-<img src="img/DonkeyCopilot.jpg" alt="" title="" width="640" height="">
-
-UI操作画面を見るにはクリックしてください
-[Donkey Copilot ブラウザデモ](https://covao.github.io/DonkeyCopilot/copilot.html?demo)
 
 ----
-## PCBWay
+PCBWayの3Dプリントサービスを利用しました
 
 $35=¥5000 (送料 $25)
 
 <img src="./img/2025-07-24-10-00-32.png" width="600" class="popup-image">
 
-## 本体価格
+## Raspberry Pi 本体価格
 
 | 製品名 | 価格 | リンク |
 |:---|:---|:---|
@@ -120,7 +27,7 @@ $35=¥5000 (送料 $25)
 | Raspberry Pi Zero 2 W | ￥3,190 | [商品ページ](https://akizukidenshi.com/catalog/g/g117398/) |
 
 
-<img src="./img/2025-07-24-10-28-33.png" width="300" class="popup-image">
+<img src="./img/2025-07-24-10-28-33.png" width="100" class="popup-image">
 ¥800
 
 ---
@@ -132,41 +39,29 @@ $35=¥5000 (送料 $25)
 | A | ミニ四駆 キット (ぞうさん5:1ギア)                                                               | ￥1,500 | [Amazon](https://www.amazon.co.jp/dp/B08VX3W3Q6/) <br> <img src="./img/2025-07-24-10-05-45.png" width="400" class="popup-image">                                                                                                                   |
 |   | F710                                                                                            | ￥5,200 | [Amazon](https://www.amazon.co.jp/dp/B00CDG7994/?th=1) <br> <img src="./img/2025-07-23-14-14-07.png" width="600" class="popup-image">                                                                                                              |
 | A | バッテリー (明誠 C0303 モバイルバッテリー)  <br> <br> ※Type A to Type CのUSBで充電                                                  | ￥1,450 | [Amazon](https://www.amazon.co.jp/dp/B07Q5M3CLQ/?th=1) <br> <img src="./img/2025-07-24-09-56-27.png" width="200" class="popup-image">                                                                                                              |
-| A | TypeC- USB L型 <br><br> 注意 raspi zero は micro USBを準備                            | ￥1,000 | ショートケーブル15-20cm <br> [e.g. aceyoon](https://www.amazon.co.jp/dp/B0B4JQ41SW/) <img src="./img/2025-07-23-14-12-21.png" width="600" class="popup-image">                                                                                     |
-| A | カメラ V2 または V1                                                                                     | ￥3,000 | [秋月 商品ページ](https://akizukidenshi.com/catalog/g/g110518/) <br> <a href="https://www.amazon.co.jp/exec/obidos/ASIN/B086MK17K5/beatnix06-22/">Amazon 1500円</a><br> <img src="./img/2025-07-24-09-57-07.png" width="400" class="popup-image"> |
-| A<br>(残1)| サーボ (TowerPro SG90)                                                                          | ￥1,200 | TowerPro SG90(0.1sec/60度) <br>  [リンク](https://www.ωamazon.co.jp/dp/B016FKJJ8M/) <br><img src="./img/2025-07-23-13-59-53.png" width="600" class="popup-image">                                                                                  |
-| A<br>(残2)| DCモーター用/Hブリッジ L298N                                                                    | ￥700   | [Amazon](https://www.amazon.co.jp/dp/B083DT2DMV/) <br> <img src="./img/2025-07-23-13-57-35.png" width="600" class="popup-image">                                                                                                                   |
-|   | ピンヘッダー                                                                                    | ￥700   | オス 90度 / モータードライバー用 <br> 単行 40ポジション 2.54 mmピッチ 2個 <br> [Amazon](https://www.amazon.co.jp/dp/B00V4V703O/) <br> <img src="./img/2025-07-23-13-57-07.png" width="600" class="popup-image">                                    |
-|   | ジャンパーケーブル                                                                              | ￥700   | メスコネクタからメスコネクタ 10cm <br> <img src="./img/2025-07-23-14-11-32.png" width="600" class="popup-image">                                                                                                                                   |
-| A | タミヤ 130 DC モーター 75028                                                                    | ￥1,400 | タミヤ エレクラフトシリーズ No.28 低回転型130モーター 模型工作用モーター 75028 <br> [Amazon](https://www.amazon.co.jp/dp/B005AFBLIA/) <br> <img src="./img/2025-07-23-13-59-24.png" width="600" class="popup-image">                               |
-| Y | タミヤ グレードアップ No.381 GP.381低摩擦プラローラーセット 15381 <br><br>または<br><br>タミヤ ミニ四駆 グレードアップパーツシリーズ 15435 <br>ファーストトライパーツ<br>ローラーパーツ | ¥220 <br> <br>￥600   | スペーサーとM2x10ネジが必要 <br> <img src="./img/2025-07-29-12-52-29.png" width="600" class="popup-image"><br><br> <img src="./img/2025-07-23-14-05-24.png" width="600" class="popup-image">                                                                                                                                         |
-| Y | タミヤ ミニ四駆 グレードアップパーツシリーズ <br> ステンレスビスセット                          | ￥300   | M2x15またはM2x16 mm ボルト <br> No.508 GP.508 ステンレスビスセット 15・20・25・30mm 15508 <br> <img src="./img/2025-07-23-14-07-22.png" width="600" class="popup-image">                                                                           |
-| Y<br>(残3)| タミヤ ミニ四駆 グレードアップパーツシリーズ <br>72mm シャフト                                  | ￥150   | Tamiya Grade-Up Parts Series Black Reinforced Shaft (4 Pieces), 2.8 inches / 72 mm, GP.417, 15417 <br> [Amazon](https://www.amazon.co.jp/dp/B003GALRS0/) <br> <img src="./img/2025-07-23-14-09-49.png" width="600" class="popup-image">            |
-
+| A | TypeC- USB L型 <br><br> 注意 raspi zero は micro USBを準備                            | ￥1,000 | ショートケーブル15-20cm <br> [e.g. aceyoon](https://www.amazon.co.jp/dp/B0B4JQ41SW/) <img src="./img/2025-07-23-14-12-21.png" width="200" class="popup-image">                                                                                     |
 
 ---
 
-**合計部品費（Raspberry Piとmicro SDカードを除く）**
-**約 18,000円**
-
-合計
+## 合計
 
 - rapsi (3200~9200円) + SDカード (1000円) + PCBWay 5000円
 
-=> 27400円 ~ 32400円
+  => 27400円 ~ 32400円
 
-----
+部品費（Raspberry Piとmicro SDカードを除く）**約 18,000円**
 
-ジャンパーケーブル: ¥700
+- ジャンパーケーブル: ¥700
 
-TypC- USB L型: ¥1,000
+- TypC- USB L型: ¥1,000
 
-F710: ¥5,200
+- F710: ¥5,200
 
-=>
-  18000円
+  =>
+    18000円
 
 ---
+### 部品 一覧
 カメラ　
   V2
   ￥3,000
@@ -226,8 +121,12 @@ DCモーター用/Hブリッジ ⭐️
 ---
 ローラーパーツ
   スペーサーとM2x10ネジが必要
-  ¥600
 
+  220円 タミヤ グレードアップ No.381 GP.381低摩擦プラローラーセット 15381
+  https://www.amazon.co.jp/dp/B001E40PXI/
+
+  ~~600円~~
+  ~~https://www.amazon.co.jp/dp/B005GJCC9C/~~
 
 ---
 タミヤ ミニ四駆 グレードアップパーツシリーズ
@@ -272,21 +171,11 @@ F710
   どこで使う？
 - [x]ジャンパーケーブル (メス)
 
-KAIT QT
-- [ ] raspi3A+
-- [ ] keeper 18350
-- [ ] F710 Faboから借りる
-
-WiFi ルーター
-- [ ] Faboから借りる
-
-
-
 ---
 
 ゆうパケット - Yahoo
 
-- [ ] 679364306611
+- [x] タミヤパーツ
 
   <img src="./img/2025-07-26-09-28-17.png" width="600" class="popup-image">
 
@@ -307,7 +196,7 @@ WiFi ルーター
 
   <img src="./img/2025-07-26-09-35-21.png" width="600" class="popup-image">
 
-- [ ] DCモーター用/Hブリッジ
+- [x] DCモーター用/Hブリッジ
   <img src="./img/2025-07-26-10-02-30.png" width="600" class="popup-image">
 
 ---
@@ -346,52 +235,10 @@ http://www.miniyonku.net/assemble-miniyonku
 
 ご不明点や他のモーターとの比較などもあれば、お気軽にどうぞ！
 
-[1]: https://www.tamiya.com/japan/products/95569/index.html?utm_source=chatgpt.com "タミヤ ミニ四駆特別企画　ミニ四駆ぞうさん | タミヤ"
-[2]: https://www.mini4wd.tech/archives/mini4wd-motor-recommendation-list.html?utm_source=chatgpt.com "〖2025年〗ミニ四駆のおすすめモーターランキング｜種類と選び方も紹介 | ムーチョのミニ四駆ブログ"
-[3]: https://mini4-masters.com/mini-yonku-shoshinsha-kaumono-guide/?utm_source=chatgpt.com "ミニ四駆を始める初心者が買うもの全部見せます！予算3000円から楽しめる！速く走らせるコツも‼｜ミニ四駆マスターズ"
-[4]: https://www.mini4wd.tech/archives/mini4wd-animalseries-modification.html?utm_source=chatgpt.com "〖ミニ四駆アニマルシリーズ〗ぞうさんのポテンシャル｜簡単な改造パーツで安定した走りに | ムーチョのミニ四駆ブログ"
-
-
-----
-
-The chip on the board is labeled **MX1508**. This is a different H-bridge driver with different pinouts and capabilities than the L298N.
-
-The MX1508 is a compact, low-cost dual H-bridge motor driver, often used for small DC motors. It can typically handle voltages from 2V to 10V and currents up to 1.5A per channel (2.5A peak).
-
-Let's break down how to connect this **MX1508 module** to your Raspberry Pi and a DC motor, based on the labels visible in your image:
-
-**MX1508 Module Pins and Their Functions:**
-
-  * **+ (VCC):** Power input for the motors. Connect this to the positive terminal of your external DC motor power supply (e.g., 3V to 10V, depending on your motor).
-  * **- (GND):** Ground connection for the motor power supply. Connect this to the negative terminal of your external motor power supply AND a GND pin on your Raspberry Pi.
-  * **IN1, IN2:** Input control pins for **Motor A**. Connect these to two GPIO pins on your Raspberry Pi.
-  * **IN3, IN4:** Input control pins for **Motor B**. Connect these to two other GPIO pins on your Raspberry Pi.
-  * **MOTOR-A (or OUT1, OUT2 - based on typical MX1508 layout):** Output terminals for **Motor A**. Connect your first DC motor here.
-  * **MOTOR-B (or OUT3, OUT4 - based on typical MX1508 layout):** Output terminals for **Motor B**. Connect your second DC motor here.
-
-**Key Difference from L298N for the MX1508:**
-
-The MX1508 typically **does not have separate enable (ENA/ENB) pins** like the L298N for PWM control. Instead, you usually control the speed by applying a **PWM signal directly to one of the INx pins** while keeping the other INx pin for that motor LOW, or by using a software PWM approach to toggle both INx pins appropriately. For simple on/off and direction control, you just set INx pins HIGH/LOW.
-
-**Wiring Instructions (for one DC Motor, assuming "MOTOR-A" in your diagram refers to the outputs for IN1/IN2):**
-
-1.  **External DC Motor Power Supply:**
-
-      * Connect the **positive (+) terminal** of your external DC motor power supply (e.g., 3V to 6V battery pack, depending on your motor's voltage requirements) to the **'+' terminal** on the MX1508 module.
-      * Connect the **negative (-) terminal** of your external DC motor power supply to the **'-' terminal (GND)** on the MX1508 module.
-
-2.  **Raspberry Pi to MX1508 Module (Control Signals):**
-
-      * Connect a **Raspberry Pi GND pin** to the **'-' terminal (GND)** on the MX1508 module. (This creates a common ground for everything).
-      * Connect a **Raspberry Pi GPIO pin** (e.g., BCM pin 17) to the **IN1** pin on the MX1508 module.
-      * Connect another **Raspberry Pi GPIO pin** (e.g., BCM pin 18) to the **IN2** pin on the MX1508 module.
-
-3.  **DC Motor to MX1508 Module:**
-
-      * Connect one terminal of your DC motor to one of the **MOTOR-A** output screw terminals on the MX1508 module.
-      * Connect the other terminal of your DC motor to the other **MOTOR-A** output screw terminal on the MX1508 module.
-
-    *(If you had a second motor, you would use IN3/IN4 and MOTOR-B outputs similarly.)*
+- [1](https://www.tamiya.com/japan/products/95569/index.html?utm_source=chatgpt.com) タミヤ ミニ四駆特別企画　ミニ四駆ぞうさん | タミヤ"
+- [2](https://www.mini4wd.tech/archives/mini4wd-motor-recommendation-list.html?utm_source=chatgpt.com) 〖2025年〗ミニ四駆のおすすめモーターランキング｜種類と選び方も紹介 | ムーチョのミニ四駆ブログ"
+- [3](https://mini4-masters.com/mini-yonku-shoshinsha-kaumono-guide/?utm_source=chatgpt.com) ミニ四駆を始める初心者が買うもの全部見せます！予算3000円から楽しめる！速く走らせるコツも‼｜ミニ四駆マスターズ"
+- [4](https://www.mini4wd.tech/archives/mini4wd-animalseries-modification.html?utm_source=chatgpt.com) 〖ミニ四駆アニマルシリーズ〗ぞうさんのポテンシャル｜簡単な改造パーツで安定した走りに | ムーチョのミニ四駆ブログ"
 
 ----
 
@@ -415,11 +262,9 @@ The MX1508 typically **does not have separate enable (ENA/ENB) pins** like the L
 
 <img src="./img/2025-07-30-17-12-29.png" width="600" class="popup-image">
 
+羽を削る
+<img src="./img/2025-08-23-10-09-30.png" width="600" class="popup-image">
 <img src="./img/2025-08-22-20-44-59.png" width="600" class="popup-image">
-
-<img src="./img/2025-08-02-12-27-51.png" width="600" class="popup-image">
-
-<img src="./img/2025-07-30-12-42-32.png" width="600" class="popup-image">
 
 
 前輪とサーボ
@@ -428,8 +273,15 @@ The MX1508 typically **does not have separate enable (ENA/ENB) pins** like the L
 
 <img src="./img/2025-08-21-11-16-34.png" width="600" class="popup-image">
 
+配線の入れ替え
+<img src="./img/2025-08-02-12-27-51.png" width="600" class="popup-image">
+
+シャーシに嵌め込む
+<img src="./img/2025-07-30-12-42-32.png" width="600" class="popup-image">
 
 ----
+
+モーター 後輪
 
 <img src="./img/2025-07-30-17-09-14.png" width="1600" class="popup-image">
 
@@ -447,6 +299,8 @@ The MX1508 typically **does not have separate enable (ENA/ENB) pins** like the L
 
 ----
 
+カメラ（前）バッテリーのホルダー（後ろ）
+
 <img src="./img/2025-07-30-19-21-57.png" width="600" class="popup-image">
 
 <img src="./img/M2_10.png" width="600" class="popup-image">
@@ -457,56 +311,69 @@ The MX1508 typically **does not have separate enable (ENA/ENB) pins** like the L
 
 ----
 
+配線
+
 <img src="./img/2025-07-30-20-15-43.png" width="1600" class="popup-image">
 
 <img src="./img/2025-07-30-20-14-33.png" width="600" class="popup-image">
 
 <img src="./img/2025-07-30-20-26-04.png" width="600" class="popup-image">
 
+ハンダつけ
+
 <img src="./img/2025-08-02-10-56-24.png" width="1600" class="popup-image">
 
-----
+ピン位置
 
-- [x] rapi zero camera cable
-- [x] USB micro to A for raspi zero power
-- [x] USB micro to A fro F710 donggle
+https://github.com/covao/TatamiRacer/blob/master/img/TatamiRacer_Circuit.png
 
-tatamiracerzero.local
-
-SSID: BIRDS Coworking×FUKUROI
+<img src="./img/2025-08-23-10-14-02.png" width="1600" class="popup-image">
 
 ----
 
 ## Raspi Zero用
 
+- [x] rapi zero camera cable
+- [x] USB micro to A for raspi zero power
+- [x] USB micro to A fro F710 donggle
+
+
 短いUSBケーブル（A-microBタイプ）10cm で モバイルバッテリーからraspi zeroに給電します
 
 https://www.switch-science.com/products/2844
 
-<img src="./img/2025-08-04-10-03-44.png" width="600" class="popup-image">
+<img src="./img/2025-08-04-10-03-44.png" width="400" class="popup-image">
+
+参考 アマゾン L型 Micro USB 10cm under ¥600
+<img src="./img/2025-08-04-10-12-53.png" width="600" class="popup-image">
 
 
 USBをMicro-Bへ変換するアダプタ これは F710のゲームパッドのUSBドングルを micro-Bに接続するために必要です。
 <br>
 https://www.switch-science.com/products/3702
 
-<img src="./img/2025-08-04-09-59-32.png" width="600" class="popup-image">
+<img src="./img/2025-08-04-09-59-32.png" width="400" class="popup-image">
 
-  Raspberry Pi 公式OTGケーブル（USB A－microB、8 cm）
-  https://www.switch-science.com/products/10310
+  ~~Raspberry Pi 公式OTGケーブル（USB A－microB、8 cm）~~
+  ~~https://www.switch-science.com/products/10310~~
 
-  <img src="./img/2025-08-04-09-58-48.png" width="600" class="popup-image">
+カメラケーブル
 
 https://www.amazon.co.jp/-/en/RasTech-Raspberry-Camera-Megapixels-ZERO1-3/dp/B086MK17K5
 
-<img src="./img/2025-08-04-10-00-40.png" width="600" class="popup-image">
-
-
-アマゾン L型 Micro USB 10cm under ¥600
-<img src="./img/2025-08-04-10-12-53.png" width="600" class="popup-image">
+<img src="./img/2025-08-04-10-00-40.png" width="400" class="popup-image">
 
 
 ---
+
+
+## Donkey SW セットアップ
+
+  https://docs.donkeycar.com/guide/robot_sbc/setup_raspberry_pi/
+
+Donkeyバージョン 4.5のRaspi Busterなので 「Installation for Donkeycar <= 4.5 using Raspberry Pi OS Buster」のセクションに従ってください。
+
+### Step 1 - 5
 
 Raspi imager
 
@@ -531,6 +398,8 @@ Raspi imager
   ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no pi@192.168.68.50
   ```
 
+ミニ HDMI ( micro < mini < normal) でモニターをつける場合
+
 config.txt
 
   Before
@@ -549,6 +418,23 @@ config.txt
   #dtoverlay=vc4-kms-v3d
   ```
 
+  うまくいかない場合は 以下も試してみてください
+
+  ```
+  hdmi_force_hotplug=1
+  hdmi_group=2
+  hdmi_mode=51
+
+  [all]
+  dtoverlay=vc4-fkms-v3d
+  #dtoverlay=vc4-kms-v3d,nocomposite
+  #dtoverlay=ov5647
+  dtoverlay=imx219
+  ```
+
+
+### WiFi 設定
+
  wpa_supplicant.conf
 
  ```
@@ -561,67 +447,67 @@ config.txt
   }
   ```
 
-https://docs.donkeycar.com/guide/robot_sbc/setup_raspberry_pi/
-
-Installation for Donkeycar <= 4.5 using Raspberry Pi OS Buster
 
 - [step6](https://docs.donkeycar.com/guide/robot_sbc/setup_raspberry_pi/#step-6-update-and-upgrade)
 
-```
-sudo apt-get update --allow-releaseinfo-change
-sudo apt-get upgrade
-```
-
-```
-sudo raspi-config
-```
-- i2c
-- camera
-- expand filesystem
-
-Step 8
-
-```
-sudo apt-get install build-essential python3 python3-dev python3-pip python3-virtualenv python3-numpy python3-picamera python3-pandas python3-rpi.gpio i2c-tools avahi-utils joystick libopenjp2-7-dev libtiff5-dev gfortran libatlas-base-dev libopenblas-dev libhdf5-serial-dev libgeos-dev git ntp
-```
-
-Step 10
-
-```
-python3 -m virtualenv -p python3 env --system-site-packages
-echo "source ~/env/bin/activate" >> ~/.bashrc
-source ~/.bashrc
-```
-
-Step 11
-
-```
-mkdir projects
-cd projects
-
-git clone https://github.com/autorope/donkeycar
-cd donkeycar
-git fetch --all --tags -f
-git checkout 4.5.1
-```
-
-⭐️Install opencv-python**
-
-```
-pip install opencv-python==4.5.1.48
-
-```
-
-```
-pip install -e .[pi]
-pip install https://github.com/lhelontra/tensorflow-on-arm/releases/download/v2.2.0/tensorflow-2.2.0-cp37-none-linux_armv7l.whl
-```
-
-- Check tensorflow version
+  ```
+  sudo apt-get update --allow-releaseinfo-change
+  sudo apt-get upgrade
+  ```
 
   ```
-  python -c "import tensorflow; print(tensorflow.__version__)"
+  sudo raspi-config
   ```
+  - i2c
+  - camera
+  - expand filesystem
+
+- Step 7
+
+- Step 8
+
+  ```
+  sudo apt-get install build-essential python3 python3-dev python3-pip python3-virtualenv python3-numpy python3-picamera python3-pandas python3-rpi.gpio i2c-tools avahi-utils joystick libopenjp2-7-dev libtiff5-dev gfortran libatlas-base-dev libopenblas-dev libhdf5-serial-dev libgeos-dev git ntp
+  ```
+
+- Step 9
+- Step 10
+
+  ```
+  python3 -m virtualenv -p python3 env --system-site-packages
+  echo "source ~/env/bin/activate" >> ~/.bashrc
+  source ~/.bashrc
+  ```
+
+- Step 11
+
+  ```
+  mkdir projects
+  cd projects
+
+  git clone https://github.com/autorope/donkeycar
+  cd donkeycar
+  git fetch --all --tags -f
+  git checkout 4.5.1
+  ```
+
+  ⭐️Install opencv-python しておく
+
+  ```
+  pip install opencv-python==4.5.1.48
+
+  ```
+
+  ```
+  pip install -e .[pi]
+  pip install https://github.com/lhelontra/tensorflow-on-arm/releases/download/v2.2.0/tensorflow-2.2.0-cp37-none-linux_armv7l.whl
+  ```
+
+  - Check tensorflow version
+
+    ```
+    python -c "import tensorflow; print(tensorflow.__version__)"
+    ```
 
   - Fix
 
@@ -630,6 +516,8 @@ pip install https://github.com/lhelontra/tensorflow-on-arm/releases/download/v2.
     ```
 
 ---
+
+## TatamiRacer の設定手順
 
 https://github.com/covao/TatamiRacer/blob/master/doc/HowToSetupSoftware.md#install-donkey-car-application-for-raspberry-pi
 
@@ -666,11 +554,17 @@ wget "https://raw.githubusercontent.com/covao/TatamiRacer/master/raspi/install/s
 sh -x setup_tatamiracer.sh
 ```
 
+### ラズパイZeroのIPアドレスの見つけ方
+
+ローカルPCで arpコマンドを利用
+
+> donkey findcarは 2c:cfを見ていない
+
 ```
 arp -a | grep 2c:cf
 ```
 
-camera
+### camera
 
 
 - raspistill
@@ -698,32 +592,51 @@ https://zenn.dev/kobayutapon/articles/490d93ab683337
 sudo raspi-config nonint do_legacy 0
 ```
 
-```
-hdmi_force_hotplug=1
-hdmi_group=2
-hdmi_mode=51
-
-[all]
-dtoverlay=vc4-fkms-v3d
-#dtoverlay=vc4-kms-v3d,nocomposite
-#dtoverlay=ov5647
-dtoverlay=imx219
-```
 
 ## Setup TatamiRacer by Shell Script
 
+```
 wget "https://raw.githubusercontent.com/covao/TatamiRacer/master/raspi/install/setup_tatamiracer.sh" -O "setup_tatamiracer.sh"
 sh -x setup_tatamiracer.sh
+```
 
 
-bullseys
-https://zenn.dev/kobayutapon/articles/490d93ab683337
+bullseysの
+[Raspberry Pi Zero2 Wでカメラ・OpenCV環境を整える](https://zenn.dev/kobayutapon/articles/490d93ab683337)
+
+---
+
+## TatamiRacerのDonkey 4.5対応 ⭐️
+
+ https://github.com/KwikHangout/AI-RC/tree/main/src/mycar_tatamiracer
 
 
-----
+---
 
-sudo systemctl restart pigpiod
+## カリブレーション
 
+  tatamiracer_test.pyを利用して、myconfig.pyの値を後進　⭐️
+
+  うまくいかない場合は 配線やGPIOデーモンを確認
+
+  ```
+  sudo systemctl restart pigpiod
+  ```
+---
+
+## 走行
+
+myconfig.py
+
+```
+CONTROLLER_TYPE = 'F710'
+```
+
+python manage.py drive --js
+
+---
+
+## PCでトレーニング
 
 get data
 
