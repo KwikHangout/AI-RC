@@ -241,6 +241,17 @@ http://www.miniyonku.net/assemble-miniyonku
 - [4](https://www.mini4wd.tech/archives/mini4wd-animalseries-modification.html?utm_source=chatgpt.com) 〖ミニ四駆アニマルシリーズ〗ぞうさんのポテンシャル｜簡単な改造パーツで安定した走りに | ムーチョのミニ四駆ブログ"
 
 ----
+## 組み立て
+
+部品一覧
+<img src="img/parts_purchased.png" width="1600">
+<img src="img/parts_all.png" width="1600">
+
+ミニ４駆の車体キットに入っている部品
+<img src="img/parts_roller_stopper_spacer.png" width="1600">
+
+----
+
 
 <img src="./img/2025-07-30-11-09-04.png" width="1600" class="popup-image">
 
@@ -296,6 +307,7 @@ http://www.miniyonku.net/assemble-miniyonku
 <img src="./img/2025-07-30-18-53-19.png" width="600" class="popup-image">
 
 <img src="./img/2025-07-30-19-23-33.png" width="600" class="popup-image">
+
 
 ----
 
