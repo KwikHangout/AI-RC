@@ -1,4 +1,40 @@
+donkey-kwiksher.local
+pi/donkey
 
+sudo systemctl list-units -t service
+sudo systemctl stop
+sudo systemctl disable
+
+----
+tatamiracer-zero
+kait-qt-221
+
+------
+AIRCCar2025
+
+AI RC Car Fabo
+AI RC Car 5GHz
+password: AIFestival
+
+arp -a | grep 2c:cf
+
+
+-----
+KAIT QT: 10.20.171.221
+
+  WiFi Router
+    SSID: KAIT-RACER => AI RC Car Fabo
+    Pass: kanagawa12
+
+  donkey 4.4.0
+  tensor flow 2.2.0
+  baster
+
+  /etc/dhpcd.conf
+    interface wlan0
+    static ip_address=10.20.171.221/24
+    static routers=10.20.0.1
+    static domain_name_servers=10.20.0.1
 
 
 https://github.com/covao/TatamiRacer
@@ -48,14 +84,6 @@ battery
 F710
 
 
-
-WiFi Router
-  SSID: KAIT-RACER 10.20.171.221
-  Pass: kanagawa12
-
-donkey 4.4.0
- tensor flow 2.2.0
-baster
 
 あらかじめデータセットを入れておいて ２、３周だけのデータをマージする
 
