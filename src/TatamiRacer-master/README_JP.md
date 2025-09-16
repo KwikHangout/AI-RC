@@ -5,18 +5,7 @@
 
   > オリジナルの手順を参考に進めてください
 
-| 部品名 | 備考 | 最低構成 | 推奨構成 | Amazon-JP | Amazon-US |
-|:---|:---|:---:|:---:|:---:|:---:|
-dp/B0742RS6YL) |
-| Type-C USB ケーブル（L型ヘッダー） <br><br> 注意 raspi zero は micro USBを用意してください   | ショートケーブル15-20cm ||+| [e.g. aceyoon](https://www.amazon.co.jp/dp/B0B4JQ41SW/)| [e.g. aceyoon](https://www.amazon.com/dp/B096VYVR17/) |
-
-
 ----
-PCBWayの3Dプリントサービスを利用しました
-
-$35=¥5000 (送料 $25)
-
-<img src="./img/2025-07-24-10-00-32.png" width="600" class="popup-image">
 
 ## Raspberry Pi 本体価格
 
@@ -27,57 +16,73 @@ $35=¥5000 (送料 $25)
 | Raspberry Pi Zero 2 W | ￥3,190 | [商品ページ](https://akizukidenshi.com/catalog/g/g117398/) |
 
 
-<img src="./img/2025-07-24-10-28-33.png" width="100" class="popup-image">
-¥800
+## Tatami 3Dパーツ
+
+PCBWayの3Dプリントサービスを利用しました
+
+$35=¥5000 (送料 $25)
+
+<img src="./img/2025-07-24-10-00-32.png" width="600" class="popup-image">
 
 ---
 
 ## 部品価格一覧
 
-|   | 部品名                                                                                          | 価格    | 備考・リンク                                                                                                                                                                                                                                       |
-|:---|:------------------------------------------------------------------------------------------------|:--------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| A | ミニ四駆 キット (ぞうさん5:1ギア)                                                               | ￥1,500 | [Amazon](https://www.amazon.co.jp/dp/B08VX3W3Q6/) <br> <img src="./img/2025-07-24-10-05-45.png" width="400" class="popup-image">                                                                                                                   |
-|   | F710                                                                                            | ￥5,200 | [Amazon](https://www.amazon.co.jp/dp/B00CDG7994/?th=1) <br> <img src="./img/2025-07-23-14-14-07.png" width="600" class="popup-image">                                                                                                              |
-| A | バッテリー (明誠 C0303 モバイルバッテリー)  <br> <br> ※Type A to Type CのUSBで充電                                                  | ￥1,450 | [Amazon](https://www.amazon.co.jp/dp/B07Q5M3CLQ/?th=1) <br> <img src="./img/2025-07-24-09-56-27.png" width="200" class="popup-image">                                                                                                              |
-| A | TypeC- USB L型 <br><br> 注意 raspi zero は micro USBを準備                            | ￥1,000 | ショートケーブル15-20cm <br> [e.g. aceyoon](https://www.amazon.co.jp/dp/B0B4JQ41SW/) <img src="./img/2025-07-23-14-12-21.png" width="200" class="popup-image">                                                                                     |
-
----
 
 ## 合計
 
-- rapsi (3200~9200円) + SDカード (1000円) + PCBWay 5000円
+- rapsi (3200~9200円) + PCBWay 5000円
+- F710: ¥5,200
 
   => 27400円 ~ 32400円
 
-部品費（Raspberry Piとmicro SDカードを除く）**約 18,000円**
+部品費（Raspberry Piとmicro SDカードを除く）**約 16,000円**
 
-- ジャンパーケーブル: ¥700
 
-- TypC- USB L型: ¥1,000
+## 部品価格一覧（BOM）
 
-- F710: ¥5,200
-
-  =>
-    18000円
+| 品名 | 価格 | リンク / 備考 |
+| --- | ---: | --- |
+| F710 (ゲームパッド) | ¥5,200 | https://www.amazon.co.jp/dp/B00CDG7994/?th=1 |
+| カメラ V1 (OV5647) | ¥1,400 | RasTech Raspberry Pi Camera Module (5MP) https://www.amazon.co.jp/exec/obidos/ASIN/B086MK17K5/beatnix06-22/ |
+| バッテリー (明誠 C0303 4000mAh) | ¥1,450 | https://www.amazon.co.jp/dp/B07Q5M3CLQ/?th=1 (Type A→C充電) |
+| DCモーター用 Hブリッジ (L298N) | ¥700 | https://www.amazon.co.jp/dp/B083DT2DMV/ |
+| ピンヘッダー (オス 90度 40ポジション×2) | ¥700 | https://www.amazon.co.jp/dp/B00V4V703O/ |
+| 130 DC モーター (Tamiya No.28) | ¥1,400 | https://www.amazon.co.jp/dp/B005AFBLIA/ |
+| サーボ (TowerPro SG90) | ¥1,200 | 標準 0.1s / 60度 |
+| ミニ四駆 キット (ぞうさん 5:1ギア) | ¥1,500 | https://www.amazon.co.jp/dp/B08VX3W3Q6/ |
+| ローラーパーツ (低摩擦プラローラーセット) | ¥220 | タミヤ GP.381 (15381) https://www.amazon.co.jp/dp/B001E40PXI/ |
+| タミヤ ステンレスビスセット | ¥300 | GP.508 (15508) M2x15/16 推奨 |
+| タミヤ 72mm シャフト (Black Reinforced Shaft) | ¥150 | GP.417 (15417) https://www.amazon.co.jp/dp/B003GALRS0/ |
+| ジャンパーケーブル (メス-メス 10cm) | ¥700 | - |
+| Type-C → USB L型 ショートケーブル | ¥600 | 15-20cm |
+| SDカード | ¥800 | (目安) |
 
 ---
 ### 部品 一覧
-カメラ　
-  V2
-  ￥3,000
-  https://akizukidenshi.com/catalog/g/g110518/
 
+---
+F710
+￥5,200
+https://www.amazon.co.jp/dp/B00CDG7994/?th=1
+
+---
+カメラ  V1 (ov5647)
   ¥1400 RasTech Raspberry Pi Camera Module, Raspberry Pi Camera 5 Megapixels
 
-  >ov5647
-
   https://www.amazon.co.jp/exec/obidos/ASIN/B086MK17K5/beatnix06-22/
+
+  ~~V2 ￥3,000 https://akizukidenshi.com/catalog/g/g110518/~~
+
+
 
 ---
 バッテリー
   明誠 C0303 モバイルバッテリー 4000mAh
   1450円
   https://www.amazon.co.jp/dp/B07Q5M3CLQ/?th=1
+
+  > ※Type A to Type CのUSBで充電
 
 ---
 DCモーター用/Hブリッジ ⭐️
@@ -95,8 +100,6 @@ DCモーター用/Hブリッジ ⭐️
   https://www.amazon.co.jp/dp/B00V4V703O/
 
 
-
-
 ---
 130 DC モーター
   ¥1400
@@ -111,12 +114,12 @@ DCモーター用/Hブリッジ ⭐️
   TowerPro SG90(0.1sec/60度)
 
 
-
 ---
 ミニ四駆 キット
   ぞうさん5:1ギア
   ¥1500
   https://www.amazon.co.jp/dp/B08VX3W3Q6/
+
 
 ---
 ローラーパーツ
@@ -125,8 +128,6 @@ DCモーター用/Hブリッジ ⭐️
   220円 タミヤ グレードアップ No.381 GP.381低摩擦プラローラーセット 15381
   https://www.amazon.co.jp/dp/B001E40PXI/
 
-  ~~600円~~
-  ~~https://www.amazon.co.jp/dp/B005GJCC9C/~~
 
 ---
 タミヤ ミニ四駆 グレードアップパーツシリーズ
@@ -142,34 +143,68 @@ DCモーター用/Hブリッジ ⭐️
   https://www.amazon.co.jp/dp/B003GALRS0/
 
 
-
 ---
 ジャンパーケーブル
   ¥700
   メスコネクタからメスコネクタ 10cm
 
-
 ---
 TypC- USB L型
-  ¥1000
+  ¥600
   ショートケーブル15-20cm
+
+---
+SDカード (1000円)
+¥800
+
+## Raspi Zero用
+
+- [x] rapi zero camera cable
+- [x] USB micro to A for raspi zero power
+- [x] USB micro to A fro F710 donggle
+
+
+短いUSBケーブル（A-microBタイプ）10cm で モバイルバッテリーからraspi zeroに給電します
+
+https://www.switch-science.com/products/2844
+561円
+
+<img src="./img/2025-08-04-10-03-44.png" width="200" class="popup-image">
+
+
+USBをMicro-Bへ変換するアダプタ これは F710のゲームパッドのUSBドングルを micro-Bに接続するために必要です。
+<br>
+https://www.switch-science.com/products/3702
+
+<img src="./img/2025-08-04-09-59-32.png" width="200" class="popup-image">
+
+Zeo用カメラケーブル V1キット(1,390円)に含まれている
+
+https://www.amazon.co.jp/-/en/RasTech-Raspberry-Camera-Megapixels-ZERO1-3/dp/B086MK17K5
+
+<img src="./img/2025-08-04-10-00-40.png" width="200" class="popup-image">
+
 
 
 ---
-F710
-  ¥5200
-  https://www.amazon.co.jp/dp/B00CDG7994/?th=1
+その他 道具
 
+- [x] ニッパー
+- [x] ハンダこて
 
-<img src="./img/2025-07-24-13-22-32.png" width="600" class="popup-image">
+---
+
+## Deliveries
+
+<img src="./img/2025-07-24-13-22-32.png" width="400" class="popup-image">
 
 - Shipped
 
-- [x]raspi
-- [x]sdcard
-- [x]ピンヘッダー
+- [x] raspi
+- [x] sdcard
+- [x] ピンヘッダー
   どこで使う？
-- [x]ジャンパーケーブル (メス)
+- [x] ジャンパーケーブル (メス)
 
 ---
 
@@ -197,12 +232,9 @@ F710
   <img src="./img/2025-07-26-09-35-21.png" width="600" class="popup-image">
 
 - [x] DCモーター用/Hブリッジ
+
   <img src="./img/2025-07-26-10-02-30.png" width="600" class="popup-image">
 
----
-
-- [x] ニッパー
-- [x] ハンダこて
 
 ----
 https://www.tamiya.com/japan/cms/mini4wdsettingguide_basic.html
@@ -340,40 +372,6 @@ http://www.miniyonku.net/assemble-miniyonku
 https://github.com/covao/TatamiRacer/blob/master/img/TatamiRacer_Circuit.png
 
 <img src="./img/2025-08-23-10-14-02.png" width="1600" class="popup-image">
-
-----
-
-## Raspi Zero用
-
-- [x] rapi zero camera cable
-- [x] USB micro to A for raspi zero power
-- [x] USB micro to A fro F710 donggle
-
-
-短いUSBケーブル（A-microBタイプ）10cm で モバイルバッテリーからraspi zeroに給電します
-
-https://www.switch-science.com/products/2844
-
-<img src="./img/2025-08-04-10-03-44.png" width="400" class="popup-image">
-
-参考 アマゾン L型 Micro USB 10cm under ¥600
-<img src="./img/2025-08-04-10-12-53.png" width="600" class="popup-image">
-
-
-USBをMicro-Bへ変換するアダプタ これは F710のゲームパッドのUSBドングルを micro-Bに接続するために必要です。
-<br>
-https://www.switch-science.com/products/3702
-
-<img src="./img/2025-08-04-09-59-32.png" width="400" class="popup-image">
-
-  ~~Raspberry Pi 公式OTGケーブル（USB A－microB、8 cm）~~
-  ~~https://www.switch-science.com/products/10310~~
-
-カメラケーブル
-
-https://www.amazon.co.jp/-/en/RasTech-Raspberry-Camera-Megapixels-ZERO1-3/dp/B086MK17K5
-
-<img src="./img/2025-08-04-10-00-40.png" width="400" class="popup-image">
 
 
 ---
