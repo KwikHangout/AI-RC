@@ -94,8 +94,8 @@ Tatamiracer zero mac addresses : 2c:cf:67:b2:b0:45
 
     .ssh/config 設定済み
     ```
-    Host kait-qt-221
-      HostName 10.20.171.221
+    Host tatamiracer-zero
+      HostName 10.20.171.146
       User pi
     ```
 
@@ -142,7 +142,7 @@ Tatamiracer zero mac addresses : 2c:cf:67:b2:b0:45
 
   - [ ] カメラの確認
 
-     http://10.20.171.221:8887
+     http://10.20.171.146:8887
 
       Donkey Webでカメラからの映像が表示されていることを確認してください。
 
@@ -153,7 +153,7 @@ Tatamiracer zero mac addresses : 2c:cf:67:b2:b0:45
   - [ ] データ取得
 
     ```
-    rsync -rv --progress --partial pi@kait-qt-221:~/mycar/data/  ~/projects/mycar/data/
+    rsync -rv --progress --partial pi@tatamiracer-zero:~/mycar/data/  ~/projects/mycar/data/
     ```
 
   - [ ] 学習
@@ -176,7 +176,7 @@ Tatamiracer zero mac addresses : 2c:cf:67:b2:b0:45
   - [ ] モデルのアップロード
 
     ```
-    rsync -rvt --progress --partial ~/projects/mycar/models/ pi@kait-qt-221:~/mycar/models/
+    rsync -rvt --progress --partial ~/projects/mycar/models/ pi@tatamiracer-zero:~/mycar/models/
     ```
 
 自動走行
@@ -294,7 +294,7 @@ donkey ui
   ```mermaid
   graph TB
   subgraph Donkeycar
-    subgraph raspi[raspi 3A+ kait-qt-221]
+    subgraph raspi[raspi 3A+ tatamiracer-zero]
       app[donkeycar v4.4.0]
       mycardata([mycar/data])
       mycarmodels([mycar/models])
@@ -333,7 +333,7 @@ donkey ui
     end
 
 
-    subgraph vscode[ssh kait-qt-221]
+    subgraph vscode[ssh tatamiracer-zero]
       drive([python manage.py drive --js])
       driveWithModel([pythn mange.py drive --js <br> --model ./models/mypilot.h5])
     end
@@ -370,14 +370,11 @@ vscode -.ssh.- raspi
 
 Raspiドンキーカーと同じ無線WiFiに接続してください。
 
-> jetson nano ドンキーカーの無線WiFi DONKEY001である必要はありません。例 スマホテザリングなどで、任意のインターネットが利用可能なWiFiスポットに ドンキーカーとHX80GのミニゲーミングPCが接続していれば動作します。
-
- <div style="page-break-before:always"></div>
 
 ### アクセス
 
 - ユーザ: ymmtny
-- パスワード: HX80G
+- パスワード: ****
 
   ネットワークからアクセス可能な共有フォルダとして SMBで 以下の共有フォルダにアクセス可能です。
 
