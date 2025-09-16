@@ -1,6 +1,7 @@
 donkey-kwiksher.local
 pi/donkey
 
+cat /etc/os-release
 sudo systemctl list-units -t service
 sudo systemctl stop
 sudo systemctl disable
