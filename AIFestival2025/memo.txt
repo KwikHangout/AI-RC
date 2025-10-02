@@ -1,3 +1,38 @@
+9/20(土)
+  AIで走る自動運転カーレース KAIT Racer GP 8
+  - [x] QTx3 - fabo F710x3
+  - [x] 手順・ミニ授業資料
+    - [x] hugo content/envrioment for AIFestival
+        - [x] KAIT QT
+        - [x] tatamiracer
+
+      - q-con_donkeycar_presentation_2017.pdf
+      - /Users/ymmtny/Documents/GitHub/AI-RC/misc/menlopark.jpeg
+      - /Users/ymmtny/Documents/GitHub/AI-RC/MFT2023/donkeycar_LT.md
+      - /Users/ymmtny/Documents/GitHub/AI-RC/memo/setup_memo_skipcity_donkey_raspi3.md
+
+      - ↓donkey blue with behvior
+        /Users/ymmtny/Documents/GitHub/AI-RC/SkipCity2024/doc/content/environment/raspi.md
+
+  - [x] マシン３台 => 2台
+    - mac, HX80G
+      - [ ] HX80Gで 並行で training できるのか？
+    - 深水さんに手伝ってもらう、深水さんマシンで、Traininingしてモデルを作ってもらう
+      -[ ] donkey-kwiksher(wltoys) myconfig.py LED
+      =>
+        wpa_supplicant.conf, dhpcd.conf
+
+
+------
+7日の設営について
+午後からの搬入でよろしいでしょうか。（7日の設営は18時まで）
+
+8日について
+  8時から会場入りできます（10時開場）
+  スタッフ分のお弁当を用意しますので、8日に入るスタッフの人数を教えてください。
+
+
+-----
 donkey-kwiksher.local
 pi/donkey
 
