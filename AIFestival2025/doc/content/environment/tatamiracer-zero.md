@@ -460,4 +460,18 @@ network={
 }
 ```
 
+---
 
+### Donkey Copilot
+
+https://github.com/covao/DonkeyCopilot
+
+```
+cd ~/projects/donkeycar/donkeycar/parts/web_controller/templates/static
+wget "https://raw.githubusercontent.com/covao/DonkeyCopilot/main/copilot.html"  -O "copilot.html"
+wget "https://raw.githubusercontent.com/covao/DonkeyCopilot/main/p5.min.js"  -O "p5.min.js"
+```
+
+- http://10.20.171.146:8887/static/copilot.html
+
+{{<img src="./img/2025-10-30-10-23-26.png" width="800" class="popup-image">}}

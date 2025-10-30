@@ -145,7 +145,10 @@ gantt
 
     section 当日
     レーサ準備可能 :prep2, 2024-11-08 08:00, 2h
-    開場 :milestone, open, 2024-11-08 10:00, 0h
+    レーサ向けパス配布 :milestone, open, 2024-11-08 8:30, 0h
+    レーサ向けパス配布 :milestone, open, 2024-11-08 9:00, 0h
+    レーサ向けパス配布 :milestone, open, 2024-11-08 9:30, 0h
+    一般開場 :milestone, open, 2024-11-08 10:00, 0h
     体験セミナー① :hands1, 2024-11-08 11:00, 1h
     レーサー：学習データ取得 :racer, after open, 2h
     プレゼン :presentation, after racer, 0.75h

@@ -7,12 +7,13 @@ weight: 2
 Donkey カー MLOps
 
 KAIT QT mac addresses
-- [ ] 221
-- [ ] 222
-- [ ] 223
+- [x] 1号機 10.20.171.221
+- [x] 3号機 10.20.171.223
+- [x] 4号機 10.20.171.224
+
 
 車体
-- hostname:kait-qt-221.local
+
 - ip address: 10.20.171.221
 - pi:raspberry
 
@@ -87,17 +88,10 @@ KAIT QT mac addresses
 接続
 - PC
 
-    .ssh/config 設定済み
-    ```
-    Host kait-qt-221
-      HostName 10.20.171.221
-      User pi
-    ```
-
   - [ ] ssh して Raspiに入ります
 
     ```
-    ssh pi@kaito-qt-221
+    ssh pi@10.20.171.221
     ```
 
 記録
@@ -148,7 +142,7 @@ KAIT QT mac addresses
   - [ ] データ取得
 
     ```
-    rsync -rv --progress --partial pi@kait-qt-221:~/mycar/data/  ~/projects/mycar/data/
+    rsync -rv --progress --partial pi@10.20.171.221:~/mycar/data/  ~/projects/mycar/data/
     ```
 
   - [ ] 学習
@@ -171,7 +165,7 @@ KAIT QT mac addresses
   - [ ] モデルのアップロード
 
     ```
-    rsync -rvt --progress --partial ~/projects/mycar/models/ pi@kait-qt-221:~/mycar/models/
+    rsync -rvt --progress --partial ~/projects/mycar/models/ pi@10.20.171.221:~/mycar/models/
     ```
 
 自動走行
