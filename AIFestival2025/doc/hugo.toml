@@ -5,9 +5,10 @@ title = 'My New Hugo Site'
 # Change the default theme to be use when building the site with Hugo
 #theme = "hugo-theme-relearn"
 
-# For search functionality
+# For search functionality - removed deprecated 'SEARCH' output format
+# See: https://mcshelby.github.io/hugo-theme-relearn/introduction/releasenotes/7/#7-0-0
 [outputs]
-home = [ "HTML", "RSS", "SEARCH"]
+home = [ "HTML", "RSS"]
 
 [module]
 [[module.imports]]

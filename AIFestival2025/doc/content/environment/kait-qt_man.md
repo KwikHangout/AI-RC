@@ -1,10 +1,8 @@
----
-title: "KAIT Qt"
-chapter: false
-weight: 2
----
+# Donkey カー MLOps
 
-Donkey カー MLOps
+<div align="right"> 2025.11.8 <br> AI FestivalでAI RCカーを走らせよう！ </div>
+
+<br>
 
 KAIT QT mac addresses
 - [x] 1号機 10.20.171.221
@@ -22,13 +20,14 @@ KAIT QT mac addresses
 
    バッテリーを２個装着して、それぞれスイッチを入れます。
 
-  {{<img src="./img/2025-09-16-14-24-34.png" width="600" class="popup-image">}}
+  <img src="./img/2025-09-16-14-24-34.png" width="600" class="popup-image">
 
    ラズパイ用には 追加で電子回路に付いている小さなボタンを押します。
 
-  {{<img src="./img/2025-09-16-14-27-11.png" width="600" class="popup-image">}}
+  <img src="./img/2025-09-16-14-27-11.png" width="600" class="popup-image">
 
-## 構図
+<div style="page-break-after: always;"></div>
+
 
   ```mermaid
   graph LR
@@ -196,7 +195,7 @@ KAIT QT mac addresses
 
       衝突した場合は Aボタンを押す。 startボタンで人間操作にして、後退させて再度自動走行を実施します。
 
-----
+
 ### Donkey web
 
   - [ ] カメラ画像が正しく表示されていること
@@ -205,9 +204,9 @@ KAIT QT mac addresses
 
   > 問題なければ、走行データの記録が可能です、コースにて走行してください。**Bボタン**で記録がOn/Offします。
 
-{{<img src="./img/2024-01-09-17-52-21.png" width="600">}}
+<img src="./img/2024-01-09-17-52-21.png" width="600">
 
-{{<img src="./img/2024-01-09-17-56-21.png" width="600">}}
+<img src="./img/2024-01-09-17-56-21.png" width="600">
 
 ---
 ### Donkey ui
@@ -221,11 +220,13 @@ Trainerも動作します。
 donkey ui
 ```
 
-{{<img src="./img/2024-01-09-18-06-52.png" width="500">}}
+<img src="./img/2024-01-09-18-06-52.png" width="500">
 
-{{<img src="./img/2024-01-09-18-10-17.png" width="500">}}
+<img src="./img/2024-01-09-18-10-17.png" width="500">
 
-----
+
+<div style="page-break-after: always;"></div>
+
 ### 補足 コンソール操作
 
 1. calibrate in raspi
@@ -267,17 +268,20 @@ donkey ui
     python manage.py drive --js --model ./models/$mypilot --type tflite_linear
     ```
 
----
+<div style="page-break-after: always;"></div>
 
 ゲームパッド
 
-  {{<img src="./img/2024-01-09-15-59-23.png" width="800">}}
+  <img src="./img/2024-01-09-15-59-23.png" width="800">
 
   - XInputを使用して、MODEボタンはOFF（緑色のLEGが消灯）
   - Vibrationボタンでバッテリーが十分であるかの確認ができます。
 
 
 ---
+
+<div style="page-break-after: always;"></div>
+
 ## MLOps サマリー
 
   ```mermaid
@@ -347,105 +351,4 @@ vscode -.ssh.- raspi
   WifiSpot -.- pc
 
   ```
-
----
-## Windows WSL Ubuntu 20.04
-
-ホストPCの環境は HX80GのミニゲーミングPCに構築
-
-{{<img src="./img/2024-01-09-17-11-15.png" width="300">}}
-
-キーボードとマウスを繋げてください。ヘッドレスでの利用も可能です、Windows Remote Desktopで別のマシンから遠隔アクセス可能です。
-
-Raspiドンキーカーと同じ無線WiFiに接続してください。
-
-### アクセス
-
-- ユーザ: ymmtny
-- パスワード: ****
-
-  ネットワークからアクセス可能な共有フォルダとして SMBで 以下の共有フォルダにアクセス可能です。
-
-  - ホスト名: smb://KWIKSHER-HX80G/Users/ymmtny/Documents/Shared
-
-    {{<img src="./img/2024-01-09-15-43-17.png" width="600">}}
-
-
-Ubuntuは、Z: ドライブにもマウントしてあります。
-
-{{<img src="./img/2024-01-09-17-22-28.png" width="200">}}
-
-- [ ] vs code > workspace: AI RC Car(WSL)
-
-    {{TODO screenshot}}
-
-
-### Doc
-
-この解説のウェブページは、AI RC Car/docフォルダに格納されています。
-hugo.exeを起動してウェブサーバがローカルに立ち上がります。
-
-```
-hugo.exe server
-```
-
-### vscode - mycar
-
-vscodeのAI RC Car(WSL:Ubuntu) のワークスペースを開きます
-
-{{screenshot}}
-
-
-注意
-
-- 英語キーボード切り替え
-  =>
-    Microsoft Remotedesktop App > Connections > Keyboard Mode > Unicodeにする
-
-    =>
-      powser shellで入力できない、元のscancodeに戻す
-
-- vscodeの EmacsキーのエクステンションでEmacsキーになってます。
-
-
----
-
- <div style="page-break-before:always"></div>
-
-### Raspi img
-
-raspiのイメージのバックアップが AI RC Car/raspi3_buster_donkey フォルダに格納されています。復元には kait-qt-dhcpのimgをつかい、WiFi ルータに接続後に donkey findcar または arp コマンドでIPアドレスを見つけてください。
-
-- [ ] kait-qt-dhcp
-
-  ```
-  arp -a | grep $MAC_ADDRESS
-  ```
-
-- pi-image.img
-
-  {{<img src="./img/2024-01-09-18-26-26.png" width="400">}}
-
-  EtcherもWin32DiskManagerもインストール済みです。
-
----
-
-
-#### WiFi 接続
-
-raspiドンキーカーを任意のWiFiに接続する場合は、**wpa_supplicant**のファイルを用意して、SDカードに書き込んでください。
-
-
-wpa_supplicant/AI RC Car 5GHz
-
-```
-country=JP
-ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
-update_config=1
-network={
-    ssid="AI RC Car 5GHz"
-    psk="AIFestival"
-}
-```
-
 

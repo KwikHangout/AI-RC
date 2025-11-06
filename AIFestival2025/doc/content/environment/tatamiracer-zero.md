@@ -1,6 +1,6 @@
 ---
 title: "Tatamiracer zero"
-chapter: true
+chapter: false
 weight: 2
 ---
 
