@@ -12,6 +12,10 @@ weight: 1
 
   > オリジナルの手順を参考に進めてください
 
+
+  <img src="./img/2025-09-16-14-40-11.png" width="600" class="popup-image">
+
+
 ----
 
 ## Raspberry Pi 本体価格

@@ -46,7 +46,7 @@ tatamiracer-zero
 kait-qt-221
 
 ------
-AIRCCar2025
+ASUS admin:AIRCCar2025
 
 AI RC Car Fabo
 AI RC Car 5GHz
@@ -54,6 +54,8 @@ password: AIFestival
 
 arp -a | grep 2c:cf
 
+raspi3 B8:27
+raspi4 DC:A6
 
 -----
 KAIT QT: 10.20.171.221

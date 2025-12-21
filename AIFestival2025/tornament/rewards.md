@@ -77,9 +77,9 @@ Raspberry Pi 3 Model A+
 
 # 2位、３位
 
-ギネス世界記録 2026
+[ギネス世界記録 2026](https://www.kadokawa.co.jp/product/322504000664/)
 
-<img src="./img/2025-10-29-15-38-44.png" width="300" class="popup-image">
+<img src="./img/2025-11-09-19-18-19.png" width="300" class="popup-image">
 
 </div>
 
